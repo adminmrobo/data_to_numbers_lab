@@ -325,6 +325,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .crowdrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
+
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
 </style>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="잡음이 섞였을 때 — 모든 데이터는 숫자가 된다 4장">
@@ -406,6 +413,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <p><b>ImageNet-C</b> 사진에 흔한 손상을 입힌 시험 자료 · <b>dB</b> 데시벨, 세기 비율을 로그로 잰 단위 · <b>SNR</b> 신호 대 잡음비 · <b>WILDS</b> 실제 환경 변화를 모은 시험 자료 · <b>FGSM</b> 기울기 부호로 한 번에 비트는 공격 · <b>TextFooler</b> 낱말을 비슷한 낱말로 바꿔 속이는 공격 · <b>FaceForensics++</b> 가짜 얼굴 영상 탐지 시험 자료</p>
     </details>
   </div>
+  <div class="recap first"><b>30초 복습</b> — 3장에서 본 것: 학습으로 만든 숫자 줄에서는 같은 것끼리 가깝게 모입니다. 4장은 그 숫자에 잡음이 섞이면 어떻게 되는지, 우연한 잡음과 일부러 노린 잡음을 나눠 봅니다. 판정기는 "가중치 × 밝기를 모두 더한 점수"로 답을 고른다는 것만 기억하면 됩니다.</div>
 </section>
 
 <section class="level" id="cast" aria-labelledby="h-cast">
@@ -473,7 +481,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"잡음 세기 0.26"이 얼마나 센 건지 감이 안 와요.</p></div></div>
       <div class="school">학교 수학으로 보면: <b>정규분포</b>와 <b>표준편차</b></div>
-      <div class="eq">잡음 섞인 픽셀 = <em>원래 값</em> + <b>σ</b> × (평균 0, 표준편차 1인 무작위 수)</div>
+      <div class="inwords"><b>말로 먼저</b> — 원래 밝기에, 평균 0인 무작위 흔들림을 잡음 세기(σ)만큼 키워 더합니다.</div>
+        <div class="eq">잡음 섞인 픽셀 = <em>원래 값</em> + <b>σ</b> × (평균 0, 표준편차 1인 무작위 수)</div>
       <table>
         <tr><td>σ</td><td>"시그마". 잡음의 표준편차 = 잡음 세기</td></tr>
         <tr><td>약 68%</td><td>잡음이 −σ ~ +σ 안에 들어오는 비율 (정규분포)</td></tr>
@@ -546,7 +555,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>데시벨은 왜 그냥 비율이 아니고 로그를 써요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>상용로그</b> (log₁₀)와 <b>제곱근</b></div>
-      <div class="eq">SNR(dB) = 10 × log₁₀( <em>신호 세기</em> ÷ <b>잡음 세기</b> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 신호가 잡음의 몇 배인지 구한 뒤, 로그를 취해 10을 곱한 값이 데시벨입니다.</div>
+        <div class="eq">SNR(dB) = 10 × log₁₀( <em>신호 세기</em> ÷ <b>잡음 세기</b> )</div>
       <table>
         <tr><td>log₁₀ 10 = 1</td><td>세기 10배 차이 = 10 dB</td></tr>
         <tr><td>log₁₀ 0.1 = −1</td><td>잡음이 10배 세면 −10 dB</td></tr>
@@ -620,11 +630,14 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>다섯 명 중 셋 이상이 틀릴 확률은 어떻게 계산해요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>독립시행의 확률</b> (ₙCᵣ pʳ (1 − p)ⁿ⁻ʳ)</div>
-      <div class="eq">r명 틀릴 확률 = ₅C<sub>r</sub> × <em>p</em><sup>r</sup> × (1 − <em>p</em>)<sup>5−r</sup><br>다수결이 틀릴 확률 = r = 3, 4, 5의 합</div>
+      <div class="inwords"><b>말로 먼저</b> — 다섯 이웃 중 r명이 틀리는 가짓수에 그렇게 될 확률을 곱하고, r이 3·4·5일 때를 모두 더합니다.</div>
+        <div class="eq">r명 틀릴 확률 = ₅C<sub>r</sub> × <em>p</em><sup>r</sup> × (1 − <em>p</em>)<sup>5−r</sup><br>다수결이 틀릴 확률 = r = 3, 4, 5의 합</div>
       <table>
         <tr><td>p</td><td>정답 하나가 틀렸을 확률 (여기서 0.2)</td></tr>
         <tr><td>r</td><td>다섯 이웃 중 틀린 이웃 수</td></tr>
-      </table>
+        <tr><td>₅Cᵣ</td><td>"오 씨 알". 다섯 이웃 중 틀린 r명을 고르는 가짓수. ₅C₃ = 10</td></tr>
+          <tr><td>pʳ</td><td>p를 r번 곱한 것. 고른 r명이 모두 틀릴 확률</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — p = 0.2<br>셋: 10 × 0.008 × 0.64 = 0.0512 · 넷: 5 × 0.0016 × 0.8 = 0.0064 · 다섯: 0.00032<br>합 ≈ <b>0.058</b> → 한 명에게 물을 때(0.2)보다 훨씬 작다</div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>20%가 6%로! 단, 이웃끼리 서로 독립이라고 단순하게 본 계산이에요.</p></div></div>
     </div>
@@ -744,12 +757,15 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>픽셀을 0.05씩만 바꿨는데 점수가 얼마나 바뀌어요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>내적</b>과 <b>절댓값</b>, 부호 (+1 / −1)</div>
-      <div class="eq">점수 변화 = Σ <em>w</em>ₖ × ( <b>ε</b> × 부호(<em>w</em>ₖ) ) = <b>ε</b> × Σ |<em>w</em>ₖ|</div>
+      <div class="inwords"><b>말로 먼저</b> — 모든 점을 가중치 부호 쪽으로 ε씩 밀면, 점수는 가중치 크기의 합에 ε를 곱한 만큼 움직입니다.</div>
+        <div class="eq">점수 변화 = Σ <em>w</em>ₖ × ( <b>ε</b> × 부호(<em>w</em>ₖ) ) = <b>ε</b> × Σ |<em>w</em>ₖ|</div>
       <table>
         <tr><td>wₖ</td><td>픽셀 k에 곱하는 가중치</td></tr>
         <tr><td>ε</td><td>"엡실론". 픽셀마다 미는 양</td></tr>
         <tr><td>부호(w)</td><td>w가 양수면 +1, 음수면 −1</td></tr>
-      </table>
+        <tr><td>Σ</td><td>"시그마". 모든 점 k에 대해 더하라는 표시</td></tr>
+          <tr><td>| |</td><td>절댓값. 부호를 떼고 크기만 본다</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — 픽셀 4개, w = (0.5, −0.5, 0.5, −0.5), ε = 0.1<br>점수 변화 = 0.1 × (0.5 + 0.5 + 0.5 + 0.5) = <b>0.2</b><br>같은 크기의 가중치로 픽셀이 64개면 16배 → <b>3.2</b></div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>픽셀이 많을수록 위험하구나. 실제 사진은 픽셀이 수십만 개니까 훨씬 더 작은 ε로도 되겠네요.</p></div></div>
     </div>
@@ -921,11 +937,14 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"최솟값 안에 최댓값"이 들어 있는 식이라던데, 무슨 순서로 읽어요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>함수의 최댓값·최솟값</b> (안쪽부터 계산)</div>
-      <div class="eq">min<sub>판정기</sub> 평균 [ max<sub>|변조| ≤ ε</sub> 손실( <em>그림</em> + <b>변조</b> ) ]</div>
+      <div class="inwords"><b>말로 먼저</b> — 안쪽에서는 공격자가 ε 안에서 가장 나쁜 변조를 찾고, 바깥에서는 그 손실이 평균적으로 작아지도록 판정기를 고칩니다.</div>
+        <div class="eq">min<sub>판정기</sub> 평균 [ max<sub>|변조| ≤ ε</sub> 손실( <em>그림</em> + <b>변조</b> ) ]</div>
       <table>
         <tr><td>안쪽 max</td><td>공격자: ε 안에서 손실이 가장 커지는 변조 찾기</td></tr>
         <tr><td>바깥 min</td><td>방어자: 그 가장 나쁜 손실을 줄이도록 판정기 고치기</td></tr>
-      </table>
+        <tr><td>|변조| ≤ ε</td><td>점 하나를 ε보다 많이 바꾸지 않는다는 조건</td></tr>
+          <tr><td>평균 [ ]</td><td>학습 그림 모두에 대해 평균을 낸다</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — 한 그림의 변조 후보 세 개, 손실 0.2 · 0.9 · 0.4<br>안쪽 max = <b>0.9</b> → 이 그림에서는 0.9를 줄이도록 배운다<br>(보통 학습은 변조 없는 손실만 줄인다)</div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>안쪽은 공격자, 바깥은 방어자. 식 하나에 두 사람이 들어 있네요.</p></div></div>
     </div>

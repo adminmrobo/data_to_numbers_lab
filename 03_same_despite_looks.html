@@ -325,6 +325,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .crowdrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
+
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
 </style>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="겉모습이 달라도 같은 것은 같게 — 모든 데이터는 숫자가 된다 3장">
@@ -407,6 +414,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <p><b>SimCLR</b> 사진의 여러 모습을 서로 가깝게 배우는 방법 · <b>FaceNet</b> 얼굴을 숫자 줄로 바꾸는 모델 · <b>x-vector</b> 목소리 주인을 담는 숫자 줄 · <b>TrOCR</b> 손글씨·인쇄 글자 읽기 모델 · <b>SBERT</b> 문장 뜻을 숫자 줄로 바꾸는 모델 · <b>OpenPose</b> 사진에서 관절 위치를 찾는 방법 · <b>I3D</b> 영상 동작 인식 모델 · <b>CLIP</b> 사진과 글을 한 공간에 놓는 모델</p>
     </details>
   </div>
+  <div class="recap first"><b>30초 복습</b> — 2장에서 본 것: 규칙으로 바꾼 숫자는 색·조명·글씨체가 조금만 달라도 크게 달라집니다(초록 사과를 놓쳤죠). 3장은 같은 것은 가깝게, 다른 것은 멀게 숫자를 다시 놓는 학습을 봅니다. 두 점 사이 거리(피타고라스 정리)만 떠올리면 충분합니다.</div>
 </section>
 
 <section class="level" id="cast" aria-labelledby="h-cast">
@@ -474,11 +482,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>코사인은 삼각형에서 배운 거잖아요. 숫자 줄에도 각도가 있어요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>벡터의 내적</b>과 <b>코사인</b> (두 화살표 사이 각)</div>
-      <div class="eq">코사인 유사도 = ( <em>a</em> · <b>b</b> ) ÷ ( |<em>a</em>| × |<b>b</b>| )</div>
+      <div class="inwords"><b>말로 먼저</b> — 두 숫자 줄을 화살표로 보고, 길이는 빼고 방향이 얼마나 같은지만 잽니다(같으면 1, 직각이면 0).</div>
+        <div class="eq">코사인 유사도 = ( <em>a</em> · <b>b</b> ) ÷ ( |<em>a</em>| × |<b>b</b>| )</div>
       <table>
         <tr><td>a · b</td><td>내적. 같은 자리 숫자끼리 곱해 모두 더한 값</td></tr>
         <tr><td>|a|</td><td>화살표 길이. 원점에서의 거리</td></tr>
-      </table>
+        <tr><td>a, b</td><td>비교하는 두 숫자 줄(임베딩). 화살표 두 개로 본다</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — a = (1, 0), b = (1, 1)<br>내적 1×1 + 0×1 = 1 · 길이 1과 √2 ≈ 1.414<br>코사인 = 1 ÷ 1.414 ≈ <b>0.707</b> (45도) · b를 (5, 5)로 늘려도 <b>0.707</b></div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>화살표를 늘려도 각도는 그대로니까 값이 같네요. 크기는 무시하고 방향만 보는 거구나.</p></div></div>
     </div>
@@ -547,7 +557,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"같은 쌍", "다른 쌍"이 한 번에 몇 개씩 나와요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>조합</b> (n개 중 2개 고르기)</div>
-      <div class="eq">같은 쌍 = <em>n</em> ,&nbsp; 다른 쌍 = <b>n × (n − 1) ÷ 2</b> ,&nbsp; 손실 = 같은 쌍 거리² + 다른 쌍 (<i>m</i> − 거리)²</div>
+      <div class="inwords"><b>말로 먼저</b> — 사진 n장에서 같은 사진의 두 모습은 n쌍, 서로 다른 사진끼리는 n개 중 2개를 고르는 수만큼 쌍이 생깁니다.</div>
+        <div class="eq">같은 쌍 = <em>n</em> ,&nbsp; 다른 쌍 = <b>n × (n − 1) ÷ 2</b> ,&nbsp; 손실 = 같은 쌍 거리² + 다른 쌍 (<i>m</i> − 거리)²</div>
       <table>
         <tr><td>n</td><td>한 번에 쓰는 사진 수. 사진마다 모습 두 개</td></tr>
         <tr><td>m</td><td>다른 쌍이 적어도 떨어져야 할 거리 (여기서는 1)</td></tr>
@@ -620,7 +631,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"max(0, …)"는 무슨 뜻이에요? 0이랑 비교해서 큰 걸 고르는 거예요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>부등식</b>과 <b>최댓값</b> (조건을 만족하면 0점)</div>
-      <div class="eq">손실 = max( 0 , <em>d</em>(기준, 같은 사람)² − <b>d</b>(기준, 다른 사람)² + <i>α</i> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 같은 사람이 다른 사람보다 α만큼 더 가깝지 않으면, 모자란 만큼을 벌점으로 줍니다.</div>
+        <div class="eq">손실 = max( 0 , <em>d</em>(기준, 같은 사람)² − <b>d</b>(기준, 다른 사람)² + <i>α</i> )</div>
       <table>
         <tr><td>d(·,·)</td><td>숫자 줄 사이 거리</td></tr>
         <tr><td>α</td><td>"알파". 같은 사람이 다른 사람보다 적어도 이만큼 더 가까워야 한다는 여유</td></tr>
@@ -699,7 +711,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>녹음 12개면 쌍이 몇 개나 돼요? 그중 같은 낱말 쌍은요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>조합</b> (ₙC₂ = n × (n − 1) ÷ 2)</div>
-      <div class="eq">전체 쌍 = <em>n</em> × (<em>n</em> − 1) ÷ 2 ,&nbsp; 같은 낱말 쌍 = 낱말 수 × <b>k</b> × (<b>k</b> − 1) ÷ 2</div>
+      <div class="inwords"><b>말로 먼저</b> — 녹음 n개 중 2개를 고르는 쌍의 수를 세고, 그중 같은 낱말끼리 짝지은 쌍만 따로 셉니다.</div>
+        <div class="eq">전체 쌍 = <em>n</em> × (<em>n</em> − 1) ÷ 2 ,&nbsp; 같은 낱말 쌍 = 낱말 수 × <b>k</b> × (<b>k</b> − 1) ÷ 2</div>
       <table>
         <tr><td>n</td><td>훈련 녹음 수 (12)</td></tr>
         <tr><td>k</td><td>낱말 하나당 녹음 수 (6 = 3명 × 2번)</td></tr>
@@ -824,7 +837,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"글자 겹침 비율"은 어떻게 계산해요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>집합</b> (교집합의 원소 수 ÷ 합집합의 원소 수)</div>
-      <div class="eq">겹침 비율 = | <em>A</em> ∩ <b>B</b> | ÷ | <em>A</em> ∪ <b>B</b> |</div>
+      <div class="inwords"><b>말로 먼저</b> — 두 문장에 함께 쓰인 글자 수를, 어느 한쪽에라도 쓰인 글자 수로 나눕니다.</div>
+        <div class="eq">겹침 비율 = | <em>A</em> ∩ <b>B</b> | ÷ | <em>A</em> ∪ <b>B</b> |</div>
       <table>
         <tr><td>A, B</td><td>두 문장에 쓰인 글자 모음 (띄어쓰기 빼고, 같은 글자는 한 번)</td></tr>
         <tr><td>∩, ∪</td><td>교집합(둘 다 있는 글자), 합집합(어느 한쪽에라도 있는 글자)</td></tr>
@@ -900,7 +914,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>키가 다른 두 사람이 정말 같은 숫자가 돼요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>평행이동</b>과 <b>닮음비</b></div>
-      <div class="eq">맞춘 좌표 = ( <em>관절 좌표</em> − <b>골반 좌표</b> ) ÷ <i>키</i></div>
+      <div class="inwords"><b>말로 먼저</b> — 관절 위치에서 골반 위치를 빼서 선 자리를 지우고, 키로 나눠 체격을 지웁니다.</div>
+        <div class="eq">맞춘 좌표 = ( <em>관절 좌표</em> − <b>골반 좌표</b> ) ÷ <i>키</i></div>
       <table>
         <tr><td>− 골반</td><td>평행이동. 서 있는 자리를 지운다</td></tr>
         <tr><td>÷ 키</td><td>닮음비로 나누기. 체격을 지운다</td></tr>
@@ -1026,7 +1041,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>사진 숫자랑 글 숫자를 어떻게 비교해요? 둘이 단위가 다르잖아요.</p></div></div>
       <div class="school">학교 수학으로 보면: <b>행렬</b> (모든 사진 × 모든 글의 표) 과 <b>코사인</b></div>
-      <div class="eq">유사도 표[<em>i</em>, <b>j</b>] = 코사인( 사진<sub><em>i</em></sub> , 글<sub><b>j</b></sub> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 모든 사진과 모든 글을 세로·가로로 늘어놓고, 만나는 자리마다 코사인 유사도를 적은 표입니다.</div>
+        <div class="eq">유사도 표[<em>i</em>, <b>j</b>] = 코사인( 사진<sub><em>i</em></sub> , 글<sub><b>j</b></sub> )</div>
       <table>
         <tr><td>i, j</td><td>사진 번호, 글 번호</td></tr>
         <tr><td>대각선</td><td>짝인 사진·글 쌍. 학습은 대각선을 크게, 나머지를 작게 만든다</td></tr>

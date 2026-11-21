@@ -325,6 +325,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .crowdrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
+
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
 </style>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="숫자로 바꾸는 네 개의 창구 — 모든 데이터는 숫자가 된다 2장">
@@ -404,6 +411,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <p><b>RGB</b> 빨강·초록·파랑 세 숫자로 색을 적는 방식 · <b>Hz</b> 헤르츠, 1초에 몇 번 떨리나 · <b>IoU</b> Intersection over Union, 두 상자가 겹친 넓이 ÷ 합친 넓이 · <b>ViT</b> 사진을 조각 내 읽는 모델 · <b>AST</b> 소리 그림을 조각 내 읽는 모델 · <b>BPE</b> 자주 붙어 나오는 글자끼리 묶어 조각을 만드는 방법</p>
     </details>
   </div>
+  <div class="recap first"><b>30초 복습</b> — 1장에서 본 것: 컴퓨터 안에서는 사진·영상·글·소리가 모두 숫자의 묶음입니다. 사진은 가로 × 세로 × 색 3개, 영상은 거기에 장면 수를 곱하고, 소리는 초 × 1초에 재는 횟수입니다. 2장은 이 "번역 규칙"을 하나씩 자세히 봅니다.</div>
 </section>
 
 <section class="level" id="cast" aria-labelledby="h-cast">
@@ -463,7 +471,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>흑백으로 바꿀 때 왜 초록에 0.587이나 곱해요? 셋을 똑같이 나누면 안 되나요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>가중 평균</b> (중요한 것에 더 큰 비율)</div>
-      <div class="eq">밝기 = <em>0.299</em> × <b>R</b> + <em>0.587</em> × <b>G</b> + <em>0.114</em> × <b>B</b></div>
+      <div class="inwords"><b>말로 먼저</b> — 빨강·초록·파랑에 사람 눈이 느끼는 밝기 비율을 곱해 더하면 흑백 밝기 하나가 됩니다.</div>
+        <div class="eq">밝기 = <em>0.299</em> × <b>R</b> + <em>0.587</em> × <b>G</b> + <em>0.114</em> × <b>B</b></div>
       <table>
         <tr><td>R, G, B</td><td>빨강·초록·파랑 밝기 (0~255)</td></tr>
         <tr><td>0.299 …</td><td>가중치. 사람 눈이 초록을 가장 밝게, 파랑을 가장 어둡게 느끼는 정도. 합은 1</td></tr>
@@ -591,7 +600,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>원-핫으로 하면 숫자가 엄청 길어지지 않아요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>곱셈</b>과 <b>좌표</b> (한 축에만 1인 점)</div>
-      <div class="eq">원-핫 숫자 개수 = <em>토큰 수</em> × <i>어휘 수</i> ,&nbsp; 그중 1인 숫자 = <em>토큰 수</em></div>
+      <div class="inwords"><b>말로 먼저</b> — 토큰마다 어휘 수만큼의 숫자 줄을 만들고, 그 토큰 번호 자리에만 1을 적습니다.</div>
+        <div class="eq">원-핫 숫자 개수 = <em>토큰 수</em> × <i>어휘 수</i> ,&nbsp; 그중 1인 숫자 = <em>토큰 수</em></div>
       <table>
         <tr><td>토큰 수</td><td>문장을 쪼갠 조각 수</td></tr>
         <tr><td>어휘 수</td><td>조각 목록의 길이. 실제 모델은 수만 개</td></tr>
@@ -665,12 +675,16 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"사인" 그래프가 왜 나와요? 소리랑 무슨 상관이에요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>삼각함수</b> (사인 그래프의 주기와 진동수)</div>
-      <div class="eq">소리 = <em>크기</em> × sin(2π × <b>f</b> × <i>t</i>) ,&nbsp; 높낮이 간격 = <i>1초에 재는 횟수</i> ÷ <b>창 길이</b></div>
+      <div class="inwords"><b>말로 먼저</b> — 소리는 1초에 f번 오르내리는 물결이고, 짧게 자른 창이 길수록 높낮이를 더 촘촘히 가릅니다.</div>
+        <div class="eq">소리 = <em>크기</em> × sin(2π × <b>f</b> × <i>t</i>) ,&nbsp; 높낮이 간격 = <i>1초에 재는 횟수</i> ÷ <b>창 길이</b></div>
       <table>
         <tr><td>f</td><td>진동수. 1초에 몇 번 떨리나 (Hz). 클수록 높은 소리</td></tr>
         <tr><td>t</td><td>시간(초)</td></tr>
         <tr><td>창 길이</td><td>한 번에 자르는 숫자 개수</td></tr>
-      </table>
+        <tr><td>sin( )</td><td>"사인". 0을 가운데 두고 위아래로 오르내리는 물결 모양</td></tr>
+          <tr><td>2π</td><td>"이 파이". 물결 한 번(한 바퀴)을 나타내는 각도, 약 6.28</td></tr>
+          <tr><td>크기</td><td>물결이 얼마나 크게 오르내리나 = 소리의 크기</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b><br>"라" 440Hz → 1초에 440번 떨림, 한 번 떨리는 데 1 ÷ 440 ≈ <b>0.00227초</b><br>1초에 8,000번 재고 창 64개면 8,000 ÷ 64 = <b>125Hz</b> 간격으로만 높이를 구분</div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>창이 짧으면 높이 간격이 넓어서 "미"와 "솔"을 못 가를 수 있겠네요!</p></div></div>
     </div>
@@ -743,11 +757,14 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"겹친 넓이 나누기 합친 넓이"… 합친 넓이는 그냥 둘을 더하면 돼요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>넓이</b>와 <b>집합</b> (교집합 ÷ 합집합)</div>
-      <div class="eq">IoU = <em>겹친 넓이</em> ÷ ( <b>A 넓이</b> + <b>B 넓이</b> − <em>겹친 넓이</em> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 두 상자가 겹친 넓이를, 두 상자가 덮은 전체 넓이(겹친 곳은 한 번만 셈)로 나눕니다.</div>
+        <div class="eq">IoU = <em>겹친 넓이</em> ÷ ( <b>A 넓이</b> + <b>B 넓이</b> − <em>겹친 넓이</em> )</div>
       <table>
         <tr><td>겹친 넓이</td><td>두 상자가 함께 덮은 부분 (교집합)</td></tr>
         <tr><td>− 겹친 넓이</td><td>그냥 더하면 겹친 부분을 두 번 세므로 한 번 뺀다</td></tr>
-      </table>
+        <tr><td>IoU</td><td>Intersection over Union. "겹친 넓이 ÷ 합친 넓이"의 영어 머리글자</td></tr>
+          <tr><td>A, B</td><td>정답 상자와 예측 상자</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — 4×4 상자 둘, 가로로 2만큼 어긋남<br>각 넓이 16, 겹친 부분 2 × 4 = 8<br>IoU = 8 ÷ (16 + 16 − 8) = 8 ÷ 24 ≈ <b>0.333</b></div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>반만 겹친 것 같은데 0.33밖에 안 되네요. 기준 0.5를 넘기기가 생각보다 어렵겠어요.</p></div></div>
     </div>
@@ -818,7 +835,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"시그마"는 뭐예요? 평균은 아는데…</p></div></div>
       <div class="school">학교 수학으로 보면: <b>평균과 표준편차</b>, <b>표준화(z점수)</b></div>
-      <div class="eq">z = ( <em>x</em> − <b>μ</b> ) ÷ <i>σ</i></div>
+      <div class="inwords"><b>말로 먼저</b> — 점마다 평균을 빼고 퍼진 정도로 나누면, 사진이 밝든 어둡든 "평균보다 얼마나 밝은가"만 남습니다.</div>
+        <div class="eq">z = ( <em>x</em> − <b>μ</b> ) ÷ <i>σ</i></div>
       <table>
         <tr><td>x</td><td>점 하나의 밝기</td></tr>
         <tr><td>μ</td><td>"뮤". 그 사진의 밝기 평균</td></tr>
@@ -895,7 +913,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>196이랑 768은 어디서 나온 숫자예요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>나눗셈과 제곱</b> (넓이 나누기)</div>
-      <div class="eq">조각 수 = ( <em>한 변</em> ÷ <b>p</b> )² ,&nbsp; 조각 하나의 숫자 = <b>p</b> × <b>p</b> × <i>색 수</i></div>
+      <div class="inwords"><b>말로 먼저</b> — 사진 한 변을 조각 한 변으로 나눠 제곱하면 조각 수이고, 조각 하나의 숫자는 조각 넓이 × 색 수입니다.</div>
+        <div class="eq">조각 수 = ( <em>한 변</em> ÷ <b>p</b> )² ,&nbsp; 조각 하나의 숫자 = <b>p</b> × <b>p</b> × <i>색 수</i></div>
       <table>
         <tr><td>p</td><td>조각의 한 변 길이 (점 수)</td></tr>
         <tr><td>색 수</td><td>컬러 3, 흑백·소리 그림 1</td></tr>

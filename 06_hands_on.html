@@ -326,6 +326,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
 
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
+
 /* 6장 실전 연습장 */
 .tabbar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0 10px;position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.95);padding:6px 0}
 @media (max-width:760px){.tabbar{grid-template-columns:repeat(2,1fr)}}
@@ -531,6 +538,7 @@ ol.missions li .ok{margin-top:4px;color:var(--gfp);font-size:15px}
         <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
         <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>예산이 정해지면 한 변은 어떻게 거꾸로 구해요?</p></div></div>
         <div class="school">학교 수학으로 보면: <b>넓이</b>(가로 × 세로)와 <b>제곱근</b></div>
+        <div class="inwords"><b>말로 먼저</b> — 한 변을 두 번 곱하고 색 수와 장면 수를 곱하면 숫자 개수이고, 이를 거꾸로 풀면 예산 안 최대 한 변입니다.</div>
         <div class="eq">숫자 개수 = <em>한 변</em> × <em>한 변</em> × <i>색</i> × <b>장면 수</b> ,&nbsp; 최대 한 변 = √( 예산 ÷ ( <i>색</i> × <b>장면 수</b> ) ) 의 정수 부분</div>
         <table>
           <tr><td>한 변</td><td>정사각형 사진의 가로(=세로) 점 수</td></tr>
@@ -615,6 +623,7 @@ ol.missions li .ok{margin-top:4px;color:var(--gfp);font-size:15px}
         <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
         <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>필터가 "가로줄 같다"는 걸 숫자로 어떻게 재요?</p></div></div>
         <div class="school">학교 수학으로 보면: <b>평균</b>과 <b>최댓값</b></div>
+        <div class="inwords"><b>말로 먼저</b> — 나란한 점 세 개의 평균으로 "이 자리에 그 모양이 있나"를 재고, 그림 전체에서 가장 큰 값만 남깁니다.</div>
         <div class="eq">필터 값 = ( <em>점 1</em> + <em>점 2</em> + <em>점 3</em> ) ÷ 3 ,&nbsp; 특징 = 모든 위치의 필터 값 중 <b>최댓값</b></div>
         <table>
           <tr><td>점 1·2·3</td><td>나란히 놓인 점 세 개의 밝기 (가로 필터는 옆으로, 세로 필터는 위아래로, 대각 필터는 비스듬히)</td></tr>
@@ -627,7 +636,7 @@ ol.missions li .ok{margin-top:4px;color:var(--gfp);font-size:15px}
 
     <div class="talkrow" aria-label="장면 대화">
       <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>옮겨진 그림을 맞히려면 그림을 더 모을까요, 읽는 방법을 바꿀까요?</p></div></div>
-      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>당연히 더 모으지! 270장이면 뭐든 맞혀.</p></div></div>
+      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>그야 더 모으지! 270장이면 뭐든 맞혀.</p></div></div>
       <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>정확도 선 그래프에서 빨간 선과 파란 선을 비교해 봐. 조작판 아래 그리기판에 직접 줄을 그려 봐도 돼.</p></div></div>
     </div>
 
@@ -699,6 +708,7 @@ ol.missions li .ok{margin-top:4px;color:var(--gfp);font-size:15px}
         <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
         <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>점을 조금씩만 바꾸는데 판정이 왜 뒤집혀요?</p></div></div>
         <div class="school">학교 수학으로 보면: <b>일차식</b>(점수 = 가중치 × 밝기의 합)과 <b>절댓값</b></div>
+        <div class="inwords"><b>말로 먼저</b> — 공격은 점마다 ε씩 밀어, 정답과 오답의 점수 차이를 "ε × 가중치 차이 크기의 합"만큼 줄입니다.</div>
         <div class="eq">점수 차이가 줄어드는 양 = <b>ε</b> × ( <em>|가중치 차이 1|</em> + <em>|가중치 차이 2|</em> + … + <em>|가중치 차이 64|</em> )</div>
         <table>
           <tr><td>ε</td><td>공격 세기. 점 하나의 밝기를 최대 이만큼 바꾼다</td></tr>
@@ -779,6 +789,7 @@ ol.missions li .ok{margin-top:4px;color:var(--gfp);font-size:15px}
         <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
         <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>지우고 비트도 줄이면 크기는 정확히 얼마예요?</p></div></div>
         <div class="school">학교 수학으로 보면: <b>곱셈</b>과 <b>분배법칙</b></div>
+        <div class="inwords"><b>말로 먼저</b> — 남은 가중치에 편향 3개를 더하고, 숫자 하나에 드는 비트(지웠다면 위치 표시 8비트 포함)를 곱합니다.</div>
         <div class="eq">크기(비트) = ( <em>남은 가중치</em> + 3 ) × ( <b>비트</b> + <i>위치 표시 8</i> )</div>
         <table>
           <tr><td>남은 가중치</td><td>전체 192개 × (1 − 지운 비율), 3은 지우지 않는 편향</td></tr>

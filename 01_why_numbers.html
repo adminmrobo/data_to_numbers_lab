@@ -325,6 +325,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .crowdrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
+
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
 </style>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="사진도, 목소리도, 결국 숫자다 — 모든 데이터는 숫자가 된다 1장">
@@ -485,7 +492,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"2의 8제곱"이 왜 256이 되는 거예요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>거듭제곱</b> (같은 수를 여러 번 곱하기)</div>
-      <div class="eq">가짓수 = <b>2</b><sup><em>k</em></sup> ,&nbsp; 사진 숫자 개수 = <i>가로</i> × <i>세로</i> × <i>색 수</i></div>
+      <div class="inwords"><b>말로 먼저</b> — 비트가 하나 늘 때마다 적을 수 있는 가짓수는 두 배가 되고, 사진의 숫자 개수는 가로·세로·색 수를 곱한 만큼입니다.</div>
+        <div class="eq">가짓수 = <b>2</b><sup><em>k</em></sup> ,&nbsp; 사진 숫자 개수 = <i>가로</i> × <i>세로</i> × <i>색 수</i></div>
       <table>
         <tr><td>2</td><td>한 자리에 올 수 있는 값의 수 (0 또는 1)</td></tr>
         <tr><td>k</td><td>자리 수(비트 수). 자리가 하나 늘 때마다 가짓수가 두 배</td></tr>
@@ -559,7 +567,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>곱하기를 세 번, 네 번 하던데… 이건 무슨 계산이에요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>직육면체의 부피</b> (가로 × 세로 × 높이)</div>
-      <div class="eq">영상 숫자 = <em>장면 수</em> × <i>가로</i> × <i>세로</i> × <b>3</b> ,&nbsp; 소리 숫자 = <em>초</em> × <i>1초에 재는 횟수</i></div>
+      <div class="inwords"><b>말로 먼저</b> — 영상은 사진 숫자에 장면 수를 곱하고, 소리는 길이(초)에 1초에 재는 횟수를 곱합니다.</div>
+        <div class="eq">영상 숫자 = <em>장면 수</em> × <i>가로</i> × <i>세로</i> × <b>3</b> ,&nbsp; 소리 숫자 = <em>초</em> × <i>1초에 재는 횟수</i></div>
       <table>
         <tr><td>3</td><td>빨강·초록·파랑 세 가지 색 밝기</td></tr>
         <tr><td>장면 수</td><td>영상을 이루는 사진(프레임) 수</td></tr>
@@ -636,7 +645,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"e의 점수 제곱"… e는 또 뭐예요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>지수함수</b>와 <b>비율</b> (전체 중 몇 %)</div>
-      <div class="eq">확률<sub>고양이</sub> = <b>e</b><sup><em>점수</em><sub>고양이</sub></sup> ÷ ( <b>e</b><sup><em>점수</em><sub>고양이</sub></sup> + <b>e</b><sup><em>점수</em><sub>개</sub></sup> + <b>e</b><sup><em>점수</em><sub>여우</sub></sup> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 점수마다 e를 거듭제곱해 모두 양수로 만든 뒤, 전체 합으로 나눠 "전체 중 몇 %"로 바꿉니다.</div>
+        <div class="eq">확률<sub>고양이</sub> = <b>e</b><sup><em>점수</em><sub>고양이</sub></sup> ÷ ( <b>e</b><sup><em>점수</em><sub>고양이</sub></sup> + <b>e</b><sup><em>점수</em><sub>개</sub></sup> + <b>e</b><sup><em>점수</em><sub>여우</sub></sup> )</div>
       <table>
         <tr><td>e</td><td>"이". 약 2.718인 수. 거듭제곱하면 항상 양수</td></tr>
         <tr><td>점수</td><td>모델이 각 답에 매긴 숫자. 클수록 그 답 같다는 뜻</td></tr>
@@ -718,12 +728,15 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"거리"를 숫자로 어떻게 재요? 자로 재는 건가요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>피타고라스 정리</b> (두 점 사이 거리)</div>
-      <div class="eq">거리 = √( (<em>x</em>₁ − <em>x</em>₂)² + (<i>y</i>₁ − <i>y</i>₂)² ) ,&nbsp; 손실 = 같은 종류의 거리² + 다른 종류의 (<b>m</b> − 거리)²</div>
+      <div class="inwords"><b>말로 먼저</b> — 두 점 사이 거리는 가로 차이와 세로 차이로 만든 직각삼각형의 빗변이고, 손실은 같은 종류는 가깝게·다른 종류는 m 이상 떨어지게 하는 벌점입니다.</div>
+        <div class="eq">거리 = √( (<em>x</em>₁ − <em>x</em>₂)² + (<i>y</i>₁ − <i>y</i>₂)² ) ,&nbsp; 손실 = 같은 종류의 거리² + 다른 종류의 (<b>m</b> − 거리)²</div>
       <table>
         <tr><td>x, y</td><td>지도 위 두 물건의 좌표 (숫자 줄의 두 숫자)</td></tr>
         <tr><td>m</td><td>"다른 종류는 적어도 이만큼은 떨어져라" 하는 기준 거리. 이 페이지에서는 1</td></tr>
         <tr><td>손실</td><td>지금 지도가 얼마나 엉망인지 재는 점수. 0에 가까울수록 잘 정리됨</td></tr>
-      </table>
+        <tr><td>x₁, x₂</td><td>아래 작은 1·2는 "첫째 점·둘째 점"이라는 이름표</td></tr>
+          <tr><td>√ , ²</td><td>제곱근(루트)과 제곱. 차이를 제곱해 더한 뒤 루트를 씌운다</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — 두 점 (1, 2)와 (4, 6)이면<br>가로 차이 3, 세로 차이 4 → √(9 + 16) = √25 = <b>5</b><br>다른 종류인데 거리가 0.4면 손실 (1 − 0.4)² = <b>0.36</b></div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>직각삼각형의 빗변이 거리구나! 학습은 이 손실을 줄이는 쪽으로 점을 옮기는 거고요.</p></div></div>
     </div>
@@ -798,7 +811,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>저장 크기를 어떻게 계산하는 거예요? 비트, 바이트가 헷갈려요.</p></div></div>
       <div class="school">학교 수학으로 보면: <b>곱셈과 나눗셈</b>, 그리고 <b>평균</b></div>
-      <div class="eq">저장 크기(바이트) = <em>숫자 개수</em> × <i>숫자 하나의 비트</i> ÷ <b>8</b> ,&nbsp; 평균 차이 = (각 점 차이의 합) ÷ 점 개수</div>
+      <div class="inwords"><b>말로 먼저</b> — 저장 크기는 숫자 개수에 숫자 하나의 비트를 곱하고 8로 나눈 바이트이고, 평균 차이는 점마다 달라진 정도를 평균 낸 값입니다.</div>
+        <div class="eq">저장 크기(바이트) = <em>숫자 개수</em> × <i>숫자 하나의 비트</i> ÷ <b>8</b> ,&nbsp; 평균 차이 = (각 점 차이의 합) ÷ 점 개수</div>
       <table>
         <tr><td>비트</td><td>0 또는 1 한 자리. 256단계면 8비트, 4단계면 2비트</td></tr>
         <tr><td>÷ 8</td><td>8비트가 1바이트</td></tr>

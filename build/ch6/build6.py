@@ -90,3 +90,6 @@ t5=t5[:t5.find('<script>')].replace('읽은 곳 0% · 퀴즈 0/16','읽은 곳 0
 out=head+style+body+kgblock+'\n'+foot+t5+sprite+'\n'+sim6+'\n'+page+'\n'+kgx+'\n</body>\n</html>\n'
 open(os.path.join(REPO,'06_hands_on.html'),'w',encoding='utf-8').write(out)
 print('written',len(out))
+
+# ai-lab-extend 문구(말로 먼저·낱말 바꾸기)를 다시 끼운다
+subprocess.check_call([sys.executable,os.path.join(REPO,'build','extend','apply_extend.py'),REPO,'06_hands_on.html'])

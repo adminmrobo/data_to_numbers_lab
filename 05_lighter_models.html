@@ -325,6 +325,13 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 .crowdrow{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .seat{text-align:center;font-size:13px;color:var(--muted)}
 .seat img{width:84px;height:84px;image-rendering:pixelated;display:block;background:#fff;border:1px solid var(--rule);border-radius:12px}
+
+/* ai-lab-extend: 말로 먼저 */
+.inwords{background:var(--info-soft);border:1px solid #c5d5f2;border-radius:8px;padding:7px 12px;margin:8px 0 4px;font-size:15px;line-height:1.7}
+.inwords b{color:var(--info)}
+
+/* ai-lab-extend: 좁은 화면 수식 */
+@media (max-width:520px){.eq{white-space:normal;overflow-wrap:anywhere;line-height:1.9}}
 </style>
 <!-- lab-kg:head -->
 <meta name="citation_title" content="가볍게 만들기 — 모든 데이터는 숫자가 된다 5장">
@@ -385,7 +392,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
   </div>
   <div class="talk" aria-label="연구실 대화">
     <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>오늘은 모델을 다이어트시킵니다. 얼마나 줄일 수 있는지, 줄이면 무엇을 잃는지 재 봐요.</p></div></div>
-    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>크기는 비트로, 성능은 정확도로 단계마다 장부에 적을게요.</p></div></div>
+    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>크기는 비트로, 성능은 정확도로 단계마다 기록할게요.</p></div></div>
     <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>줄이면 무조건 손해지! 큰 게 좋은 거야. 정 줄여야 하면 한 번에 확 줄이고.</p></div></div>
     <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>내 뇌는 쌀알보다 작은데 잘만 날아다녀. 크기보다 무엇을 남기느냐겠지.</p></div></div>
   </div>
@@ -407,13 +414,14 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <p><b>bit(비트)</b> 0 또는 1 하나 · <b>byte(바이트)</b> 8비트 · <b>MB·GB</b> 백만·십억 바이트 · <b>INT8</b> 8비트 정수 · <b>Deep Compression</b> 가지치기·양자화·허프만 부호를 이은 압축 방법 · <b>MobileNet</b> 휴대폰용 가벼운 사진 모델 구조</p>
     </details>
   </div>
+  <div class="recap first"><b>30초 복습</b> — 4장에서 본 것: 그림 판정기는 가중치 195개로 점수를 매기고, 잡음과 공격에 따라 정확도가 달라졌습니다. 5장은 그 가중치를 덜 정밀하게, 덜 많이 적어 모델을 줄입니다. 비트(0 또는 1 하나)와 바이트(8비트)만 기억하면 됩니다.</div>
 </section>
 
 <section class="level" id="cast" aria-labelledby="h-cast">
   <h2 id="h-cast">등장인물 · 이 페이지 사용법</h2>
   <div class="cast">
     <div class="card doc"><img data-who="doc" data-mood="board" alt="" aria-hidden="true"><b>박사</b><span>해설과 판정. 친절한 선생님 역할도 맡아요</span></div>
-    <div class="card asst"><img data-who="asst" data-mood="report" alt="" aria-hidden="true"><b>조수 (하루)</b><span>크기 장부를 써요. 수식을 대신 물어봐요</span></div>
+    <div class="card asst"><img data-who="asst" data-mood="report" alt="" aria-hidden="true"><b>조수 (하루)</b><span>크기 기록을 맡아요. 수식을 대신 물어봐요</span></div>
     <div class="card fly"><img data-who="fly" data-mood="clip" alt="" aria-hidden="true"><b>초파리 연구원</b><span>작은 뇌로 사는 쪽. "무엇을 남길까?"</span></div>
     <div class="card robo"><img data-who="robo" data-mood="smile" alt="" aria-hidden="true"><b>주판봇</b><span>큰 게 좋다고 믿는 쪽</span></div>
   </div>
@@ -473,7 +481,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>비트를 줄이면 적을 수 있는 숫자가 얼마나 줄어요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>지수</b> (2ⁿ)와 <b>단위 바꾸기</b></div>
-      <div class="eq">크기(바이트) = <em>가중치 수</em> × <b>비트</b> ÷ 8 ,&nbsp; 적을 수 있는 값의 수 = 2<sup><b>비트</b></sup></div>
+      <div class="inwords"><b>말로 먼저</b> — 크기는 가중치 수에 비트를 곱하고 8로 나눈 바이트이고, 비트 b개로 적을 수 있는 값은 2를 b번 곱한 만큼입니다.</div>
+        <div class="eq">크기(바이트) = <em>가중치 수</em> × <b>비트</b> ÷ 8 ,&nbsp; 적을 수 있는 값의 수 = 2<sup><b>비트</b></sup></div>
       <table>
         <tr><td>8비트</td><td>2⁸ = 256가지 값</td></tr>
         <tr><td>4비트</td><td>2⁴ = 16가지 값</td></tr>
@@ -547,7 +556,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>반올림하면 최대 얼마나 틀려요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>반올림</b>과 <b>등차수열</b> (고른 눈금)</div>
-      <div class="eq">눈금 간격 = ( <em>최댓값</em> − <em>최솟값</em> ) ÷ ( 2<sup><b>b</b></sup> − 1 ) ,&nbsp; 최대 오차 = 간격 ÷ 2</div>
+      <div class="inwords"><b>말로 먼저</b> — 가장 작은 값과 가장 큰 값 사이를 고른 눈금으로 나누면, 한 눈금 간격의 절반이 반올림의 최대 오차입니다.</div>
+        <div class="eq">눈금 간격 = ( <em>최댓값</em> − <em>최솟값</em> ) ÷ ( 2<sup><b>b</b></sup> − 1 ) ,&nbsp; 최대 오차 = 간격 ÷ 2</div>
       <table>
         <tr><td>b</td><td>비트 수</td></tr>
         <tr><td>2ᵇ − 1</td><td>눈금 2ᵇ개 사이의 구간 수</td></tr>
@@ -617,7 +627,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>90%를 지우면 몇 배 줄어든 거예요? 10배?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>백분율</b>과 <b>비율</b></div>
-      <div class="eq">남는 가중치 = <em>전체</em> × ( 1 − <b>지운 비율</b> ) ,&nbsp; 줄어든 배수 = 1 ÷ ( 1 − <b>지운 비율</b> )</div>
+      <div class="inwords"><b>말로 먼저</b> — 남은 비율(1 − 지운 비율)을 곱하면 남는 개수이고, 1을 남은 비율로 나누면 몇 배 줄었는지입니다.</div>
+        <div class="eq">남는 가중치 = <em>전체</em> × ( 1 − <b>지운 비율</b> ) ,&nbsp; 줄어든 배수 = 1 ÷ ( 1 − <b>지운 비율</b> )</div>
       <table>
         <tr><td>지운 비율 0.9</td><td>남는 것 10% → 10배</td></tr>
         <tr><td>위치 표시</td><td>남은 가중치가 어디 있는지 적는 몫이 따로 든다</td></tr>
@@ -694,7 +705,8 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>240MB가 6.9MB면 몇 배예요? 그리고 단계별 배수는 어떻게 합쳐져요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>나눗셈</b>과 <b>곱셈의 연쇄</b> (비율의 곱)</div>
-      <div class="eq">전체 압축 배수 = <em>단계 1 배수</em> × <em>단계 2 배수</em> × <b>단계 3 배수</b></div>
+      <div class="inwords"><b>말로 먼저</b> — 단계마다 줄인 배수를 모두 곱하면 전체로 몇 배 줄었는지가 나옵니다.</div>
+        <div class="eq">전체 압축 배수 = <em>단계 1 배수</em> × <em>단계 2 배수</em> × <b>단계 3 배수</b></div>
       <table>
         <tr><td>압축 배수</td><td>원래 크기 ÷ 줄인 크기</td></tr>
       </table>
@@ -767,11 +779,15 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"온도로 나눈다"면 확률이 어떻게 변해요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>지수함수</b> eˣ와 <b>비율</b></div>
-      <div class="eq">확률ᵢ = e<sup>점수ᵢ ÷ <b>T</b></sup> ÷ Σ e<sup>점수ⱼ ÷ <b>T</b></sup></div>
+      <div class="inwords"><b>말로 먼저</b> — 점수를 온도 T로 나눈 뒤 e로 거듭제곱하고 전체 합으로 나눕니다. T가 클수록 확률이 고르게 펴집니다.</div>
+        <div class="eq">확률ᵢ = e<sup>점수ᵢ ÷ <b>T</b></sup> ÷ Σ e<sup>점수ⱼ ÷ <b>T</b></sup></div>
       <table>
         <tr><td>T = 1</td><td>보통 확률</td></tr>
         <tr><td>T 크게</td><td>점수 차이가 줄어 확률이 고르게 펴진다</td></tr>
-      </table>
+        <tr><td>e</td><td>약 2.718인 수(1장 ③). 거듭제곱하면 항상 양수</td></tr>
+          <tr><td>Σ</td><td>"시그마". 모든 답 j에 대해 더하라는 표시</td></tr>
+          <tr><td>i, j</td><td>답의 번호. i는 지금 확률을 구하는 답, j는 더할 때 차례로 도는 모든 답</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — 점수 (4, 2, 0)<br>T = 1: e⁴ : e² : e⁰ ≈ 54.6 : 7.4 : 1 → <b>0.87 : 0.12 : 0.02</b><br>T = 4: e¹ : e^0.5 : e⁰ ≈ 2.72 : 1.65 : 1 → <b>0.51 : 0.31 : 0.19</b></div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>온도를 올리니 2등, 3등 답도 잘 보이네요. 그게 "닮은 정도" 정보구나.</p></div></div>
     </div>
@@ -840,12 +856,14 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
       <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
       <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>"8~9배"는 어떻게 나와요?</p></div></div>
       <div class="school">학교 수학으로 보면: <b>분수의 덧셈</b>과 <b>약분</b></div>
-      <div class="eq">분리 ÷ 보통 = ( k²·M·F² + M·N·F² ) ÷ ( k²·M·N·F² ) = 1/<b>N</b> + 1/<b>k²</b></div>
+      <div class="inwords"><b>말로 먼저</b> — 분리 합성곱의 계산량을 보통 합성곱으로 나누면 F와 M이 약분되어, 판 수 N과 창 크기 k만 남습니다.</div>
+        <div class="eq">분리 ÷ 보통 = ( k²·M·F² + M·N·F² ) ÷ ( k²·M·N·F² ) = 1/<b>N</b> + 1/<b>k²</b></div>
       <table>
         <tr><td>k</td><td>창의 한 변 (3)</td></tr>
         <tr><td>M, N</td><td>입력·출력 판 수</td></tr>
         <tr><td>F</td><td>그림 한 변의 크기 (약분되어 사라짐)</td></tr>
-      </table>
+        <tr><td>·</td><td>곱하기. k²·M은 k² × M과 같다</td></tr>
+        </table>
       <div class="try"><b>숫자로 한 번 해 보기</b> — k = 3, N = 256<br>1/256 + 1/9 ≈ 0.0039 + 0.1111 = <b>0.115</b><br>→ 보통 합성곱의 약 11.5% = 약 <b>8.7배</b> 가벼움</div>
       <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>N이 크면 1/N은 거의 0이니까 결국 1/9 → 9배에 가까워지는구나.</p></div></div>
     </div>
@@ -964,7 +982,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
 
   <div class="talkrow" aria-label="단계 대화">
     <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>가지치기 90%(다시 학습) 모델은 원래보다 약해졌을까요, 강해졌을까요?</p></div></div>
-    <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>90%나 잘라냈으니 당연히 다 약해졌겠지.</p></div></div>
+    <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="sigh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>90%나 잘라냈으니 다 약해졌을 게 뻔하지.</p></div></div>
     <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>빨간 막대(공격)를 봐. 짐작이랑 반대일걸.</p></div></div>
   </div>
 
@@ -1069,7 +1087,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
   <h2 id="h-out">마무리</h2>
   <div class="talkrow">
     <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="verdict" alt="" aria-hidden="true"><div><b class="name">박사</b><p>모델도 숫자 덩어리라 숫자를 줄일 수 있습니다. 다만 줄일 때마다 같은 시험지로 다시 재 주세요. 그게 1장부터 이어 온 습관입니다.</p></div></div>
-    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="proud" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>오늘의 장부: 8비트 손실 0, 가지치기 90%에 다시 학습 98%, 학생 4분의 1 크기로 94%, 분리 합성곱 8.7배.</p></div></div>
+    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="proud" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>오늘의 기록: 8비트 손실 0, 가지치기 90%에 다시 학습 98%, 학생 4분의 1 크기로 94%, 분리 합성곱 8.7배.</p></div></div>
     <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="coffee" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>이제 직접 만져 볼 차례야. 6장에서 1~5장을 한판 게임으로 다시 해 보자.</p></div></div>
     <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="blush" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>한 번에 크게 자르는 건 이삿짐을 반으로 톱질한 거였네…</p></div></div>
     <div class="say" data-who="x1"><img class="who" data-who="x1" data-mood="e13" alt="" aria-hidden="true"><div><b class="name">X1</b><p>(시계에 쏙. 꾸벅)</p></div></div>
