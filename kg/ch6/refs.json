@@ -1,0 +1,127 @@
+[
+ {
+  "id": "han2016deep",
+  "type": "paper-conference",
+  "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+  "author": [
+   {
+    "family": "Han",
+    "given": "Song"
+   },
+   {
+    "family": "Mao",
+    "given": "Huizi"
+   },
+   {
+    "family": "Dally",
+    "given": "William J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1510.00149",
+  "container-title": "ICLR 2016",
+  "lab": {
+   "work": "lab:work/han2016deep",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "goodfellow2015explaining",
+  "type": "paper-conference",
+  "title": "Explaining and Harnessing Adversarial Examples",
+  "author": [
+   {
+    "family": "Goodfellow",
+    "given": "Ian J."
+   },
+   {
+    "family": "Shlens",
+    "given": "Jonathon"
+   },
+   {
+    "family": "Szegedy",
+    "given": "Christian"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1412.6572",
+  "container-title": "ICLR 2015",
+  "lab": {
+   "work": "lab:work/goodfellow2015explaining",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "madry2018towards",
+  "type": "paper-conference",
+  "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+  "author": [
+   {
+    "family": "Madry",
+    "given": "Aleksander"
+   },
+   {
+    "family": "Makelov",
+    "given": "Aleksandar"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1706.06083",
+  "container-title": "ICLR 2018",
+  "lab": {
+   "work": "lab:work/madry2018towards",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ }
+]

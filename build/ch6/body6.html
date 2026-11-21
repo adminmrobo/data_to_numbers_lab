@@ -1,0 +1,513 @@
+<body>
+<nav class="top" aria-label="섹션 바로가기">
+  <span class="logo">연구실 해설</span>
+  <a href="#three">3줄 요약</a><a href="#cast">등장인물</a><a href="#map">큰 그림</a>
+  <a href="#desk" data-goto="desk">A 접수 창구</a><a href="#inspect" data-goto="inspect">B 검수대</a><a href="#security" data-goto="security">C 보안실</a><a href="#moving" data-goto="moving">D 이삿짐 센터</a>
+  <a href="#wrapup">마무리 상자</a><a href="#aicheck">AI 판단</a><a href="#summary">정리</a><a href="#outro">마무리</a>
+</nav>
+<div id="prog" aria-hidden="true"></div>
+
+<!-- lab-cover -->
+<div class="cover" id="cover" data-img="cover_ch6" role="img" aria-label="글 표지: 연구실 식구 네 명이 접수 창구·검수대·보안실·이삿짐 센터 네 개의 작업대 앞에서 조작판을 만지고 있다">
+  <div class="fallback" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <rect width="1600" height="900" fill="#f7fafc"/><rect x="0" y="700" width="1600" height="200" fill="#eef2f6"/>
+      <g stroke="#16212b" stroke-width="4">
+        <rect x="860" y="180" width="150" height="200" fill="#e7f5ec"/><rect x="1030" y="180" width="150" height="200" fill="#e6eefb"/>
+        <rect x="1200" y="180" width="150" height="200" fill="#fcebea"/><rect x="1370" y="180" width="150" height="200" fill="#fdf3e1"/>
+      </g>
+      <g font-family="sans-serif" font-size="72" font-weight="700" fill="#16212b" text-anchor="middle">
+        <text x="935" y="305">A</text><text x="1105" y="305">B</text><text x="1275" y="305">C</text><text x="1445" y="305">D</text>
+      </g>
+      <g fill="#13733a"><rect x="880" y="420" width="110" height="18" rx="9"/><rect x="1050" y="420" width="110" height="18" rx="9"/><rect x="1220" y="420" width="110" height="18" rx="9"/><rect x="1390" y="420" width="110" height="18" rx="9"/></g>
+    </svg>
+    <div class="cast4" style="right:auto;left:3%;width:50%;justify-content:flex-start">
+      <img data-who="doc" data-mood="front" data-large="1" alt="" style="width:31%"><img data-who="asst" data-mood="smile" data-large="1" alt="" style="width:28%"><img data-who="robo" data-mood="coin" data-large="1" alt="" style="width:23%"><img data-who="fly" data-mood="point" data-large="1" alt="" style="width:15%" class="flipme">
+    </div>
+    <div class="ttl"><b>직접<br>해 보기</b><span>모든 데이터는 숫자가 된다 · 6장 체험 · 실전 연습장</span></div>
+    <span class="note">대체 표지 · 픽셀아트 표지 그림을 받으면 바뀝니다</span>
+  </div>
+</div>
+<!-- /lab-cover -->
+
+<header class="hero" id="top">
+ <div class="wrap hero-grid">
+  <div class="hero-text">
+    <div class="kicker">연구실 해설 · 인공지능 · 모든 데이터는 숫자가 된다 6장 체험</div>
+    <h1>직접<br>해 보기</h1>
+    <p class="qline">1~5장에서 본 결정을 이번엔 내가 내린다 — 네 개의 작업대, 미션 열두 개.</p>
+    <p class="lead">마지막 장은 실전 연습장입니다. 데이터를 받는 <b>접수 창구</b>에서 숫자 예산을 맞추고, <b>검수대</b>에서 옮겨진 그림을 알아보게 하고, <b>보안실</b>에서 잡음과 공격을 막고, <b>이삿짐 센터</b>에서 모델을 기기에 맞게 줄입니다. 조작판을 움직이면 성적표와 그래프, 연구실 식구들의 말이 그 자리에서 바뀝니다.</p>
+    <div class="kpis">
+      <div class="kpi i"><b>4개 장면</b><span>1·2장 · 3장 · 4장 · 5장에서 하나씩</span></div>
+      <div class="kpi g"><b>미션 12개</b><span>장면마다 가장 좋은 설정 · 함정 · 조건 바꾸기</span></div>
+      <div class="kpi a"><b>자동 판정</b><span>조작한 결과로만 통과, 정답 표시 없음</span></div>
+      <div class="kpi m"><b>계산 · 모형 값</b><span>장면 A는 계산 값, B~D는 설명용 모형(시드 고정)</span></div>
+    </div>
+  </div>
+  <div class="talk" aria-label="연구실 대화">
+    <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>오늘은 제가 설명하지 않습니다. 여러분이 고르고, 저는 판정만 할게요.</p></div></div>
+    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>성적표 숫자는 제가 바로바로 읽어 드릴게요.</p></div></div>
+    <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>미션 열두 개? 감으로 찍어도 반은 맞겠지!</p></div></div>
+    <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="magnify" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>감으로 찍으면 함정 미션에서 딱 걸려. 숫자를 보고 골라.</p></div></div>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+
+<section class="level" id="three" aria-labelledby="h-three">
+  <div class="three">
+    <h2 id="h-three" style="font-size:22px;margin:0">처음 오신 분께 — 이 페이지를 3줄로</h2>
+    <ol>
+      <li><b>무엇을:</b> 1~5장의 핵심 결정 네 가지(숫자를 몇 개 담을까, 무엇을 무시할까, 무엇을 막을까, 얼마나 줄일까)를 조작판으로 직접 내리고, 결과를 성적표로 확인합니다.</li>
+      <li><b>왜 중요한가:</b> 읽고 고개를 끄덕이는 것과 직접 골라 보는 것은 다릅니다. 함정 미션에서 "그럴듯한 선택"이 왜 틀리는지 몸으로 확인합니다.</li>
+      <li><b>업무에서는:</b> AI 도입 회의에서 "사진 크기는? 위치가 바뀌면? 공격을 받으면? 장비에 들어가나?"라는 네 질문을 순서대로 던질 수 있게 됩니다.</li>
+    </ol>
+    <span class="free">코드·수식을 몰라도 됩니다. 수식은 조수가 대신 물어봅니다.</span> <span class="free">앞 장을 안 읽었어도 장면마다 "30초 복습"이 있습니다.</span>
+    <details class="abbr"><summary>이 페이지의 영어 약어 풀이</summary>
+      <p><b>ε(엡실론)</b> 공격 세기, 점 하나를 최대 얼마나 바꾸는지 · <b>KB</b> 약 천 바이트 · <b>%p(퍼센트포인트)</b> 두 비율의 차이 · <b>bit(비트)</b> 0 또는 1 하나</p>
+    </details>
+  </div>
+</section>
+
+<section class="level" id="cast" aria-labelledby="h-cast">
+  <h2 id="h-cast">등장인물 · 이 페이지 사용법</h2>
+  <div class="cast">
+    <div class="card doc"><img data-who="doc" data-mood="board" alt="" aria-hidden="true"><b>박사</b><span>판정을 맡아요. 상황 질문과 해석도 해요</span></div>
+    <div class="card asst"><img data-who="asst" data-mood="report" alt="" aria-hidden="true"><b>조수 (하루)</b><span>성적표 숫자를 읽어요. 수식을 대신 물어봐요</span></div>
+    <div class="card fly"><img data-who="fly" data-mood="clip" alt="" aria-hidden="true"><b>초파리 연구원</b><span>"정말 그래?" 의심하고 눌러 볼 곳을 알려 줘요</span></div>
+    <div class="card robo"><img data-who="robo" data-mood="smile" alt="" aria-hidden="true"><b>주판봇</b><span>성급하게 확신해요. 함정 미션의 단골</span></div>
+  </div>
+  <div class="extra"><img data-who="sia" data-mood="smile" alt="" aria-hidden="true"> 인턴 시아 · <img data-who="moa" data-mood="cheer" alt="" aria-hidden="true"> 인턴 모아 — 미션 확인과 쉬어 가기 · <img data-who="x1" data-mood="e13" alt="" aria-hidden="true"> 미공개 X1~X3 — 이삿짐 센터에 각자 기기를 들고 와요.</div>
+  <div class="howto">
+    <h3>조작판 읽는 법</h3>
+    <ul>
+      <li><span class="chipk env">초록 버튼</span> 내가 바꿀 수 없는 <b>환경 조건</b>입니다(예산, 시험 조건, 기기 한도).</li>
+      <li><span class="chipk dec">파랑 버튼·막대</span> 내가 정하는 <b>결정</b>입니다(크기, 읽는 방법, 학습 방법, 줄이는 정도).</li>
+      <li><b>성적표</b>의 네 숫자는 초록이면 좋음, 주황이면 주의, 빨강이면 나쁨입니다.</li>
+      <li><b>미션</b>은 조작판을 직접 움직였을 때만 판정합니다. 통과하면 ✔와 함께 설명이 열립니다.</li>
+    </ul>
+  </div>
+  <p class="muted" style="margin-top:12px">점선 밑줄 낱말을 누르면 뜻이 나옵니다. 장면 A의 숫자는 곱셈으로 바로 나오는 계산 값이고, 장면 B~D의 정확도는 설명용 모형 값입니다(시드 고정, 4·5장과 같은 그림 판정기). 앞 장: <a href="05_lighter_models.html">5장 특별</a></p>
+
+  <div class="comic" id="comic6">
+    <div class="ctitle">4컷 만화 ⑥ 졸업 시험 <span>읽기 시작 전 몸풀기</span></div>
+    <div class="strip">
+      <div class="frame" data-img="cm6_1" data-scene="board"><span class="n">1</span><div class="bub" style="--tail:30%">오늘은 졸업 시험! 문제는 네 개의 작업대에 있어요.</div><img class="ch l" data-who="doc" data-mood="board" alt=""></div>
+      <div class="frame" data-img="cm6_2" data-scene="desk"><span class="n">2</span><div class="bub" style="--tail:65%">답 다 외웠지! 크면 좋고, 많으면 좋고, 줄이면 손해!</div><img class="ch r" data-who="robo" data-mood="happy" alt=""></div>
+      <div class="frame" data-img="cm6_3" data-scene="screen"><span class="n">3</span><div class="bub" style="--tail:40%">외운 답은 조건이 바뀌면 틀려. 조작판을 직접 움직여 봐.</div><img class="ch c sm" data-who="fly" data-mood="point" alt=""></div>
+      <div class="frame" data-img="cm6_4" data-scene="lab"><span class="n">4</span><div class="bub" style="--tail:30%">성적표는 제가 그 자리에서 읽어 드릴게요!</div><img class="ch l" data-who="asst" data-mood="spark" alt=""><img class="ch r sm" data-who="robo" data-mood="sigh" alt=""></div>
+    </div>
+    <p class="cap">글자 없는 그림 위에 말풍선을 얹었습니다. 캐릭터 그림: 연구실 캐릭터 팩.</p>
+  </div>
+</section>
+
+<section class="level" id="map" aria-labelledby="h-map">
+  <h2 id="h-map">큰 그림 — 네 작업대는 1~5장의 어디인가</h2>
+  <div class="tw"><table class="tb">
+    <thead><tr><th>장면</th><th>내리는 결정</th><th>다시 보는 장</th><th>미션 세 개</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#desk" data-goto="desk">A 접수 창구</a></td><td>숫자를 몇 개 담을까</td><td>1장 ② · 2장 ①~④</td><td>사진 한 변 · 영상의 함정 · 예산 두 배</td></tr>
+      <tr><td><a href="#inspect" data-goto="inspect">B 검수대</a></td><td>어떤 차이를 무시할까</td><td>3장 ②·대결</td><td>옮겨진 그림 · 그림 수의 함정 · 세 가지 시험</td></tr>
+      <tr><td><a href="#security" data-goto="security">C 보안실</a></td><td>무엇을 막을까</td><td>4장 ①·⑤·⑧</td><td>공격 막기 · 잡음 연습의 함정 · 더 센 공격</td></tr>
+      <tr><td><a href="#moving" data-goto="moving">D 이삿짐 센터</a></td><td>얼마나 줄일까</td><td>5장 ②·③·⑦·⑧</td><td>시계에 넣기 · 한 번에 자르기의 함정 · 휴대폰으로 바꾸기</td></tr>
+    </tbody>
+  </table></div>
+  <div class="interp"><b>박사의 한 줄</b> — 1장에서 "데이터가 숫자 하나가 되기까지"의 지도를 폈습니다. 여기 네 작업대는 그 길의 네 갈림길입니다. 담고(A) → 다듬고(B) → 지키고(C) → 줄입니다(D).</div>
+</section>
+
+<!-- ===================== 실전 연습장 ===================== -->
+<section class="level" id="lab" aria-labelledby="h-lab">
+  <h2 id="h-lab">실전 연습장 — 네 개의 작업대</h2>
+  <div class="tabbar" role="tablist" aria-label="장면 고르기">
+    <button class="tabb" role="tab" id="tab-desk" aria-controls="sc-desk" aria-selected="true"><b>A</b> 접수 창구<small>1·2장</small></button>
+    <button class="tabb" role="tab" id="tab-inspect" aria-controls="sc-inspect" aria-selected="false" tabindex="-1"><b>B</b> 검수대<small>3장</small></button>
+    <button class="tabb" role="tab" id="tab-security" aria-controls="sc-security" aria-selected="false" tabindex="-1"><b>C</b> 보안실<small>4장</small></button>
+    <button class="tabb" role="tab" id="tab-moving" aria-controls="sc-moving" aria-selected="false" tabindex="-1"><b>D</b> 이삿짐 센터<small>5장</small></button>
+  </div>
+  <div class="scoreline">미션 통과 <b id="misTotal">0 / 12</b><span class="sbar"><span id="misBar"></span></span> <span class="muted">기록은 이 탭을 닫으면 사라집니다.</span></div>
+
+  <!-- ===== 장면 A ===== -->
+  <div class="scene" id="sc-desk" role="tabpanel" aria-labelledby="tab-desk">
+    <span id="desk" class="anchor"></span>
+    <div class="lvhead"><div class="hex">A</div><h3 class="sh">접수 창구 — 숫자 예산 안에 담기</h3></div>
+    <div class="tags"><span class="tag nn">결정: 사진 한 변·장면 수·토큰 수·길이</span><span class="tag fly">일상: 짐 부피에 맞춰 상자 고르기</span><span class="tag src">다시 보기: 1장 ②, 2장 ①~④</span></div>
+
+    <div class="say situ" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>회사 서버가 데이터 하나에 숫자 10만 개까지만 받는다고 합시다. 사진은 얼마나 크게 받을 수 있을까요? 영상이라면요?</p></div></div>
+    <div class="recap"><b>30초 복습</b> — 사진 한 장은 점(픽셀)마다 숫자를 적은 판입니다. 흑백은 점마다 1개, 컬러는 빨강·초록·파랑 3개. 영상은 그 판을 장면 수만큼 쌓고, 글은 조각(토큰)마다 숫자 줄 하나, 소리는 1초에 수천~수만 번 잰 떨림 값입니다(1장 ②, 2장 ①~④).</div>
+    <div class="brief"><b>상황</b> — 데이터 접수 창구에 네 손님(사진·영상·글·소리)이 줄을 섰습니다. 창구는 한 손님당 숫자 예산을 넘으면 받지 않습니다. 예산 안에서 가능한 한 많은 정보를 담는 크기를 고르세요.</div>
+
+    <div class="whymath">
+      <div class="why">
+        <h4>왜 "숫자 개수"부터 세나</h4>
+        <ol>
+          <li><b>문제 상황:</b> 모델의 계산량과 저장 공간은 들어오는 숫자 개수에 비례합니다.</li>
+          <li><b>앞 방법의 한계:</b> "사진은 크게, 영상은 길게"처럼 감으로 정하면 예산을 수십 배 넘기기 쉽습니다.</li>
+          <li><b>해법:</b> 데이터마다 숫자 개수를 곱셈 하나로 세고, 예산을 넘지 않는 가장 큰 값을 거꾸로 구합니다.</li>
+        </ol>
+        <div class="easy"><b>쉽게 말하면</b> — 이삿짐 상자를 고르기 전에 짐 부피부터 재는 것과 같습니다.</div>
+      </div>
+      <div class="math">
+        <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
+        <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>예산이 정해지면 한 변은 어떻게 거꾸로 구해요?</p></div></div>
+        <div class="school">학교 수학으로 보면: <b>넓이</b>(가로 × 세로)와 <b>제곱근</b></div>
+        <div class="eq">숫자 개수 = <em>한 변</em> × <em>한 변</em> × <i>색</i> × <b>장면 수</b> ,&nbsp; 최대 한 변 = √( 예산 ÷ ( <i>색</i> × <b>장면 수</b> ) ) 의 정수 부분</div>
+        <table>
+          <tr><td>한 변</td><td>정사각형 사진의 가로(=세로) 점 수</td></tr>
+          <tr><td>색</td><td>흑백 1, 컬러 3</td></tr>
+          <tr><td>장면 수</td><td>사진은 1, 영상은 1초에 찍는 장 수 × 초</td></tr>
+          <tr><td>√</td><td>제곱근. "몇을 두 번 곱하면 이 수가 되나"</td></tr>
+        </table>
+        <div class="try"><b>숫자로 한 번 해 보기</b> — 예산 100,000, 컬러 사진<br>100,000 ÷ 3 ≈ 33,333 → √33,333 ≈ <b>182.6</b> → 한 변 <b>182</b><br>확인: 182 × 182 × 3 = <b>99,372</b> (예산 안), 183이면 100,467 (초과)</div>
+        <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>나눗셈 한 번, 제곱근 한 번이면 되는구나. 소수점은 버려야 예산을 안 넘고요.</p></div></div>
+      </div>
+    </div>
+
+    <div class="talkrow" aria-label="장면 대화">
+      <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>사진에서 찾은 크기를 영상에도 그대로 쓰면 될까요?</p></div></div>
+      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="meh" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>영상도 사진이잖아. 182면 182지!</p></div></div>
+      <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>"영상" 버튼을 누르고 182를 넣어 봐. 오른쪽 막대가 어디까지 가는지.</p></div></div>
+    </div>
+
+    <div class="panel" id="pA">
+      <p class="ptitle">조작판 A — 접수 창구</p>
+      <div class="ctrl">
+        <div class="group env"><span class="glabel">예산 (환경)</span><button class="bt" data-abud="50000">5만 개</button><button class="bt" data-abud="100000" aria-pressed="true">10만 개</button><button class="bt" data-abud="200000">20만 개</button></div>
+        <div class="group dec"><span class="glabel">손님 (결정)</span><button class="bt" data-atype="photo" aria-pressed="true">사진</button><button class="bt" data-atype="video">영상</button><button class="bt" data-atype="text">글</button><button class="bt" data-atype="sound">소리</button></div>
+      </div>
+      <div class="ctrl">
+        <div class="group dec"><label class="glabel" for="aMain" id="aMainL">한 변(점)</label><button class="bt sm" data-astep="-1" aria-label="하나 줄이기">−</button><input type="range" id="aMain" min="8" max="320" step="1" value="224"><button class="bt sm" data-astep="1" aria-label="하나 늘리기">+</button><span class="val" id="aMainV">224</span></div>
+        <div class="group dec" data-agrp="photo video"><span class="glabel">색</span><button class="bt" data-acol="1">흑백</button><button class="bt" data-acol="3" aria-pressed="true">컬러</button></div>
+        <div class="group dec" data-agrp="video" hidden><span class="glabel">1초에</span><button class="bt" data-afps="1">1장</button><button class="bt" data-afps="10">10장</button><button class="bt" data-afps="30" aria-pressed="true">30장</button></div>
+        <div class="group dec" data-agrp="video" hidden><span class="glabel">길이</span><button class="bt" data-adur="1">1초</button><button class="bt" data-adur="2" aria-pressed="true">2초</button><button class="bt" data-adur="5">5초</button></div>
+        <div class="group dec" data-agrp="text" hidden><span class="glabel">토큰 하나의 숫자 줄</span><button class="bt" data-adim="128">128개</button><button class="bt" data-adim="384">384개</button><button class="bt" data-adim="768" aria-pressed="true">768개</button></div>
+        <div class="group dec" data-agrp="sound" hidden><span class="glabel">1초에 재는 횟수</span><button class="bt" data-arate="8000">8,000</button><button class="bt" data-arate="16000" aria-pressed="true">16,000</button><button class="bt" data-arate="44100">44,100</button></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi g"><b id="kA1">-</b><span>숫자 개수</span></div>
+        <div class="kpi g"><b id="kA2">-</b><span>예산 대비</span></div>
+        <div class="kpi i"><b id="kA3">-</b><span>32비트로 적으면</span></div>
+        <div class="kpi a"><b id="kA4">-</b><span>이 조건의 예산 안 최댓값</span></div>
+      </div>
+      <div class="twocol">
+        <div class="cwrap"><canvas id="cA1" width="520" height="320" aria-label="고른 손잡이 값에 따른 숫자 개수 곡선과 예산선, 내 선택과 예산 안 최댓값"></canvas></div>
+        <div class="cwrap"><canvas id="cA2" width="520" height="320" aria-label="사진·영상·글·소리의 현재 숫자 개수를 예산 대비 막대로"></canvas></div>
+      </div>
+      <div class="live" id="liveA" aria-live="polite"></div>
+      <div class="insight" id="iA" aria-live="polite"></div>
+      <h4 class="mh">미션</h4><ol class="missions" id="mis-desk"></ol>
+    </div>
+
+    <div class="explain">
+      <h4>풀이</h4>
+      <ol>
+        <li>사진 숫자는 한 변의 <b>제곱</b>으로 늘어납니다. 한 변을 224에서 182로 19% 줄이면 숫자는 34% 줄어듭니다.</li>
+        <li>영상은 사진에 장면 수(30 × 2 = 60)를 곱합니다. 그래서 같은 예산이면 한 변이 √60 ≈ 7.7배 작아져 23이 됩니다. 실제 영상 모델이 장면을 건너뛰어 읽거나 작은 조각으로 나누는 이유입니다(2장 ②).</li>
+        <li>예산이 두 배가 되면 한 변은 √2 ≈ 1.41배만 늘어 258이 됩니다.</li>
+      </ol>
+    </div>
+    <div class="interp"><b>해석 문장</b> — "사진을 두 배 크게 받자"는 제안은 숫자(계산량·저장 공간)를 네 배로 늘리자는 뜻입니다. 영상이라면 거기에 장면 수가 다시 곱해집니다.</div>
+    <div class="back"><b>배운 곳 다시 보기</b> — <a href="01_why_numbers.html#s2">1장 ② 네 손님</a> · <a href="02_rules_to_numbers.html#s1">2장 ① 사진</a> · <a href="02_rules_to_numbers.html#s2">2장 ② 영상</a></div>
+    <div class="quiz" data-quiz="q1"></div>
+  </div>
+
+  <!-- ===== 장면 B ===== -->
+  <div class="scene" id="sc-inspect" role="tabpanel" aria-labelledby="tab-inspect" hidden>
+    <span id="inspect" class="anchor"></span>
+    <div class="lvhead"><div class="hex">B</div><h3 class="sh">검수대 — 옮겨진 그림도 같은 그림으로</h3></div>
+    <div class="tags"><span class="tag nn">결정: 읽는 방법·학습 때 옮기기·학습 그림 수</span><span class="tag fly">일상: 책상 어디에 놓여도 같은 컵</span><span class="tag src">다시 보기: 3장 ②·대결</span></div>
+
+    <div class="say situ" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>공장 검수대 카메라가 흔들려서, 부품 사진이 조금씩 옮겨져 찍힙니다. 판정기가 "같은 부품"을 계속 같게 볼 수 있을까요?</p></div></div>
+    <div class="recap"><b>30초 복습</b> — 3장에서는 "겉모습이 달라도 같은 것은 같게" 보는 법을 봤습니다. 하나는 일부러 모습을 바꿔 보여 주기(증강), 다른 하나는 처음부터 바뀌는 부분을 무시하는 읽는 방법입니다. 여기서는 8 × 8 그림 세 가지(가로줄·세로줄·대각선)가 위아래·좌우로 옮겨집니다.</div>
+    <div class="brief"><b>상황</b> — 시험 그림은 최대 2점까지 옮겨질 수 있습니다(환경). 여러분은 판정기가 그림을 읽는 방법, 학습 때 그림을 옮겨 보여 줄지, 학습 그림을 몇 장 쓸지를 고릅니다.</div>
+
+    <div class="whymath">
+      <div class="why">
+        <h4>왜 "작은 필터 + 최댓값"으로 읽나</h4>
+        <ol>
+          <li><b>문제 상황:</b> 픽셀 그대로 읽으면 판정기는 "몇 번째 점이 밝은가"를 외웁니다. 줄이 한 점만 옮겨져도 다른 점이 밝아집니다.</li>
+          <li><b>앞 방법의 한계:</b> 같은 위치 그림을 아무리 더 보여 줘도, 옮겨진 위치는 배운 적이 없습니다.</li>
+          <li><b>해법:</b> 점 세 개짜리 작은 <span class="jt" data-tip="필터">필터</span>를 그림 전체에 밀면서 "여기 가로줄 같은 게 있나"를 재고, 모든 위치 중 가장 큰 값만 남깁니다(<span class="jt" data-tip="최댓값 남기기">최댓값 남기기</span>). 위치 정보를 일부러 버리는 것입니다. 사진 모델의 기본 부품인 <span class="jt" data-tip="합성곱">합성곱</span>과 풀링이 하는 일입니다.</li>
+        </ol>
+        <div class="easy"><b>쉽게 말하면</b> — 방 전체를 손전등으로 훑으면서 "컵이 있었나?"만 기억하면, 컵이 책상 왼쪽에 있든 오른쪽에 있든 답은 같습니다.</div>
+      </div>
+      <div class="math">
+        <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
+        <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>필터가 "가로줄 같다"는 걸 숫자로 어떻게 재요?</p></div></div>
+        <div class="school">학교 수학으로 보면: <b>평균</b>과 <b>최댓값</b></div>
+        <div class="eq">필터 값 = ( <em>점 1</em> + <em>점 2</em> + <em>점 3</em> ) ÷ 3 ,&nbsp; 특징 = 모든 위치의 필터 값 중 <b>최댓값</b></div>
+        <table>
+          <tr><td>점 1·2·3</td><td>나란히 놓인 점 세 개의 밝기 (가로 필터는 옆으로, 세로 필터는 위아래로, 대각 필터는 비스듬히)</td></tr>
+          <tr><td>최댓값</td><td>그림 위 모든 자리에서 잰 값 중 가장 큰 것. 어디서 나왔는지는 버린다</td></tr>
+        </table>
+        <div class="try"><b>숫자로 한 번 해 보기</b> — 줄 위의 점은 0.6, 바탕은 0.4<br>가로 필터가 가로줄 위: (0.6 + 0.6 + 0.6) ÷ 3 = <b>0.60</b><br>세로 필터가 가로줄을 가로지름: (0.4 + 0.6 + 0.6) ÷ 3 ≈ <b>0.53</b><br>줄을 어디로 옮겨도 최댓값은 0.60과 0.53 그대로</div>
+        <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>최댓값만 남기니까 "어디에"는 사라지고 "무엇이"만 남는구나!</p></div></div>
+      </div>
+    </div>
+
+    <div class="talkrow" aria-label="장면 대화">
+      <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>옮겨진 그림을 맞히려면 그림을 더 모을까요, 읽는 방법을 바꿀까요?</p></div></div>
+      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="coin" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>당연히 더 모으지! 270장이면 뭐든 맞혀.</p></div></div>
+      <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>정확도 선 그래프에서 빨간 선과 파란 선을 비교해 봐. 조작판 아래 그리기판에 직접 줄을 그려 봐도 돼.</p></div></div>
+    </div>
+
+    <div class="panel" id="pB">
+      <p class="ptitle">조작판 B — 검수대</p>
+      <div class="ctrl">
+        <div class="group env"><span class="glabel">시험 그림 이동 폭 (환경)</span><button class="bt" data-btest="0">0</button><button class="bt" data-btest="1">1점</button><button class="bt" data-btest="2" aria-pressed="true">2점</button></div>
+      </div>
+      <div class="ctrl">
+        <div class="group dec"><span class="glabel">읽는 방법</span><button class="bt" data-bfeat="pixel" aria-pressed="true">픽셀 그대로 (64개)</button><button class="bt" data-bfeat="filter">작은 필터 + 최댓값 (3개)</button></div>
+        <div class="group dec"><span class="glabel">학습 때 옮기기</span><button class="bt" data-bts="0" aria-pressed="true">안 함</button><button class="bt" data-bts="1">1점</button><button class="bt" data-bts="2">2점</button></div>
+        <div class="group dec"><span class="glabel">학습 그림</span><button class="bt" data-bn="30">30장</button><button class="bt" data-bn="90" aria-pressed="true">90장</button><button class="bt" data-bn="270">270장</button></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi g"><b id="kB1">-</b><span>시험 150장 정확도</span></div>
+        <div class="kpi g"><b id="kB2">-</b><span>이동 없을 때보다</span></div>
+        <div class="kpi i"><b id="kB3">-</b><span>판정기 가중치 수</span></div>
+        <div class="kpi m"><b id="kB4">-</b><span>학습 그림</span></div>
+      </div>
+      <div class="twocol">
+        <div class="cwrap"><canvas id="cB1" width="520" height="320" aria-label="시험 이동 폭 0·1·2에서 두 읽는 방법의 정확도 선"></canvas></div>
+        <div class="cwrap"><canvas id="cB2" width="520" height="320" aria-label="옮겨진 시험 그림 세 장과 가로·세로·대각 필터 최댓값 막대"></canvas></div>
+      </div>
+      <div class="padwrap">
+        <div><b>직접 그려 보기</b> <span class="muted">— 점을 눌러 켜고 끕니다</span><div class="pad" id="padB" role="group" aria-label="8 × 8 그리기판"></div>
+          <div style="display:flex;gap:8px;margin-top:8px"><button class="bt" id="padEx">예시: 위로 옮긴 가로줄</button><button class="bt" id="padClear">지우기</button></div></div>
+        <div class="padout" id="padOut" aria-live="polite"></div>
+      </div>
+      <div class="live" id="liveB" aria-live="polite"></div>
+      <div class="insight" id="iB" aria-live="polite"></div>
+      <h4 class="mh">미션</h4><ol class="missions" id="mis-inspect"></ol>
+    </div>
+
+    <div class="explain">
+      <h4>풀이</h4>
+      <ol>
+        <li>픽셀 그대로 읽는 판정기는 이동이 없으면 100%지만, 이동 2에서는 어떤 조합으로도 63%를 넘지 못합니다. 학습 때 옮겨 보여 주면(증강) 이동 1까지는 96%로 버티지만, 이동 2는 이 단순한 판정기가 감당하지 못합니다.</li>
+        <li>같은 위치 그림만 270장으로 늘리면 이동 2에서 40%로, 90장일 때와 같습니다. 양보다 "어떤 차이를 보여 주느냐"가 중요했던 3장 대결과 같은 결론입니다.</li>
+        <li>작은 필터 + 최댓값은 숫자 3개, 가중치 21개로 이동 0·1·2 모두 97~99%입니다. 무시할 것(위치)을 읽는 방법에 미리 넣었기 때문입니다.</li>
+      </ol>
+    </div>
+    <div class="lim"><b>여기서는 단순하게 봤어요</b> — 필터 세 개는 사람이 정했습니다. 실제 사진 모델은 필터 수백 개의 숫자까지 학습으로 정하고, 최댓값도 그림 전체가 아니라 작은 구역마다 남깁니다.</div>
+    <div class="interp"><b>해석 문장</b> — "데이터를 더 모으면 됩니다"라는 말을 들으면, 모을 데이터가 지금 틀리는 조건(여기서는 위치 이동)을 담고 있는지 먼저 확인합니다.</div>
+    <div class="back"><b>배운 곳 다시 보기</b> — <a href="03_same_despite_looks.html#s2">3장 ② 여러 색깔의 사과</a> · <a href="03_same_despite_looks.html#duel">3장 대결</a></div>
+    <div class="quiz" data-quiz="q2"></div>
+  </div>
+
+  <!-- ===== 장면 C ===== -->
+  <div class="scene" id="sc-security" role="tabpanel" aria-labelledby="tab-security" hidden>
+    <span id="security" class="anchor"></span>
+    <div class="lvhead"><div class="hex">C</div><h3 class="sh">보안실 — 우연한 잡음과 노린 공격 막기</h3></div>
+    <div class="tags"><span class="tag nn">결정: 학습 때 무엇을 섞을지</span><span class="tag fly">일상: 소방 훈련과 보안 훈련은 다르다</span><span class="tag src">다시 보기: 4장 ①·⑤·⑧</span></div>
+
+    <div class="say situ" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>보안 담당자가 묻습니다. "누가 사진에 눈에 안 띄는 점을 일부러 섞으면 판정이 뒤집힌다던데, 우리 모델은 괜찮나요?"</p></div></div>
+    <div class="recap"><b>30초 복습</b> — 4장에서 잡음은 두 종류였습니다. 아무 방향으로나 흔드는 <b>우연한 잡음</b>, 판정기가 가장 약한 방향만 골라 미는 <b>노린 잡음(적대적 변조)</b>. 노린 잡음은 점 하나를 아주 조금(ε)만 바꿔도 정확도를 98%에서 42%로 떨어뜨렸습니다.</div>
+    <div class="brief"><b>상황</b> — 시험 때 얼마나 센 잡음과 공격이 들어올지는 환경입니다. 여러분은 학습 때 그림을 그대로 쓸지, 잡음을 섞을지, 공격받은 그림을 섞을지(<span class="jt" data-tip="적대적 학습">적대적 학습</span>)를 고릅니다.</div>
+
+    <div class="whymath">
+      <div class="why">
+        <h4>왜 공격받은 그림으로 연습하나</h4>
+        <ol>
+          <li><b>문제 상황:</b> 공격은 판정기의 가중치를 보고 "점수가 가장 크게 바뀌는 방향"으로만 점을 바꿉니다.</li>
+          <li><b>앞 방법의 한계:</b> 잡음을 섞어 배우면 아무 방향의 흔들림에는 익숙해지지만, 가장 약한 방향은 여전히 약합니다.</li>
+          <li><b>해법:</b> 학습하는 동안 그때그때의 약한 방향으로 그림을 바꿔 보여 주면, 판정기가 그 방향에 덜 기대도록 가중치를 고칩니다.</li>
+        </ol>
+        <div class="easy"><b>쉽게 말하면</b> — 화재 대피 훈련을 아무리 해도 문을 따고 들어오는 도둑은 못 막습니다. 도둑이 노릴 문을 직접 점검해야 합니다.</div>
+      </div>
+      <div class="math">
+        <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
+        <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>점을 조금씩만 바꾸는데 판정이 왜 뒤집혀요?</p></div></div>
+        <div class="school">학교 수학으로 보면: <b>일차식</b>(점수 = 가중치 × 밝기의 합)과 <b>절댓값</b></div>
+        <div class="eq">점수 차이가 줄어드는 양 = <b>ε</b> × ( <em>|가중치 차이 1|</em> + <em>|가중치 차이 2|</em> + … + <em>|가중치 차이 64|</em> )</div>
+        <table>
+          <tr><td>ε</td><td>공격 세기. 점 하나의 밝기를 최대 이만큼 바꾼다</td></tr>
+          <tr><td>가중치 차이</td><td>점마다 "정답 점수에 곱하는 수 − 오답 점수에 곱하는 수"</td></tr>
+          <tr><td>| |</td><td>절댓값. 부호를 떼고 크기만 본다</td></tr>
+        </table>
+        <div class="try"><b>숫자로 한 번 해 보기</b> — 그대로 배운 모델, 가로줄과 세로줄 사이<br>가중치 차이 64개의 절댓값 합 ≈ <b>67</b><br>ε = 0.05이면 0.05 × 67 ≈ <b>3.4점</b>이 한꺼번에 움직입니다<br>정답이 3.4점보다 적게 앞서 있던 그림은 뒤집힙니다</div>
+        <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>점 하나는 조금이어도 64개가 한 방향으로 모이니까 크구나. 공격 연습은 이 합을 줄이고 정답 쪽 여유를 늘리는 거네요.</p></div></div>
+      </div>
+    </div>
+
+    <div class="talkrow" aria-label="장면 대화">
+      <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>잡음 연습을 한 모델은 공격에도 강할까요?</p></div></div>
+      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="smile" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>잡음이나 공격이나 다 잡음이지. 하나 막으면 둘 다 막혀.</p></div></div>
+      <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>"잡음 섞기"를 누르고 공격 세기별 정확도 선을 봐.</p></div></div>
+    </div>
+
+    <div class="panel" id="pC">
+      <p class="ptitle">조작판 C — 보안실</p>
+      <div class="ctrl">
+        <div class="group env"><span class="glabel">시험 잡음 세기 (환경)</span><button class="bt" data-cns="0.2">0.2</button><button class="bt" data-cns="0.35" aria-pressed="true">0.35</button><button class="bt" data-cns="0.5">0.5</button></div>
+        <div class="group env"><span class="glabel">시험 공격 세기 ε (환경)</span><button class="bt" data-cae="0.03">0.03</button><button class="bt" data-cae="0.05" aria-pressed="true">0.05</button><button class="bt" data-cae="0.08">0.08</button></div>
+      </div>
+      <div class="ctrl">
+        <div class="group dec"><span class="glabel">학습 방법</span><button class="bt" data-cmode="plain" aria-pressed="true">그대로 배우기</button><button class="bt" data-cmode="noise">잡음 섞기 (0.35)</button><button class="bt" data-cmode="adv">공격 섞기</button></div>
+        <div class="group dec" id="cEt" hidden><span class="glabel">연습 공격 세기</span><button class="bt" data-cet="0.03">0.03</button><button class="bt" data-cet="0.05" aria-pressed="true">0.05</button><button class="bt" data-cet="0.08">0.08</button></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi g"><b id="kC1">-</b><span>깨끗한 그림 정확도</span></div>
+        <div class="kpi g"><b id="kC2">-</b><span>잡음 시험 정확도</span></div>
+        <div class="kpi g"><b id="kC3">-</b><span>공격 시험 정확도</span></div>
+        <div class="kpi i"><b id="kC4">-</b><span>세 시험 평균</span></div>
+      </div>
+      <div class="twocol">
+        <div class="cwrap"><canvas id="cC1" width="520" height="320" aria-label="깨끗·잡음·공격 세 시험에서 내 모델과 그대로 배운 모델의 정확도 막대"></canvas></div>
+        <div class="cwrap"><canvas id="cC2" width="520" height="320" aria-label="공격 세기 0부터 0.1까지 정확도 선, 내 모델과 그대로 배운 모델"></canvas></div>
+      </div>
+      <div class="live" id="liveC" aria-live="polite"></div>
+      <div class="insight" id="iC" aria-live="polite"></div>
+      <h4 class="mh">미션</h4><ol class="missions" id="mis-security"></ol>
+    </div>
+
+    <div class="explain">
+      <h4>풀이</h4>
+      <ol>
+        <li>공격 0.05로 연습하면 같은 세기의 공격에 42.2% → 76.7%로 버티고, 깨끗한 정확도 97.8%도 지킵니다(4장 ⑧과 같은 판정기).</li>
+        <li>잡음 0.35로 연습한 모델은 공격 0.05에 45.6%입니다. 우연한 잡음 연습은 노린 공격을 거의 막지 못합니다.</li>
+        <li>공격이 0.08로 세지면 0.05 연습 모델은 38.9%. 0.08로 연습하면 40.0%로 조금 낫지만 깨끗한 정확도가 90.0%로 내려갑니다. 방어는 "얼마나 센 공격까지"를 정하고 그 대가를 함께 적어야 합니다.</li>
+      </ol>
+    </div>
+    <div class="lim"><b>여기서는 단순하게 봤어요</b> — 공격은 가장 단순한 한 번짜리 방식(4장 ⑤)만 썼습니다. 실제로는 여러 번 나눠 미는 더 센 공격이 있어, 방어 성능을 그 공격으로도 따로 잽니다.</div>
+    <div class="interp"><b>해석 문장</b> — "우리 모델은 잡음에 강합니다"라는 보고를 받으면, 우연한 잡음인지 노린 공격인지, 공격이라면 어떤 세기까지인지 되묻습니다.</div>
+    <div class="back"><b>배운 곳 다시 보기</b> — <a href="04_noise_and_attacks.html#s1">4장 ① 흔한 손상</a> · <a href="04_noise_and_attacks.html#s5">4장 ⑤ 적대적 변조</a> · <a href="04_noise_and_attacks.html#s8">4장 ⑧ 방어 학습</a></div>
+    <div class="quiz" data-quiz="q3"></div>
+  </div>
+
+  <!-- ===== 장면 D ===== -->
+  <div class="scene" id="sc-moving" role="tabpanel" aria-labelledby="tab-moving" hidden>
+    <span id="moving" class="anchor"></span>
+    <div class="lvhead"><div class="hex">D</div><h3 class="sh">이삿짐 센터 — 기기 한도 안에 모델 넣기</h3></div>
+    <div class="tags"><span class="tag nn">결정: 지울 비율·다시 학습·비트 수</span><span class="tag fly">일상: 트럭·승용차·자전거에 짐 싣기</span><span class="tag src">다시 보기: 5장 ②·③·⑦·⑧</span></div>
+
+    <div class="say situ" data-who="doc"><img class="who" data-who="doc" data-mood="front" alt="" aria-hidden="true"><div><b class="name">박사</b><p>X1이 스마트워치에, X2가 휴대폰에 판정기를 넣고 싶답니다. 원래 크기는 6,240비트. 시계에는 400비트까지만 들어가요.</p></div></div>
+    <div class="recap"><b>30초 복습</b> — 5장에서 모델을 줄이는 두 손잡이를 봤습니다. 숫자 하나를 덜 정밀하게 적는 <span class="jt" data-tip="양자화">양자화</span>(비트 수 줄이기), 작은 숫자를 지우는 <span class="jt" data-tip="가지치기">가지치기</span>. 지운 뒤에는 남은 가중치를 다시 학습해야 정확도가 돌아왔습니다.</div>
+    <div class="brief"><b>상황</b> — 기기와 그 한도는 환경입니다. 여러분은 가중치를 몇 %나 지울지, 지운 뒤 다시 학습할지, 몇 비트로 적을지를 고릅니다. 성적표 넷째 숫자는 4장의 잡음 시험(0.35)을 다시 건 결과입니다.</div>
+
+    <div class="whymath">
+      <div class="why">
+        <h4>왜 두 손잡이를 겹치나</h4>
+        <ol>
+          <li><b>문제 상황:</b> 시계 한도는 원래의 약 6%입니다. 한 손잡이만 세게 돌리면 정확도가 무너집니다(2비트 70%, 다시 학습 없는 90% 지우기 72%).</li>
+          <li><b>앞 방법의 한계:</b> 지운 가중치 자리를 적는 "위치 표시"가 따로 들어서, 지운 만큼 그대로 작아지지도 않습니다.</li>
+          <li><b>해법:</b> 손실이 없는 선까지 지우고(다시 학습), 손실이 없는 선까지 비트를 낮춥니다. 줄이는 배수는 곱으로 쌓입니다.</li>
+        </ol>
+        <div class="easy"><b>쉽게 말하면</b> — 안 쓰는 물건은 버리고, 남은 옷은 압축 팩에 넣는 이사. 한쪽만 극단으로 하면 꼭 필요한 것까지 잃습니다.</div>
+      </div>
+      <div class="math">
+        <h4>수학 수식을 어려워하는 조수가 대신 물어봅니다</h4>
+        <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="shock" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>지우고 비트도 줄이면 크기는 정확히 얼마예요?</p></div></div>
+        <div class="school">학교 수학으로 보면: <b>곱셈</b>과 <b>분배법칙</b></div>
+        <div class="eq">크기(비트) = ( <em>남은 가중치</em> + 3 ) × ( <b>비트</b> + <i>위치 표시 8</i> )</div>
+        <table>
+          <tr><td>남은 가중치</td><td>전체 192개 × (1 − 지운 비율), 3은 지우지 않는 편향</td></tr>
+          <tr><td>비트</td><td>숫자 하나를 적는 0·1의 개수 (32·8·4·2)</td></tr>
+          <tr><td>위치 표시 8</td><td>남은 가중치가 어디 있는지 적는 몫. 지우지 않았으면 0</td></tr>
+        </table>
+        <div class="try"><b>숫자로 한 번 해 보기</b> — 90% 지우고 8비트<br>남은 가중치 192 × 0.1 ≈ <b>20개</b> (실제로 남은 수)<br>( 20 + 3 ) × ( 8 + 8 ) = 23 × 16 = <b>368비트</b> → 시계 한도 400 안<br>원래 대비 6,240 ÷ 368 ≈ <b>17배</b> 작아짐</div>
+        <div class="say" data-who="asst" style="margin-top:8px"><img class="who" data-who="asst" data-mood="spark" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>8비트인데 위치 표시까지 16비트씩 드네. 그래서 4비트로 더 낮춰도 생각만큼 안 줄어요.</p></div></div>
+      </div>
+    </div>
+
+    <div class="talkrow" aria-label="장면 대화">
+      <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>시계에 들어가기만 하면 끝일까요?</p></div></div>
+      <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="happy" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>들어가면 끝이지! 95% 지우면 제일 작잖아.</p></div></div>
+      <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="point" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>크기·정확도 점 그래프에서 빨간 점(다시 학습 안 함)과 파란 점을 봐. 같은 크기인데 높이가 다르지.</p></div></div>
+      <div class="say" data-who="x1"><img class="who" data-who="x1" data-mood="e04" alt="" aria-hidden="true"><div><b class="name">X1</b><p>(시계를 들어 보인다. 아직 텅 비었다)</p></div></div>
+    </div>
+
+    <div class="panel" id="pD">
+      <p class="ptitle">조작판 D — 이삿짐 센터</p>
+      <div class="ctrl">
+        <div class="group env"><span class="glabel">기기 한도 (환경)</span><button class="bt" data-ddev="400" aria-pressed="true">X1 시계 400비트</button><button class="bt" data-ddev="1560">X2 휴대폰 1,560비트</button><button class="bt" data-ddev="6240">X3 노트북 6,240비트</button></div>
+      </div>
+      <div class="ctrl">
+        <div class="group dec"><span class="glabel">지울 비율</span><button class="bt" data-dfr="0" aria-pressed="true">0%</button><button class="bt" data-dfr="0.5">50%</button><button class="bt" data-dfr="0.7">70%</button><button class="bt" data-dfr="0.8">80%</button><button class="bt" data-dfr="0.9">90%</button><button class="bt" data-dfr="0.95">95%</button></div>
+        <div class="group dec" id="dRt" hidden><span class="glabel">지운 뒤</span><button class="bt" data-drt="1" aria-pressed="true">다시 학습</button><button class="bt" data-drt="0">그대로</button></div>
+        <div class="group dec"><span class="glabel">비트</span><button class="bt" data-dbits="32" aria-pressed="true">32</button><button class="bt" data-dbits="8">8</button><button class="bt" data-dbits="4">4</button><button class="bt" data-dbits="2">2</button></div>
+      </div>
+      <div class="kpis">
+        <div class="kpi g"><b id="kD1">-</b><span>크기</span></div>
+        <div class="kpi i"><b id="kD2">-</b><span>원래보다 작아진 배수</span></div>
+        <div class="kpi g"><b id="kD3">-</b><span>시험 90장 정확도</span></div>
+        <div class="kpi g"><b id="kD4">-</b><span>잡음(0.35) 정확도</span></div>
+      </div>
+      <div class="twocol">
+        <div class="cwrap"><canvas id="cD1" width="520" height="320" aria-label="모든 조합의 크기와 정확도 점, 기기 한도선과 내 조합"></canvas></div>
+        <div class="cwrap"><canvas id="cD2" width="520" height="320" aria-label="원래 모델과 내 조합의 깨끗·잡음·공격 정확도 막대"></canvas></div>
+      </div>
+      <div class="live" id="liveD" aria-live="polite"></div>
+      <div class="insight" id="iD" aria-live="polite"></div>
+      <h4 class="mh">미션</h4><ol class="missions" id="mis-moving"></ol>
+    </div>
+
+    <div class="explain">
+      <h4>풀이</h4>
+      <ol>
+        <li>시계(400비트)에 95% 이상을 지키며 들어가는 길은 "90% 지우기 + 다시 학습 + 8비트 또는 4비트"입니다. 2비트는 어떤 조합이든 정확도가 크게 떨어집니다.</li>
+        <li>다시 학습 없이 90%를 지우면 크기는 들어가도 72.2%입니다. 크기만 보는 판정은 함정입니다.</li>
+        <li>휴대폰 한도면 덜 줄여도 됩니다. 지우지 않고 8비트(1,560비트)로만 적으면 정확도 97.8%, 잡음 정확도 63.3%로 원래 모델과 같습니다. 시계용 조합은 잡음에 55.6%였습니다.</li>
+      </ol>
+    </div>
+    <div class="lim"><b>여기서는 단순하게 봤어요</b> — 크기만 셌고 실행 속도는 재지 않았습니다. 실제 속도는 기기의 칩이 0 건너뛰기와 정수 계산을 지원하는지에 따라 달라집니다(5장 ⑦).</div>
+    <div class="interp"><b>해석 문장</b> — "모델을 장비에 넣었다"는 보고에는 크기, 정확도, 그리고 원래 모델과 같은 잡음·공격 시험 결과가 함께 붙어 있어야 합니다.</div>
+    <div class="back"><b>배운 곳 다시 보기</b> — <a href="05_lighter_models.html#s2">5장 ② 양자화</a> · <a href="05_lighter_models.html#s3">5장 ③ 가지치기</a> · <a href="05_lighter_models.html#s7">5장 ⑦ 예산 안에서</a> · <a href="05_lighter_models.html#s8">5장 ⑧ 줄이면 약해지나</a></div>
+    <div class="quiz" data-quiz="q4"></div>
+  </div>
+</section>
+
+<!-- ===================== 마무리 상자 ===================== -->
+<section class="level" id="wrapup" aria-labelledby="h-wrap">
+  <h2 id="h-wrap">마무리 상자 — 네 장면이 함께 묻는 것</h2>
+  <div class="card">
+    <p>네 장면의 결정은 따로 놀지 않습니다. 사진을 크게 받으면(A) 모델에 들어가는 숫자가 늘어 줄이기(D)가 어려워집니다. 모델을 줄이면(D) 잡음에 버티는 힘(C)이 달라집니다. 위치를 무시하게 만든 읽는 방법(B)은 숫자를 64개에서 3개로 줄여 가볍게도(D) 만듭니다. 그래서 한 장면의 최고 점수보다 <b>네 질문에 모두 답할 수 있는 선택</b>이 실무에서는 더 중요합니다. 여러분이라면 시계에 넣을 판정기를 어떤 순서로 고르겠습니까?</p>
+    <div class="say" data-who="sia" style="margin-top:12px"><img class="who" data-who="sia" data-mood="guide" alt="" aria-hidden="true"><div><b class="name">시아</b><p>제가 고른 순서: 숫자 예산부터(A), 무시할 차이를 읽는 방법에 넣고(B), 막을 공격 세기를 정하고(C), 마지막에 기기에 맞게 줄이고 시험을 다시 걸기(D).</p></div></div>
+    <div class="say" data-who="moa" style="margin-top:10px"><img class="who" data-who="moa" data-mood="tea" alt="" aria-hidden="true"><div><b class="name">모아</b><p>미션을 다 못 깼어도 괜찮아요. 함정 미션에서 "왜 틀렸지?"를 한 번 느꼈다면 충분히 배운 거예요. 차 한잔하고 다시 와요.</p></div></div>
+  </div>
+  <div class="lim"><b>모형의 한계</b> — 장면 B~D의 판정기는 8 × 8 그림 세 종류만 가리는 단순한 선형 모형이고, 정확도는 시드를 고정한 설명용 값입니다. 실제 모델은 숫자가 수백만~수십억 개라 같은 조작에도 결과의 크기가 다를 수 있습니다. 숫자는 교육용 예시이며, 제품 도입이나 투자 판단의 권고가 아닙니다.</div>
+</section>
+
+<!-- ===================== AI 판단 코너 ===================== -->
+<section class="level" id="aicheck" aria-labelledby="h-ai">
+  <h2 id="h-ai">AI 판단 코너 — 이 요약, 맞을까?</h2>
+  <div class="aicheck">
+    <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="chart" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>AI한테 실전 연습장 결과를 요약해 달라고 했어. 카드 다섯 장, 발표 자료에 그대로 넣어도 되지?</p></div></div>
+    <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="think" alt="" aria-hidden="true"><div><b class="name">박사</b><p>여러분이 직접 만져 본 숫자로 한 장씩 확인해 봅시다.</p></div></div>
+    <div id="claims"></div>
+  </div>
+</section>
+
+<!-- ===================== 정리 ===================== -->
+<section class="level" id="summary" aria-labelledby="h-sum">
+  <h2 id="h-sum">정리 — 한 장으로</h2>
+  <div class="tw"><table class="tb">
+    <thead><tr><th>장면</th><th>핵심 계산</th><th>가장 좋은 설정</th><th>함정</th><th>조건을 바꾸면</th></tr></thead>
+    <tbody>
+      <tr><td>A 접수 창구</td><td>한 변 × 한 변 × 색 × 장면 수</td><td>예산 10만, 컬러 사진 한 변 182</td><td>영상은 장면 수 60을 곱해 한 변 23</td><td>예산 두 배 → 한 변 258 (1.41배)</td></tr>
+      <tr><td>B 검수대</td><td>점 세 개 평균의 최댓값</td><td>작은 필터 + 최댓값: 이동 2에서 98% 안팎</td><td>픽셀 그대로 270장: 이동 2에서 40%</td><td>이동 0·1·2 모두 97~99%</td></tr>
+      <tr><td>C 보안실</td><td>ε × 가중치 차이 절댓값의 합</td><td>공격 섞기 0.05: 깨끗 97.8%, 공격 76.7%</td><td>잡음 섞기: 공격 45.6%</td><td>공격 0.08 → 38.9%, 0.08 연습 시 40.0%(깨끗 90.0%)</td></tr>
+      <tr><td>D 이삿짐 센터</td><td>(남은 가중치 + 3) × (비트 + 8)</td><td>90% 지우기 + 다시 학습 + 8비트: 368비트, 97.8%</td><td>다시 학습 없이 90%: 72.2%</td><td>휴대폰: 지우지 않고 8비트, 잡음 63.3% 유지</td></tr>
+    </tbody>
+  </table></div>
+  <div class="steps" style="margin-top:14px">
+    <div class="card"><h3>네 질문</h3><p>① 숫자를 몇 개 담나 ② 무엇을 무시하게 했나 ③ 무엇을 어느 세기까지 막나 ④ 얼마나 줄였고 그 뒤 같은 시험을 다시 걸었나</p></div>
+    <div class="card"><h3>오늘의 핵심</h3><p>좋은 선택은 <b>조건을 바꿔도 결론이 유지되는 선택</b>이다. 함정은 늘 "한 숫자만 보면 좋아 보이는" 곳에 있다.</p></div>
+    <div class="card"><h3>시리즈 한 줄</h3><p>데이터는 규칙으로 숫자가 되고(1·2장), 학습으로 뜻 있는 숫자가 되며(3장), 흔들림을 견디고(4장), 가벼워져(5장) 기기에 들어간다(6장).</p></div>
+  </div>
+</section>
+
+<!-- ===================== 아웃트로 ===================== -->
+<section class="level" id="outro" aria-labelledby="h-out">
+  <h2 id="h-out">마무리 — 시리즈를 닫으며</h2>
+  <div class="talkrow">
+    <div class="say" data-who="doc"><img class="who" data-who="doc" data-mood="verdict" alt="" aria-hidden="true"><div><b class="name">박사</b><p>사진도, 목소리도 결국 숫자였습니다. 그리고 어떤 숫자를 남기고 어떻게 읽을지는 매번 사람이 정했습니다. 오늘 여러분이 그 결정을 직접 내렸어요. 수고 많으셨습니다.</p></div></div>
+    <div class="say" data-who="asst"><img class="who" data-who="asst" data-mood="proud" alt="" aria-hidden="true"><div><b class="name">조수 (하루)</b><p>오늘의 성적표: 사진 한 변 182, 옮겨진 그림 98%, 공격 76.7%, 시계에 368비트로 97.8%. 다 숫자로 남았어요.</p></div></div>
+    <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="coffee" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>내가 끝까지 물은 건 하나야. "그 숫자, 조건을 바꿔도 그대로야?"</p></div></div>
+    <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="blush" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>외운 답 세 개가 함정 미션 세 개에서 다 걸렸어… 다음엔 조작판부터 만져 볼게.</p></div></div>
+    <div class="say" data-who="x1"><img class="who" data-who="x1" data-mood="e13" alt="" aria-hidden="true"><div><b class="name">X1</b><p>(시계 화면에 "가로줄"이 뜬다. 꾸벅)</p></div></div>
+  </div>
+  <p class="muted">앞: <a href="05_lighter_models.html">5장 특별</a> · 처음으로: <a href="01_why_numbers.html">1장 도입</a> · <a href="index.html">시리즈 목차</a></p>
+</section>
+
+</main>

@@ -1,0 +1,1131 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_06",
+ "nodes": [
+  {
+   "id": "lab:concept/practice-room",
+   "type": "Concept",
+   "label": {
+    "ko": "실전 연습장 (조작판·성적표·미션)",
+    "en": "Practice simulator"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#lab",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "pedagogy",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "배운 결정을 가상 작업장에서 직접 내리고 자동 판정 미션으로 확인하는 대시보드"
+   }
+  },
+  {
+   "id": "lab:concept/number-budget",
+   "type": "Concept",
+   "label": {
+    "ko": "숫자 예산",
+    "en": "Input number budget"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#desk",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "숫자 개수 = 한 변 × 한 변 × 색 × 장면 수, 예산 안 최대 한 변 = √(예산 ÷ (색 × 장면 수))"
+   }
+  },
+  {
+   "id": "lab:concept/square-growth",
+   "type": "Concept",
+   "label": {
+    "ko": "넓이는 한 변의 제곱으로 늘어난다",
+    "en": "Quadratic growth of pixel count"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#desk",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/shift-invariance",
+   "type": "Concept",
+   "label": {
+    "ko": "위치가 바뀌어도 같은 판정",
+    "en": "Translation invariance"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/filter-max",
+   "type": "Method",
+   "label": {
+    "ko": "작은 필터 + 최댓값 남기기 (합성곱·풀링)",
+    "en": "Convolution filter with global max pooling"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "점 세 개 평균의 필터를 그림 전체에 밀고 최댓값만 남긴다"
+   }
+  },
+  {
+   "id": "lab:method/shift-augmentation",
+   "type": "Method",
+   "label": {
+    "ko": "학습 때 그림 옮겨 보여 주기 (증강)",
+    "en": "Shift augmentation"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/noise-training",
+   "type": "Method",
+   "label": {
+    "ko": "잡음 섞어 배우기",
+    "en": "Training with random noise"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/adversarial-training",
+   "type": "Method",
+   "label": {
+    "ko": "공격 섞어 배우기 (적대적 학습)",
+    "en": "Adversarial training"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "학습 중 그때그때의 가장 약한 방향으로 바꾼 그림을 함께 보여 준다"
+   }
+  },
+  {
+   "id": "lab:concept/fgsm-score-shift",
+   "type": "Concept",
+   "label": {
+    "ko": "공격이 움직이는 점수 = ε × 가중치 차이 절댓값의 합",
+    "en": "FGSM score change"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/robustness-tradeoff",
+   "type": "Concept",
+   "label": {
+    "ko": "막는 세기와 평소 정확도의 맞바꿈",
+    "en": "Robustness–accuracy trade-off"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/packed-size",
+   "type": "Concept",
+   "label": {
+    "ko": "줄인 크기 = (남은 가중치 + 3) × (비트 + 위치 표시)",
+    "en": "Compressed size with index overhead"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/prune-retrain-quantize",
+   "type": "Method",
+   "label": {
+    "ko": "가지치기 + 다시 학습 + 양자화",
+    "en": "Prune, retrain, quantize"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/retest-after-change",
+   "type": "Concept",
+   "label": {
+    "ko": "바꾼 뒤 같은 시험 다시 걸기",
+    "en": "Re-evaluate after every change"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "evaluation",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/condition-check",
+   "type": "Concept",
+   "label": {
+    "ko": "조건을 바꿔도 결론이 유지되는지 확인",
+    "en": "Robustness of conclusions to conditions"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#wrapup",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "evaluation",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/linear-pixel-limit",
+   "type": "Limitation",
+   "label": {
+    "ko": "픽셀 그대로 읽는 선형 판정기는 큰 이동을 감당하지 못한다",
+    "en": "Linear pixel model cannot absorb large shifts"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/hand-made-filters",
+   "type": "Limitation",
+   "label": {
+    "ko": "필터 세 개는 사람이 정했다 (실제 모델은 학습)",
+    "en": "Filters hand-designed here"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-step-attack",
+   "type": "Limitation",
+   "label": {
+    "ko": "가장 단순한 한 번짜리 공격만 썼다",
+    "en": "Only single-step attack tested"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/size-not-speed",
+   "type": "Limitation",
+   "label": {
+    "ko": "크기만 셌고 실행 속도는 재지 않았다",
+    "en": "Size counted, latency not measured"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/toy-model",
+   "type": "Limitation",
+   "label": {
+    "ko": "8 × 8 그림 세 종류의 단순 선형 모형, 설명용 값",
+    "en": "Toy linear model"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#wrapup",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/fgsm-linear",
+   "type": "Claim",
+   "label": {
+    "ko": "선형 모델은 작은 변조가 여러 차원에서 모여 판정이 뒤집힌다",
+    "en": "Linearity explains adversarial examples"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "goodfellow2015explaining",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/adv-training-robust",
+   "type": "Claim",
+   "label": {
+    "ko": "적대적 예시로 학습하면 공격에 대한 강건성이 커진다",
+    "en": "Adversarial training improves robustness"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "madry2018towards",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/prune-quant-compose",
+   "type": "Claim",
+   "label": {
+    "ko": "가지치기·양자화를 이어 붙이면 정확도 손실 없이 크게 줄인다",
+    "en": "Pruning and quantization compose"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "han2016deep",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:task/practice",
+   "type": "Task",
+   "label": {
+    "ko": "배운 결정 직접 내려 보기",
+    "en": "Hands-on decision practice"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#lab",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/d2n6-desk",
+   "type": "Simulation",
+   "label": {
+    "ko": "장면 A 접수 창구",
+    "en": "desk"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#desk",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/d2n6-inspect",
+   "type": "Simulation",
+   "label": {
+    "ko": "장면 B 검수대 (그리기판 포함)",
+    "en": "inspect"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/d2n6-security",
+   "type": "Simulation",
+   "label": {
+    "ko": "장면 C 보안실",
+    "en": "security"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/d2n6-moving",
+   "type": "Simulation",
+   "label": {
+    "ko": "장면 D 이삿짐 센터",
+    "en": "moving"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-desk-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "desk 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#desk",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-desk-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "desk 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#desk",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-inspect-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "inspect 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-inspect-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "inspect 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#inspect",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-security-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "security 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-security-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "security 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#security",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-moving-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "moving 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n6-moving-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "moving 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#moving",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/goodfellow2015explaining",
+   "type": "Work",
+   "label": {
+    "ko": "goodfellow2015explaining",
+    "en": "goodfellow2015explaining"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/madry2018towards",
+   "type": "Work",
+   "label": {
+    "ko": "madry2018towards",
+    "en": "madry2018towards"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/han2016deep",
+   "type": "Work",
+   "label": {
+    "ko": "han2016deep",
+    "en": "han2016deep"
+   },
+   "page": "data_to_numbers_06",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n6-desk-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/number-budget",
+   "anchor": "#desk",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-desk-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/number-budget",
+   "anchor": "#desk",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-inspect-1",
+   "p": "lab:assesses",
+   "o": "lab:method/filter-max",
+   "anchor": "#inspect",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-inspect-2",
+   "p": "lab:assesses",
+   "o": "lab:method/filter-max",
+   "anchor": "#inspect",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-security-1",
+   "p": "lab:assesses",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#security",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-security-2",
+   "p": "lab:assesses",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#security",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-moving-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/packed-size",
+   "anchor": "#moving",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n6-moving-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/packed-size",
+   "anchor": "#moving",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/square-growth",
+   "p": "lab:partOf",
+   "o": "lab:concept/number-budget",
+   "anchor": "#desk",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/number-budget",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/packed-size",
+   "anchor": "#moving",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shift-invariance",
+   "p": "lab:addressedBy",
+   "o": "lab:method/filter-max",
+   "anchor": "#inspect",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shift-invariance",
+   "p": "lab:addressedBy",
+   "o": "lab:method/shift-augmentation",
+   "anchor": "#inspect",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/filter-max",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/shift-augmentation",
+   "anchor": "#inspect",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/noise-training",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#security",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fgsm-score-shift",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#security",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/robustness-tradeoff",
+   "anchor": "#security",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/packed-size",
+   "p": "lab:partOf",
+   "o": "lab:method/prune-retrain-quantize",
+   "anchor": "#moving",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/prune-retrain-quantize",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/retest-after-change",
+   "anchor": "#moving",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/retest-after-change",
+   "p": "lab:partOf",
+   "o": "lab:concept/condition-check",
+   "anchor": "#wrapup",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/practice-room",
+   "p": "lab:solves",
+   "o": "lab:task/practice",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/filter-max",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/hand-made-filters",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shift-invariance",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/linear-pixel-limit",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/single-step-attack",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/prune-retrain-quantize",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/size-not-speed",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/practice-room",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/toy-model",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/number-budget",
+   "p": "lab:broader",
+   "o": "lab:topic/representation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/square-growth",
+   "p": "lab:broader",
+   "o": "lab:topic/representation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shift-invariance",
+   "p": "lab:broader",
+   "o": "lab:topic/invariance",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/filter-max",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shift-augmentation",
+   "p": "lab:broader",
+   "o": "lab:topic/data-augmentation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/noise-training",
+   "p": "lab:broader",
+   "o": "lab:topic/robustness",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fgsm-score-shift",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/robustness-tradeoff",
+   "p": "lab:broader",
+   "o": "lab:topic/robustness",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/packed-size",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/prune-retrain-quantize",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/retest-after-change",
+   "p": "lab:broader",
+   "o": "lab:topic/evaluation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/condition-check",
+   "p": "lab:broader",
+   "o": "lab:topic/evaluation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/practice-room",
+   "p": "lab:broader",
+   "o": "lab:topic/pedagogy",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-linear",
+   "p": "lab:supports",
+   "o": "lab:concept/fgsm-score-shift",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-linear",
+   "p": "lab:assertedIn",
+   "o": "lab:work/goodfellow2015explaining",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/adv-training-robust",
+   "p": "lab:supports",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/adv-training-robust",
+   "p": "lab:assertedIn",
+   "o": "lab:work/madry2018towards",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/prune-quant-compose",
+   "p": "lab:supports",
+   "o": "lab:method/prune-retrain-quantize",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/prune-quant-compose",
+   "p": "lab:assertedIn",
+   "o": "lab:work/han2016deep",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/number-budget",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/d2n6-desk",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/filter-max",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/d2n6-inspect",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/d2n6-security",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/prune-retrain-quantize",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/d2n6-moving",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:simulation/d2n6-desk",
+   "p": "lab:partOf",
+   "o": "lab:concept/practice-room",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:simulation/d2n6-inspect",
+   "p": "lab:partOf",
+   "o": "lab:concept/practice-room",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:simulation/d2n6-security",
+   "p": "lab:partOf",
+   "o": "lab:concept/practice-room",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:simulation/d2n6-moving",
+   "p": "lab:partOf",
+   "o": "lab:concept/practice-room",
+   "anchor": "#lab",
+   "confidence": "high"
+  }
+ ]
+}

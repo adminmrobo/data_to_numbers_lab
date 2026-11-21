@@ -1,0 +1,41 @@
+{
+ "title": "직접 해 보기 — 모든 데이터는 숫자가 된다 6장",
+ "number": "D2N-6",
+ "series": "모든 데이터는 숫자가 된다 (연구실 해설)",
+ "about": [
+  "lab:concept/practice-room",
+  "lab:concept/number-budget",
+  "lab:method/filter-max",
+  "lab:method/adversarial-training",
+  "lab:method/prune-retrain-quantize"
+ ],
+ "basedOn": [
+  "goodfellow2015explaining",
+  "madry2018towards",
+  "han2016deep"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-22",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/data_to_numbers_lab/06_hands_on.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 직접 해 보기 — 모든 데이터는 숫자가 된다 6장. 연구실 해설, v1.0."
+}

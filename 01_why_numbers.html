@@ -1142,6 +1142,7 @@ function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAl
 var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function fmt(x,d){return (Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toFixed(d);}
 function num(x){return Math.round(x).toLocaleString('ko-KR');}
+var CHF={'2장':'02_rules_to_numbers.html','3장':'03_same_despite_looks.html','4장':'04_noise_and_attacks.html','5장':'05_lighter_models.html','6장':'06_hands_on.html'};
 var COL={gfp:'#13733a',stain:'#9b3fb5',eye:'#c9302c',amber:'#a35c00',info:'#1e55c8',muted:'#5b6874',rule:'#d5dbe2',text:'#16212b',fly:'#c93030',robo:'#0b7a86',accent:'#3b63d6'};
 
 /* ---------- 캐릭터 ---------- */
@@ -1507,11 +1508,11 @@ function drawItem(c,x,y,it,r,test){
    {n:'3장',t:'중급 — 겉모습이 달라도 같게 보기',q:'무엇을 무시하고 무엇을 살리나',items:['임베딩과 거리','여러 색깔의 사과 (대조 학습)','같은 사람은 가깝게 (얼굴)','다른 음색, 같은 단어','같은 녹음, 반대 목표: 화자 인식','필기체와 다른 표현·같은 뜻','다른 사람, 비슷한 동작 (관절 좌표)','같은 사람, 여러 동작 (시간 패턴)','사진과 문장이 한 공간에서 만나기'],pp:'SimCLR [9] · FaceNet [8] · wav2vec 2.0 [5] · x-vector [10] · TrOCR [12] · Sentence-BERT [13] · OpenPose [14] · I3D [15] · CLIP [7]'},
    {n:'4장',t:'고급 — 잡음이 섞였을 때',q:'무시하기가 언제 깨지고 누가 악용하나',items:['무엇이 잡음인지는 과제가 정한다','비의도적: 흐림·조명·압축','비의도적: 배경 소음·오타','학습 때와 다른 세상 (분포 변화)','의도적: 판다가 긴팔원숭이로','의도적: 음성·텍스트 공격, 프롬프트 주입','딥페이크와 탐지','방어: 적대적 학습'],pp:'ImageNet-C [16] · WILDS [17] · FGSM [18] · 음성 공격 [19] · TextFooler [20] · 간접 프롬프트 주입 [21] · FaceForensics++ [22] · 적대적 학습 [23]'},
    {n:'5장',t:'특별 — 더 작은 숫자로, 더 싸게',q:'시간·비용·사양의 제약 아래에서',items:['왜 가볍게 하나','양자화: 32비트 → 8비트 → 4비트','가지치기','지식 증류','경량 구조','정확도와 비용의 맞바꿈'],pp:'양자화 [24] · Deep Compression [11] · 지식 증류 [25] · MobileNet [26]'},
-   {n:'6장',t:'체험 — 직접 해 보기',q:'배운 것을 손으로',items:['내 그림을 숫자로','내 문장을 토큰으로','내 목소리를 스펙트로그램으로','거리 맞히기 게임','잡음을 넣어 모델 속이기','비트 줄이기 슬라이더','최종 퀴즈와 수료'],pp:'1~5장의 결과를 다시 씁니다'}];
+   {n:'6장',t:'체험 — 직접 해 보기',q:'배운 것을 손으로',items:['접수 창구 — 사진·영상·글·소리를 숫자 예산 안에 담기','검수대 — 옮겨진 그림 알아보기, 직접 그려 보기','보안실 — 우연한 잡음과 노린 공격 막기','이삿짐 센터 — 시계·휴대폰 한도 안에 모델 넣기','미션 12개 자동 판정 (가장 좋은 설정 · 함정 · 조건 바꾸기)'],pp:'1~5장의 결과를 다시 씁니다'}];
   var box=$('#chmap'),det=$('#chdetail');
   box.innerHTML=CH.map(function(e,i){return '<button class="chcard'+(e.now?' now':'')+'" aria-pressed="false" data-i="'+i+'"><span class="no">'+e.n+'</span><span class="t">'+e.t+'</span><span class="q">'+e.q+'</span></button>';}).join('');
   $$('.chcard',box).forEach(function(b){b.addEventListener('click',function(){setPressed($$('.chcard',box),b);var e=CH[+b.getAttribute('data-i')];
-    det.innerHTML='<b>'+e.n+' · '+e.t+'</b>'+(e.now?' (지금 읽는 장)':e.n==='2장'?' · <a href="02_rules_to_numbers.html">읽으러 가기 →</a>':' (준비 중)')+'<ul>'+e.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><div class="pp">바탕 논문: '+e.pp+' — 번호는 아래 출처 표</div>';});});
+    det.innerHTML='<b>'+e.n+' · '+e.t+'</b>'+(e.now?' (지금 읽는 장)':CHF[e.n]?' · <a href="'+CHF[e.n]+'">'+(e.n==='6장'?'해 보러 가기 →':'읽으러 가기 →')+'</a>':'')+'<ul>'+e.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><div class="pp">바탕 논문: '+e.pp+' — 번호는 아래 출처 표</div>';});});
 })();
 
 /* ---------- 대결 ---------- */

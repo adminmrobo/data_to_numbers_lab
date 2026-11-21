@@ -1,4 +1,4 @@
-# 이미지 프롬프트 모음 — 모든 데이터는 숫자가 된다 (목차 + 1~5장)
+# 이미지 프롬프트 모음 — 모든 데이터는 숫자가 된다 (목차 + 1~6장)
 
 모든 그림은 **16비트 RPG 픽셀아트**, 흰 배경의 낮 연구실, 그림 안 글자·숫자·로고 없음. 말풍선은 HTML이 얹으므로 만화 컷에는 그리지 않습니다.
 
@@ -6,21 +6,22 @@
 
 | 구분 | 수 | 할 일 |
 |---|---|---|
-| 새로 그림: 표지 | 6 | cover_index, cover_ch1~ch5 (16:9, 1600×900) |
-| 새로 그림: 4컷 만화 | 20 | cm1_1 ~ cm5_4 (3:2, 1200×800) |
-| 표지에서 자름 | 6 | og_index, og_ch1~ch5 (1200×630, 표지 가운데를 기준으로) |
+| 새로 그림: 표지 | 7 | cover_index, cover_ch1~ch6 (16:9, 1600×900) |
+| 새로 그림: 4컷 만화 | 24 | cm1_1 ~ cm6_4 (3:2, 1200×800) |
+| 표지에서 자름 | 7 | og_index, og_ch1~ch6 (1200×630, 표지 가운데를 기준으로) |
 | 캐릭터 팩 재사용 | — | 말풍선·등장인물·대결·인턴·X1~X3 표정 그림 (fruitfly-lab-expressions) |
 
 ## 만드는 순서 (요청 = 대화 하나)
 
 1. **R1_style_check** — cover_index (16:9) · 먼저 이 한 장으로 그림체를 확인합니다. 마음에 들면 이 그림을 이후 모든 요청에 참고 그림으로 함께 올립니다.
 2. **R2_covers_1to3** — cover_ch1, cover_ch2, cover_ch3 (16:9)
-3. **R3_covers_4to5** — cover_ch4, cover_ch5 (16:9)
+3. **R3_covers_4to6** — cover_ch4, cover_ch5, cover_ch6 (16:9)
 4. **R4_comic_ch1** — cm1_1, cm1_2, cm1_3, cm1_4 (3:2)
 5. **R5_comic_ch2** — cm2_1, cm2_2, cm2_3, cm2_4 (3:2)
 6. **R6_comic_ch3** — cm3_1, cm3_2, cm3_3, cm3_4 (3:2)
 7. **R7_comic_ch4** — cm4_1, cm4_2, cm4_3, cm4_4 (3:2)
 8. **R8_comic_ch5** — cm5_1, cm5_2, cm5_3, cm5_4 (3:2)
+9. **R9_comic_ch6** — cm6_1, cm6_2, cm6_3, cm6_4 (3:2)
 
 참고 그림: 요청마다 `refs/`의 캐릭터 기본 그림 4장을 함께 올립니다. R2부터는 R1에서 받은 cover_index도 함께 올립니다.
 
@@ -62,7 +63,7 @@
 16:9 wide cover, 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory. Upper right: a floating dashed circle holding four apples of different colors (red, green, yellow, blue) clustered closely together, all with the same brown stem. Lower right: a low stage where three black silhouettes of different heights (medium, short, tall) all raise their right hand and wave in exactly the same pose; on the floor beneath them three thin stick-figure joint shadows overlap into one. Lower left: the chibi scientist (thin teal square glasses, black hair with one white streak, short ponytail, white lab coat over black vest and tie) pointing an open palm at the apple cluster; the young researcher (long pink hair in two round buns with navy streaks, lavender hoodie under white lab coat, jeans) measuring the distance between apples with a tape measure; the beige boxy CRT robot (dark green screen face, mint pixel eyes, abacus-bead antenna, crawler treads) proudly hugging a stack of identical red-apple photos; the small fruit fly researcher (black body, red compound eyes, blue helmet with gold stripe, white coat, black gloves, transparent wings) holding a yellow apple and tilting its head. Height ratio 1.00 / 0.90 / 0.72 / 0.41. Empty wall space at upper left for a title. No text, no numbers, no letters, no logos, no night, no neon.
 ```
 
-## R3_covers_4to5 (16:9)
+## R3_covers_4to6 (16:9)
 
 ### cover_ch4 · 1600×900 · 저장 이름 `cover_ch4.png`
 한국어 지시: `docs/COVER_04_noise_and_attacks.md` 참고
@@ -76,6 +77,13 @@
 
 ```
 16:9 wide cover, 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory. On the right, a 3×3 stack of grey blocks is compressed along an arrow into one small green block that slides into a smartphone screen. Next to the compressor, the young researcher (long pink hair in two round buns with navy streaks, lavender hoodie under white lab coat, jeans) weighs blocks on a scale, and the small fruit fly researcher (black body, red compound eyes, blue helmet with gold stripe, white coat, black gloves, transparent wings) trims thin twigs off the block stack with tiny scissors. Lower left: the chibi scientist (thin teal square glasses, black hair with one white streak, short ponytail, white lab coat over black vest and tie) gesturing at the phone with an open palm; the beige boxy CRT robot (dark green screen face, mint pixel eyes, abacus-bead antenna, crawler treads) hesitating with a saw halfway into a big block. Height ratio 1.00 / 0.90 / 0.72 / 0.41. Empty wall space at upper left for a title. No text, no numbers, no letters, no logos, no night, no neon.
+```
+
+### cover_ch6 · 1600×900 · 저장 이름 `cover_ch6.png`
+한국어 지시: `docs/COVER_06_hands_on.md` 참고
+
+```
+16:9 wide cover, 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory. Four workstations stand in a row on the right: a reception counter with boxes of different sizes, an inspection station with a camera over a conveyor carrying slightly misaligned parts, a security desk with a shield and a magnifying glass, and a moving-company scale where items are packed into a small box. Each workstation has a control panel with green and blue knobs. The young researcher (long pink hair in two round buns with navy streaks, lavender hoodie under white lab coat, jeans) reads a scorecard on a clipboard, and the small fruit fly researcher (black body, red compound eyes, blue helmet with gold stripe, white coat, black gloves, transparent wings) turns a knob on the inspection station. Lower left: the chibi scientist (thin teal square glasses, black hair with one white streak, short ponytail, white lab coat over black vest and tie) smiling with arms folded; the beige boxy CRT robot (dark green screen face, mint pixel eyes, abacus-bead antenna, crawler treads) hiding a big saw behind its back in front of the scale. Height ratio 1.00 / 0.90 / 0.72 / 0.41. Empty wall space at upper left for a title. No text, no numbers, no letters, no logos, no night, no neon.
 ```
 
 ## R4_comic_ch1 (3:2)
@@ -228,6 +236,36 @@ Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines
 Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory, clean white background. Setting: in front of a whiteboard. Characters: the chibi scientist (thin teal square glasses, black hair with one white streak, short ponytail, white lab coat over black vest and tie) on the left, pointing at a whiteboard like a kind teacher. The whiteboard shows a big box turning into a small box through three arrows (no writing). Keep the upper third of the panel empty for a speech bubble added later. Keep the same character designs as the reference images. No text, no letters, no numbers, no logos, no speech bubbles, no night, no neon.
 ```
 
+## R9_comic_ch6 (3:2)
+
+### cm6_1 · 1200×800 · 저장 이름 `cm6_1.png`
+- 등장: 박사(왼쪽) · 이 컷의 말풍선(HTML): "오늘은 졸업 시험! 문제는 네 개의 작업대에 있어요."
+
+```
+Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory, clean white background. Setting: in front of a whiteboard. Characters: the chibi scientist (thin teal square glasses, black hair with one white streak, short ponytail, white lab coat over black vest and tie) on the left, pointing at a whiteboard like a kind teacher. The whiteboard shows four small pictures of workstations side by side: boxes, a camera over parts, a shield, a scale (no writing). Keep the upper third of the panel empty for a speech bubble added later. Keep the same character designs as the reference images. No text, no letters, no numbers, no logos, no speech bubbles, no night, no neon.
+```
+
+### cm6_2 · 1200×800 · 저장 이름 `cm6_2.png`
+- 등장: 주판봇(오른쪽) · 이 컷의 말풍선(HTML): "답 다 외웠지! 크면 좋고, 많으면 좋고, 줄이면 손해!"
+
+```
+Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory, clean white background. Setting: at a wooden lab desk. Characters: the beige boxy CRT robot (dark green screen face with mint pixel eyes, abacus-bead antenna, crawler treads) on the right, grinning proudly with sparkling eyes. The robot proudly holds open a thick notebook of memorized answers. Keep the upper third of the panel empty for a speech bubble added later. Keep the same character designs as the reference images. No text, no letters, no numbers, no logos, no speech bubbles, no night, no neon.
+```
+
+### cm6_3 · 1200×800 · 저장 이름 `cm6_3.png`
+- 등장: 초파리 연구원(가운데 작게) · 이 컷의 말풍선(HTML): "외운 답은 조건이 바뀌면 틀려. 조작판을 직접 움직여 봐."
+
+```
+Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory, clean white background. Setting: in front of a large wall monitor. Characters: the small fruit fly researcher (black body, red compound eyes, blue helmet with gold stripe, white coat, black gloves, transparent wings) small in the center, pointing firmly with one gloved hand, confident. The fruit fly points at a control panel with green and blue knobs on a workstation. Keep the upper third of the panel empty for a speech bubble added later. Keep the same character designs as the reference images. No text, no letters, no numbers, no logos, no speech bubbles, no night, no neon.
+```
+
+### cm6_4 · 1200×800 · 저장 이름 `cm6_4.png`
+- 등장: 조수(하루)(왼쪽), 주판봇(오른쪽 작게) · 이 컷의 말풍선(HTML): "성적표는 제가 그 자리에서 읽어 드릴게요!"
+
+```
+Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading, bright sunlit white laboratory, clean white background. Setting: an open laboratory floor with tidy shelves. Characters: the young researcher Haru (long pink hair in two round buns with navy streaks, lavender hoodie under white lab coat, jeans) on the left, with sparkling eyes, excited and proud; the beige boxy CRT robot (dark green screen face with mint pixel eyes, abacus-bead antenna, crawler treads) small on the right, with a big sweat drop, sheepish and deflated. Haru reports from a clipboard; the small robot has put down its thick notebook and sweats. Keep the upper third of the panel empty for a speech bubble added later. Keep the same character designs as the reference images. No text, no letters, no numbers, no logos, no speech bubbles, no night, no neon.
+```
+
 ## 표지에서 자르기 (생성하지 않음)
 
 | 저장 이름 | 원본 | 크기 |
@@ -238,6 +276,7 @@ Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines
 | og_ch3.jpg | cover_ch3.png | 1200×630 (가운데 기준, 캐릭터 얼굴이 잘리지 않게) |
 | og_ch4.jpg | cover_ch4.png | 1200×630 (가운데 기준, 캐릭터 얼굴이 잘리지 않게) |
 | og_ch5.jpg | cover_ch5.png | 1200×630 (가운데 기준, 캐릭터 얼굴이 잘리지 않게) |
+| og_ch6.jpg | cover_ch6.png | 1200×630 (가운데 기준, 캐릭터 얼굴이 잘리지 않게) |
 
 ## 반영
 
@@ -245,7 +284,7 @@ Comic panel, 3:2 landscape (1200×800), 16-bit RPG pixel art, bold dark outlines
 
 ```
 python3 build_character_pack.py --ingest ./받은그림 \
-  --plates cover_index=L,cover_ch1=L,cover_ch2=L,cover_ch3=L,cover_ch4=L,cover_ch5=L,cm1_1=E,cm1_2=E,cm1_3=E,cm1_4=E,cm2_1=E,cm2_2=E,cm2_3=E,cm2_4=E,cm3_1=E,cm3_2=E,cm3_3=E,cm3_4=E,cm4_1=E,cm4_2=E,cm4_3=E,cm4_4=E,cm5_1=E,cm5_2=E,cm5_3=E,cm5_4=E \
+  --plates cover_index=L,cover_ch1=L,cover_ch2=L,cover_ch3=L,cover_ch4=L,cover_ch5=L,cover_ch6=L,cm1_1=E,cm1_2=E,cm1_3=E,cm1_4=E,cm2_1=E,cm2_2=E,cm2_3=E,cm2_4=E,cm3_1=E,cm3_2=E,cm3_3=E,cm3_4=E,cm4_1=E,cm4_2=E,cm4_3=E,cm4_4=E,cm5_1=E,cm5_2=E,cm5_3=E,cm5_4=E,cm6_1=E,cm6_2=E,cm6_3=E,cm6_4=E \
   --out received_all
 ```
 
