@@ -1,0 +1,48 @@
+{
+ "title": "겉모습이 달라도 같은 것은 같게 — 모든 데이터는 숫자가 된다 3장",
+ "number": "D2N-3",
+ "series": "모든 데이터는 숫자가 된다 (연구실 해설)",
+ "about": [
+  "lab:concept/cosine-similarity",
+  "lab:method/augmentation-contrastive",
+  "lab:method/triplet-loss",
+  "lab:concept/goal-defines-invariance",
+  "lab:concept/joint-embedding-space"
+ ],
+ "basedOn": [
+  "mikolov2013efficient",
+  "baevski2020wav2vec",
+  "schroff2015facenet",
+  "radford2021learning",
+  "chen2020simple",
+  "snyder2018xvectors",
+  "li2023trocr",
+  "reimers2019sentence",
+  "cao2017realtime",
+  "carreira2017quo"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/data_to_numbers_lab/03_same_despite_looks.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 겉모습이 달라도 같은 것은 같게 — 모든 데이터는 숫자가 된다 3장. 연구실 해설, v1.0."
+}

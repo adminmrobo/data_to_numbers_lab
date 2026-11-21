@@ -340,5 +340,314 @@
    "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
    "checkedSource": "external"
   }
+ },
+ {
+  "id": "radford2021learning",
+  "type": "paper-conference",
+  "title": "Learning Transferable Visual Models From Natural Language Supervision",
+  "author": [
+   {
+    "family": "Radford",
+    "given": "Alec"
+   },
+   {
+    "family": "Kim",
+    "given": "Jong Wook"
+   },
+   {
+    "family": "Hallacy",
+    "given": "Chris"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2103.00020",
+  "container-title": "ICML 2021",
+  "lab": {
+   "work": "lab:work/radford2021learning",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "chen2020simple",
+  "type": "paper-conference",
+  "title": "A Simple Framework for Contrastive Learning of Visual Representations",
+  "author": [
+   {
+    "family": "Chen",
+    "given": "Ting"
+   },
+   {
+    "family": "Kornblith",
+    "given": "Simon"
+   },
+   {
+    "family": "Norouzi",
+    "given": "Mohammad"
+   },
+   {
+    "family": "Hinton",
+    "given": "Geoffrey"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2002.05709",
+  "container-title": "ICML 2020",
+  "lab": {
+   "work": "lab:work/chen2020simple",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "snyder2018xvectors",
+  "type": "paper-conference",
+  "title": "X-Vectors: Robust DNN Embeddings for Speaker Recognition",
+  "author": [
+   {
+    "family": "Snyder",
+    "given": "David"
+   },
+   {
+    "family": "Garcia-Romero",
+    "given": "Daniel"
+   },
+   {
+    "family": "Sell",
+    "given": "Gregory"
+   },
+   {
+    "family": "Povey",
+    "given": "Daniel"
+   },
+   {
+    "family": "Khudanpur",
+    "given": "Sanjeev"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "URL": "https://danielpovey.com/files/2018_icassp_xvectors.pdf",
+  "container-title": "ICASSP 2018",
+  "lab": {
+   "work": "lab:work/snyder2018xvectors",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "li2023trocr",
+  "type": "paper-conference",
+  "title": "TrOCR: Transformer-based Optical Character Recognition with Pre-trained Models",
+  "author": [
+   {
+    "family": "Li",
+    "given": "Minghao"
+   },
+   {
+    "family": "Lv",
+    "given": "Tengchao"
+   },
+   {
+    "family": "Chen",
+    "given": "Jingye"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2109.10282",
+  "container-title": "AAAI 2023",
+  "lab": {
+   "work": "lab:work/li2023trocr",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "reimers2019sentence",
+  "type": "paper-conference",
+  "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+  "author": [
+   {
+    "family": "Reimers",
+    "given": "Nils"
+   },
+   {
+    "family": "Gurevych",
+    "given": "Iryna"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1908.10084",
+  "container-title": "EMNLP 2019",
+  "lab": {
+   "work": "lab:work/reimers2019sentence",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "cao2017realtime",
+  "type": "paper-conference",
+  "title": "Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields",
+  "author": [
+   {
+    "family": "Cao",
+    "given": "Zhe"
+   },
+   {
+    "family": "Simon",
+    "given": "Tomas"
+   },
+   {
+    "family": "Wei",
+    "given": "Shih-En"
+   },
+   {
+    "family": "Sheikh",
+    "given": "Yaser"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1611.08050",
+  "container-title": "CVPR 2017",
+  "lab": {
+   "work": "lab:work/cao2017realtime",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "carreira2017quo",
+  "type": "paper-conference",
+  "title": "Quo Vadis, Action Recognition? A New Model and the Kinetics Dataset",
+  "author": [
+   {
+    "family": "Carreira",
+    "given": "Joao"
+   },
+   {
+    "family": "Zisserman",
+    "given": "Andrew"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1705.07750",
+  "container-title": "CVPR 2017",
+  "lab": {
+   "work": "lab:work/carreira2017quo",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
  }
 ]

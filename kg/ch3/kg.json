@@ -1,0 +1,1903 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_03",
+ "nodes": [
+  {
+   "id": "lab:concept/cosine-similarity",
+   "type": "Concept",
+   "label": {
+    "ko": "코사인 유사도",
+    "en": "Cosine similarity"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "두 숫자 줄의 내적 ÷ 길이의 곱. 크기는 무시하고 방향만 본다"
+   }
+  },
+  {
+   "id": "lab:concept/embedding-distance",
+   "type": "Concept",
+   "label": {
+    "ko": "임베딩 사이 거리",
+    "en": "Embedding distance"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/augmentation-contrastive",
+   "type": "Method",
+   "label": {
+    "ko": "증강 + 대조 학습",
+    "en": "Augmentation with contrastive learning"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "한 사진의 두 모습은 가깝게, 다른 사진은 멀게. 바꿔 보여 준 차이가 무시된다"
+   }
+  },
+  {
+   "id": "lab:method/triplet-loss",
+   "type": "Method",
+   "label": {
+    "ko": "세 쌍 손실",
+    "en": "Triplet loss"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "max(0, d(기준, 같은)² − d(기준, 다른)² + α)"
+   }
+  },
+  {
+   "id": "lab:concept/goal-defines-invariance",
+   "type": "Concept",
+   "label": {
+    "ko": "무엇을 지울지는 목표가 정한다",
+    "en": "Task-dependent invariance"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "같은 녹음도 낱말 목표면 음색을, 화자 목표면 낱말을 지운다"
+   }
+  },
+  {
+   "id": "lab:method/word-embedding-speech",
+   "type": "Method",
+   "label": {
+    "ko": "같은 낱말끼리 가깝게 (음색 무시)",
+    "en": "Content embedding for speech"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/speaker-embedding",
+   "type": "Method",
+   "label": {
+    "ko": "같은 사람끼리 가깝게 (낱말 무시)",
+    "en": "Speaker embedding"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/jaccard",
+   "type": "Concept",
+   "label": {
+    "ko": "글자 겹침 비율 (자카드)",
+    "en": "Jaccard overlap"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "교집합 ÷ 합집합"
+   }
+  },
+  {
+   "id": "lab:method/sentence-embedding",
+   "type": "Method",
+   "label": {
+    "ko": "문장 뜻 숫자 줄",
+    "en": "Sentence embedding"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/pose-normalization",
+   "type": "Method",
+   "label": {
+    "ko": "관절 좌표 맞추기 (골반 기준·키로 나누기)",
+    "en": "Keypoint normalization"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s7",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "(관절 − 골반) ÷ 키. 위치와 체격을 지운다"
+   }
+  },
+  {
+   "id": "lab:concept/temporal-window",
+   "type": "Concept",
+   "label": {
+    "ko": "여러 장면 보기 (시간 창)",
+    "en": "Temporal window"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s8",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "장면을 이어 봐야 변화의 방향이 보인다"
+   }
+  },
+  {
+   "id": "lab:concept/joint-embedding-space",
+   "type": "Concept",
+   "label": {
+    "ko": "사진과 글의 한 공간",
+    "en": "Joint image-text space"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "representation",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/shortcut-color",
+   "type": "Limitation",
+   "label": {
+    "ko": "학습은 가장 쉬운 단서(색)만 배울 수 있다",
+    "en": "Shortcut learning on color"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/imbalanced-pairs",
+   "type": "Limitation",
+   "label": {
+    "ko": "다른 쌍이 많으면 전체 정확도가 속인다",
+    "en": "Pair imbalance inflates accuracy"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/content-erases-speaker",
+   "type": "Limitation",
+   "label": {
+    "ko": "낱말용 숫자는 화자를 잘 못 가린다",
+    "en": "Content embeddings lose speaker identity"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/surface-overlap",
+   "type": "Limitation",
+   "label": {
+    "ko": "글자 겹침은 뜻을 대신하지 못한다",
+    "en": "Surface overlap misses meaning"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/single-frame-ambiguity",
+   "type": "Limitation",
+   "label": {
+    "ko": "한 장면으로는 앉기와 일어서기를 가를 수 없다",
+    "en": "Single frame is ambiguous"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s8",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/nearest-always-returns",
+   "type": "Limitation",
+   "label": {
+    "ko": "맞는 것이 없어도 가장 가까운 것은 늘 나온다",
+    "en": "Nearest neighbour always returns something"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s9",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/facenet-128",
+   "type": "Claim",
+   "label": {
+    "ko": "얼굴 하나를 128바이트로, 거리 = 닮은 정도",
+    "en": "FaceNet 128 bytes per face"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "schroff2015facenet",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/clip-400m",
+   "type": "Claim",
+   "label": {
+    "ko": "사진·글 쌍 4억 개로 함께 학습",
+    "en": "CLIP trained on 400M pairs"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "radford2021learning",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/simclr-aug",
+   "type": "Claim",
+   "label": {
+    "ko": "증강 조합이 대조 학습 품질을 크게 좌우한다",
+    "en": "Augmentation composition matters"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "chen2020simple",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/xvector",
+   "type": "Claim",
+   "label": {
+    "ko": "발화를 고정 길이 화자 숫자 줄로",
+    "en": "Fixed-length speaker embeddings"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "snyder2018xvectors",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/wav2vec-10min",
+   "type": "Claim",
+   "label": {
+    "ko": "정답 달린 녹음 10분으로도 음성 인식",
+    "en": "10 minutes of labeled data"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "baevski2020wav2vec",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/trocr",
+   "type": "Claim",
+   "label": {
+    "ko": "인쇄체·손글씨·간판 글자 읽기에서 기존 모델을 앞섬",
+    "en": "TrOCR outperforms prior models"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "li2023trocr",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/sbert-speed",
+   "type": "Claim",
+   "label": {
+    "ko": "가장 비슷한 문장 쌍 찾기 65시간 → 약 5초",
+    "en": "65 hours to about 5 seconds"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "reimers2019sentence",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/openpose",
+   "type": "Claim",
+   "label": {
+    "ko": "여러 사람의 관절을 실시간으로 찾는다",
+    "en": "Realtime multi-person pose"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "cao2017realtime",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/kinetics",
+   "type": "Claim",
+   "label": {
+    "ko": "동작 400가지·동작마다 영상 400개 이상",
+    "en": "Kinetics 400 classes"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "carreira2017quo",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/w2v-analogy",
+   "type": "Claim",
+   "label": {
+    "ko": "왕 − 남자 + 여자 ≈ 여왕",
+    "en": "King − man + woman ≈ queen"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "mikolov2013efficient",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:simulation/words",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ① 낱말 지도",
+    "en": "words"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/aug",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ② 증강 실험실",
+    "en": "aug"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/face",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ③ 얼굴 지도",
+    "en": "face"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/word",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ④ 낱말 맞히기 학습",
+    "en": "word"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/goal",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑤ 목표 바꾸기",
+    "en": "goal"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/text",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑥ 문의 분류",
+    "en": "text"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/pose",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑦ 동작 무대",
+    "en": "pose"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/time",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑧ 시간 창",
+    "en": "time"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/clip",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑨ 사진·글 한 공간",
+    "en": "clip"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#p9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결: 같은 사진 두 배 vs 색 바꾸기",
+    "en": "duel"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s5-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s5-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s6-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s6-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s7-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s7-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s8-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s8-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s9-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s9 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n3-s9-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s9 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/schroff2015facenet",
+   "type": "Work",
+   "label": {
+    "ko": "schroff2015facenet",
+    "en": "schroff2015facenet"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/mikolov2013efficient",
+   "type": "Work",
+   "label": {
+    "ko": "mikolov2013efficient",
+    "en": "mikolov2013efficient"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/baevski2020wav2vec",
+   "type": "Work",
+   "label": {
+    "ko": "baevski2020wav2vec",
+    "en": "baevski2020wav2vec"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/radford2021learning",
+   "type": "Work",
+   "label": {
+    "ko": "radford2021learning",
+    "en": "radford2021learning"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/chen2020simple",
+   "type": "Work",
+   "label": {
+    "ko": "chen2020simple",
+    "en": "chen2020simple"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/snyder2018xvectors",
+   "type": "Work",
+   "label": {
+    "ko": "snyder2018xvectors",
+    "en": "snyder2018xvectors"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/li2023trocr",
+   "type": "Work",
+   "label": {
+    "ko": "li2023trocr",
+    "en": "li2023trocr"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/reimers2019sentence",
+   "type": "Work",
+   "label": {
+    "ko": "reimers2019sentence",
+    "en": "reimers2019sentence"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/cao2017realtime",
+   "type": "Work",
+   "label": {
+    "ko": "cao2017realtime",
+    "en": "cao2017realtime"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/carreira2017quo",
+   "type": "Work",
+   "label": {
+    "ko": "carreira2017quo",
+    "en": "carreira2017quo"
+   },
+   "page": "data_to_numbers_03",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n3-s1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/cosine-similarity",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s2-1",
+   "p": "lab:assesses",
+   "o": "lab:method/augmentation-contrastive",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s2-2",
+   "p": "lab:assesses",
+   "o": "lab:method/augmentation-contrastive",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s3-1",
+   "p": "lab:assesses",
+   "o": "lab:method/triplet-loss",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s3-2",
+   "p": "lab:assesses",
+   "o": "lab:method/triplet-loss",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s4-1",
+   "p": "lab:assesses",
+   "o": "lab:method/word-embedding-speech",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s4-2",
+   "p": "lab:assesses",
+   "o": "lab:method/word-embedding-speech",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s5-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/goal-defines-invariance",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s5-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/goal-defines-invariance",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s6-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/jaccard",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s6-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/jaccard",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s7-1",
+   "p": "lab:assesses",
+   "o": "lab:method/pose-normalization",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s7-2",
+   "p": "lab:assesses",
+   "o": "lab:method/pose-normalization",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s8-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/temporal-window",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s8-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/temporal-window",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s9-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/joint-embedding-space",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n3-s9-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/joint-embedding-space",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding-distance",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/augmentation-contrastive",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/embedding-distance",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/triplet-loss",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-embedding-speech",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/speaker-embedding",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/goal-defines-invariance",
+   "p": "lab:relatedTo",
+   "o": "lab:method/word-embedding-speech",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/goal-defines-invariance",
+   "p": "lab:relatedTo",
+   "o": "lab:method/speaker-embedding",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/jaccard",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/sentence-embedding",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pose-normalization",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/temporal-window",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/joint-embedding-space",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/joint-embedding-space",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/shortcut-color",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/triplet-loss",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/imbalanced-pairs",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-embedding-speech",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/content-erases-speaker",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/jaccard",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/surface-overlap",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/temporal-window",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/single-frame-ambiguity",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/joint-embedding-space",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/nearest-always-returns",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding-distance",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:broader",
+   "o": "lab:topic/contrastive",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:broader",
+   "o": "lab:topic/data-augmentation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/triplet-loss",
+   "p": "lab:broader",
+   "o": "lab:topic/loss-function",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/triplet-loss",
+   "p": "lab:broader",
+   "o": "lab:topic/contrastive",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/goal-defines-invariance",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-embedding-speech",
+   "p": "lab:broader",
+   "o": "lab:topic/self-supervised",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/speaker-embedding",
+   "p": "lab:broader",
+   "o": "lab:topic/embedding-space",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/jaccard",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/sentence-embedding",
+   "p": "lab:broader",
+   "o": "lab:topic/word-embedding",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pose-normalization",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/temporal-window",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/joint-embedding-space",
+   "p": "lab:broader",
+   "o": "lab:topic/contrastive",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/imbalanced-pairs",
+   "p": "lab:broader",
+   "o": "lab:topic/accuracy-metrics",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/shortcut-color",
+   "p": "lab:broader",
+   "o": "lab:topic/generalization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/facenet-128",
+   "p": "lab:supports",
+   "o": "lab:method/triplet-loss",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/facenet-128",
+   "p": "lab:assertedIn",
+   "o": "lab:work/schroff2015facenet",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/clip-400m",
+   "p": "lab:supports",
+   "o": "lab:concept/joint-embedding-space",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/clip-400m",
+   "p": "lab:assertedIn",
+   "o": "lab:work/radford2021learning",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/simclr-aug",
+   "p": "lab:supports",
+   "o": "lab:method/augmentation-contrastive",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/simclr-aug",
+   "p": "lab:assertedIn",
+   "o": "lab:work/chen2020simple",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/xvector",
+   "p": "lab:supports",
+   "o": "lab:method/speaker-embedding",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/xvector",
+   "p": "lab:assertedIn",
+   "o": "lab:work/snyder2018xvectors",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-10min",
+   "p": "lab:supports",
+   "o": "lab:method/word-embedding-speech",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-10min",
+   "p": "lab:assertedIn",
+   "o": "lab:work/baevski2020wav2vec",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/trocr",
+   "p": "lab:supports",
+   "o": "lab:method/sentence-embedding",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/trocr",
+   "p": "lab:assertedIn",
+   "o": "lab:work/li2023trocr",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/sbert-speed",
+   "p": "lab:supports",
+   "o": "lab:method/sentence-embedding",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/sbert-speed",
+   "p": "lab:assertedIn",
+   "o": "lab:work/reimers2019sentence",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/openpose",
+   "p": "lab:supports",
+   "o": "lab:method/pose-normalization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/openpose",
+   "p": "lab:assertedIn",
+   "o": "lab:work/cao2017realtime",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/kinetics",
+   "p": "lab:supports",
+   "o": "lab:concept/temporal-window",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/kinetics",
+   "p": "lab:assertedIn",
+   "o": "lab:work/carreira2017quo",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:supports",
+   "o": "lab:concept/embedding-distance",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013efficient",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/cosine-similarity",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/words",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/aug",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/triplet-loss",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/face",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-embedding-speech",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/word",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/goal-defines-invariance",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/goal",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/sentence-embedding",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/text",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pose-normalization",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/pose",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/temporal-window",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/time",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/joint-embedding-space",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/clip",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/augmentation-contrastive",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/duel",
+   "anchor": "#top",
+   "confidence": "high"
+  }
+ ]
+}

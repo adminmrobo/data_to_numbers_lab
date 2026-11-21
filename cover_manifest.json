@@ -19,6 +19,11 @@
         "path": "02_rules_to_numbers.html",
         "kg": true,
         "export": true
+      },
+      {
+        "path": "03_same_despite_looks.html",
+        "kg": true,
+        "export": true
       }
     ],
     "files": [
@@ -27,7 +32,10 @@
       "kg/meta.json",
       "kg/ch2/kg.json",
       "kg/ch2/refs.json",
-      "kg/ch2/meta.json"
+      "kg/ch2/meta.json",
+      "kg/ch3/kg.json",
+      "kg/ch3/refs.json",
+      "kg/ch3/meta.json"
     ]
   },
   "i18n": {
@@ -35,7 +43,7 @@
       "ko"
     ],
     "pages": {
-      "ko": 3
+      "ko": 4
     },
     "readme_langs": [
       "ko"
@@ -282,6 +290,106 @@
       "characters": [],
       "robot": "jupanbot-v2",
       "prompt_en": "see docs/IMG_02_rules_to_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "cover_ch3",
+      "role": "cover",
+      "path": "img/cover_ch3.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, daytime lab, differently colored apples clustered in one dashed circle, three silhouettes of different heights waving the same way (full prompt: docs/COVER_03_same_despite_looks.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "03_same_despite_looks.html",
+      "key": "#cover"
+    },
+    {
+      "id": "og_ch3",
+      "role": "og",
+      "path": "img/og_ch3.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_ch3",
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm3_1",
+      "role": "scene",
+      "embedded_in": "03_same_despite_looks.html",
+      "key": ".frame[data-img=\"cm3_1\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_03_same_despite_looks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm3_2",
+      "role": "scene",
+      "embedded_in": "03_same_despite_looks.html",
+      "key": ".frame[data-img=\"cm3_2\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_03_same_despite_looks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm3_3",
+      "role": "scene",
+      "embedded_in": "03_same_despite_looks.html",
+      "key": ".frame[data-img=\"cm3_3\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_03_same_despite_looks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm3_4",
+      "role": "scene",
+      "embedded_in": "03_same_despite_looks.html",
+      "key": ".frame[data-img=\"cm3_4\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_03_same_despite_looks.md",
       "source_of": null,
       "status": "todo"
     }
