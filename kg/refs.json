@@ -649,5 +649,345 @@
    "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
    "checkedSource": "external"
   }
+ },
+ {
+  "id": "hendrycks2019benchmarking",
+  "type": "paper-conference",
+  "title": "Benchmarking Neural Network Robustness to Common Corruptions and Perturbations",
+  "author": [
+   {
+    "family": "Hendrycks",
+    "given": "Dan"
+   },
+   {
+    "family": "Dietterich",
+    "given": "Thomas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1903.12261",
+  "container-title": "ICLR 2019",
+  "lab": {
+   "work": "lab:work/hendrycks2019benchmarking",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "koh2021wilds",
+  "type": "paper-conference",
+  "title": "WILDS: A Benchmark of in-the-Wild Distribution Shifts",
+  "author": [
+   {
+    "family": "Koh",
+    "given": "Pang Wei"
+   },
+   {
+    "family": "Sagawa",
+    "given": "Shiori"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2012.07421",
+  "container-title": "ICML 2021",
+  "lab": {
+   "work": "lab:work/koh2021wilds",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "goodfellow2015explaining",
+  "type": "paper-conference",
+  "title": "Explaining and Harnessing Adversarial Examples",
+  "author": [
+   {
+    "family": "Goodfellow",
+    "given": "Ian J."
+   },
+   {
+    "family": "Shlens",
+    "given": "Jonathon"
+   },
+   {
+    "family": "Szegedy",
+    "given": "Christian"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1412.6572",
+  "container-title": "ICLR 2015",
+  "lab": {
+   "work": "lab:work/goodfellow2015explaining",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "carlini2018audio",
+  "type": "paper-conference",
+  "title": "Audio Adversarial Examples: Targeted Attacks on Speech-to-Text",
+  "author": [
+   {
+    "family": "Carlini",
+    "given": "Nicholas"
+   },
+   {
+    "family": "Wagner",
+    "given": "David"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1801.01944",
+  "container-title": "IEEE S&P Workshops 2018",
+  "lab": {
+   "work": "lab:work/carlini2018audio",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "jin2020bert",
+  "type": "paper-conference",
+  "title": "Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment",
+  "author": [
+   {
+    "family": "Jin",
+    "given": "Di"
+   },
+   {
+    "family": "Jin",
+    "given": "Zhijing"
+   },
+   {
+    "family": "Zhou",
+    "given": "Joey Tianyi"
+   },
+   {
+    "family": "Szolovits",
+    "given": "Peter"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1907.11932",
+  "container-title": "AAAI 2020",
+  "lab": {
+   "work": "lab:work/jin2020bert",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "greshake2023not",
+  "type": "paper-conference",
+  "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+  "author": [
+   {
+    "family": "Greshake",
+    "given": "Kai"
+   },
+   {
+    "family": "Abdelnabi",
+    "given": "Sahar"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2302.12173",
+  "container-title": "AISec 2023",
+  "lab": {
+   "work": "lab:work/greshake2023not",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "rossler2019faceforensics",
+  "type": "paper-conference",
+  "title": "FaceForensics++: Learning to Detect Manipulated Facial Images",
+  "author": [
+   {
+    "family": "Rössler",
+    "given": "Andreas"
+   },
+   {
+    "family": "Cozzolino",
+    "given": "Davide"
+   },
+   {
+    "family": "Verdoliva",
+    "given": "Luisa"
+   },
+   {
+    "family": "Riess",
+    "given": "Christian"
+   },
+   {
+    "family": "Thies",
+    "given": "Justus"
+   },
+   {
+    "family": "Nießner",
+    "given": "Matthias"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1901.08971",
+  "container-title": "ICCV 2019",
+  "lab": {
+   "work": "lab:work/rossler2019faceforensics",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "madry2018towards",
+  "type": "paper-conference",
+  "title": "Towards Deep Learning Models Resistant to Adversarial Attacks",
+  "author": [
+   {
+    "family": "Madry",
+    "given": "Aleksander"
+   },
+   {
+    "family": "Makelov",
+    "given": "Aleksandar"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1706.06083",
+  "container-title": "ICLR 2018",
+  "lab": {
+   "work": "lab:work/madry2018towards",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
  }
 ]

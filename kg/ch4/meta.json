@@ -1,0 +1,46 @@
+{
+ "title": "잡음이 섞였을 때 — 모든 데이터는 숫자가 된다 4장",
+ "number": "D2N-4",
+ "series": "모든 데이터는 숫자가 된다 (연구실 해설)",
+ "about": [
+  "lab:concept/common-corruption",
+  "lab:concept/distribution-shift",
+  "lab:concept/adversarial-example",
+  "lab:concept/prompt-injection",
+  "lab:method/adversarial-training"
+ ],
+ "basedOn": [
+  "hendrycks2019benchmarking",
+  "koh2021wilds",
+  "goodfellow2015explaining",
+  "carlini2018audio",
+  "jin2020bert",
+  "greshake2023not",
+  "rossler2019faceforensics",
+  "madry2018towards"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/data_to_numbers_lab/04_noise_and_attacks.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 잡음이 섞였을 때 — 모든 데이터는 숫자가 된다 4장. 연구실 해설, v1.0."
+}

@@ -24,6 +24,11 @@
         "path": "03_same_despite_looks.html",
         "kg": true,
         "export": true
+      },
+      {
+        "path": "04_noise_and_attacks.html",
+        "kg": true,
+        "export": true
       }
     ],
     "files": [
@@ -35,7 +40,10 @@
       "kg/ch2/meta.json",
       "kg/ch3/kg.json",
       "kg/ch3/refs.json",
-      "kg/ch3/meta.json"
+      "kg/ch3/meta.json",
+      "kg/ch4/kg.json",
+      "kg/ch4/refs.json",
+      "kg/ch4/meta.json"
     ]
   },
   "i18n": {
@@ -43,7 +51,7 @@
       "ko"
     ],
     "pages": {
-      "ko": 4
+      "ko": 5
     },
     "readme_langs": [
       "ko"
@@ -390,6 +398,106 @@
       "characters": [],
       "robot": "jupanbot-v2",
       "prompt_en": "see docs/IMG_03_same_despite_looks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "cover_ch4",
+      "role": "cover",
+      "path": "img/cover_ch4.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, daytime lab, static-filled monitor and an apple painting with faint regular dots inspected by the fruit fly (full prompt: docs/COVER_04_noise_and_attacks.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "04_noise_and_attacks.html",
+      "key": "#cover"
+    },
+    {
+      "id": "og_ch4",
+      "role": "og",
+      "path": "img/og_ch4.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_ch4",
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm4_1",
+      "role": "scene",
+      "embedded_in": "04_noise_and_attacks.html",
+      "key": ".frame[data-img=\"cm4_1\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_04_noise_and_attacks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm4_2",
+      "role": "scene",
+      "embedded_in": "04_noise_and_attacks.html",
+      "key": ".frame[data-img=\"cm4_2\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_04_noise_and_attacks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm4_3",
+      "role": "scene",
+      "embedded_in": "04_noise_and_attacks.html",
+      "key": ".frame[data-img=\"cm4_3\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_04_noise_and_attacks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm4_4",
+      "role": "scene",
+      "embedded_in": "04_noise_and_attacks.html",
+      "key": ".frame[data-img=\"cm4_4\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_04_noise_and_attacks.md",
       "source_of": null,
       "status": "todo"
     }

@@ -11,7 +11,7 @@
 | 1장 도입 | [사진도, 목소리도, 결국 숫자다](01_why_numbers.html) | 공개 |
 | 2장 초급 | [숫자로 바꾸는 네 개의 창구](02_rules_to_numbers.html) | 공개 |
 | 3장 중급 | [겉모습이 달라도 같은 것은 같게](03_same_despite_looks.html) | 공개 |
-| 4장 고급 | 잡음이 섞였을 때 | 준비 중 |
+| 4장 고급 | [잡음이 섞였을 때](04_noise_and_attacks.html) | 공개 |
 | 5장 특별 | 더 작은 숫자로, 더 싸게 | 준비 중 |
 | 6장 체험 | 직접 해 보기 | 준비 중 |
 
@@ -39,6 +39,7 @@
 | `01_why_numbers.html` | 1장 (단일 파일, 외부 요청은 글꼴 하나) |
 | `02_rules_to_numbers.html` | 2장 |
 | `03_same_despite_looks.html` | 3장 |
+| `04_noise_and_attacks.html` | 4장 |
 | `kg/` | 1장 지식 색인·온톨로지 원본 (`kg.json`, `refs.json`, `meta.json`, 점검 보고서). 2장은 `kg/ch2/` |
 | `docs/` | 서베이 26편 목록, 표지 지시문, 이미지 명세서 (16비트 픽셀아트) |
 | `cover_manifest.json` | 표지·장면 그림 목록 ([ahnboat lab 이미지 표지 현황](https://adminmrobo.github.io/ahnboat_lab_cover_status/)이 읽음) |

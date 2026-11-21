@@ -1,0 +1,1915 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_04",
+ "nodes": [
+  {
+   "id": "lab:concept/common-corruption",
+   "type": "Concept",
+   "label": {
+    "ko": "흔한 손상 (잡음·흐림·밝기·대비)",
+    "en": "Common corruptions"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "현장에서 우연히 생기는 입력 손상. 종류×세기별로 정확도를 잰다"
+   }
+  },
+  {
+   "id": "lab:concept/snr-db",
+   "type": "Concept",
+   "label": {
+    "ko": "신호 대 잡음비 (dB)",
+    "en": "Signal-to-noise ratio"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "10 × log₁₀(신호 세기 ÷ 잡음 세기)"
+   }
+  },
+  {
+   "id": "lab:method/longer-window",
+   "type": "Method",
+   "label": {
+    "ko": "더 오래 듣기 (평균으로 잡음 줄이기)",
+    "en": "Longer integration window"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "n번 평균하면 잡음 흔들림이 1/√n"
+   }
+  },
+  {
+   "id": "lab:concept/label-noise",
+   "type": "Concept",
+   "label": {
+    "ko": "정답 잡음 (틀린 라벨)",
+    "en": "Label noise"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "훈련 정답의 일부가 틀린 상태"
+   }
+  },
+  {
+   "id": "lab:method/knn-vote",
+   "type": "Method",
+   "label": {
+    "ko": "k-최근접 다수결",
+    "en": "k-nearest-neighbour voting"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/distribution-shift",
+   "type": "Concept",
+   "label": {
+    "ko": "환경 변화 (분포 이동)",
+    "en": "Distribution shift"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "훈련한 곳과 쓰는 곳의 자료 분포가 다름"
+   }
+  },
+  {
+   "id": "lab:concept/spurious-correlation",
+   "type": "Concept",
+   "label": {
+    "ko": "우연한 엮임 (지름길 단서)",
+    "en": "Spurious correlation"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/multi-site-training",
+   "type": "Method",
+   "label": {
+    "ko": "여러 곳의 데이터로 학습",
+    "en": "Multi-site training"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/adversarial-example",
+   "type": "Concept",
+   "label": {
+    "ko": "적대적 변조",
+    "en": "Adversarial example"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "판정을 뒤집도록 약한 방향으로 넣은 작은 변조"
+   }
+  },
+  {
+   "id": "lab:method/fgsm",
+   "type": "Method",
+   "label": {
+    "ko": "FGSM (기울기 부호 공격)",
+    "en": "Fast Gradient Sign Method"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "모든 픽셀을 점수가 깎이는 부호 방향으로 ε씩"
+   }
+  },
+  {
+   "id": "lab:method/word-substitution-attack",
+   "type": "Method",
+   "label": {
+    "ko": "비슷한 낱말 바꿔치기 공격",
+    "en": "Word substitution attack"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/prompt-injection",
+   "type": "Concept",
+   "label": {
+    "ko": "간접 프롬프트 주입",
+    "en": "Indirect prompt injection"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "AI가 읽어 온 자료 속 지시문으로 시키지 않은 일을 하게 함"
+   }
+  },
+  {
+   "id": "lab:method/data-instruction-separation",
+   "type": "Method",
+   "label": {
+    "ko": "자료와 명령 나누기 + 행동 확인",
+    "en": "Separating data from instructions"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/adversarial-training",
+   "type": "Method",
+   "label": {
+    "ko": "적대적 학습",
+    "en": "Adversarial training"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "min 평균[max 손실(그림 + 변조)]"
+   }
+  },
+  {
+   "id": "lab:concept/deepfake-detection",
+   "type": "Concept",
+   "label": {
+    "ko": "가짜 얼굴 영상 탐지",
+    "en": "Deepfake detection"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/noise-destroys-info",
+   "type": "Limitation",
+   "label": {
+    "ko": "잡음이 신호 차이보다 크면 한 장 안의 정보가 묻힌다",
+    "en": "Noise beyond signal destroys information"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/latency-tradeoff",
+   "type": "Limitation",
+   "label": {
+    "ko": "오래 들으면 판단이 늦어진다",
+    "en": "Longer window adds latency"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/majority-fails-high-noise",
+   "type": "Limitation",
+   "label": {
+    "ko": "틀린 정답이 절반에 가까우면 다수결도 흔들린다",
+    "en": "Voting fails at high label noise"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/shortcut-collapse",
+   "type": "Limitation",
+   "label": {
+    "ko": "지름길 단서는 다른 환경에서 무너진다",
+    "en": "Shortcuts collapse under shift"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/robust-accuracy-tradeoff",
+   "type": "Limitation",
+   "label": {
+    "ko": "학습용 변조가 크면 깨끗한 정확도가 떨어진다",
+    "en": "Robustness–accuracy trade-off"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/compression-erases-traces",
+   "type": "Limitation",
+   "label": {
+    "ko": "압축이 조작 흔적을 지운다",
+    "en": "Compression erases manipulation traces"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s9",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/no-complete-injection-defense",
+   "type": "Limitation",
+   "label": {
+    "ko": "프롬프트 주입에는 아직 완벽한 방어가 없다",
+    "en": "No complete defense against injection"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/imagenetc-75",
+   "type": "Claim",
+   "label": {
+    "ko": "흔한 손상 15종류 × 세기 5단계 = 75가지 조건",
+    "en": "15 corruptions × 5 severities"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "hendrycks2019benchmarking",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/wilds-10",
+   "type": "Claim",
+   "label": {
+    "ko": "실제 환경 변화 자료 10가지",
+    "en": "10 in-the-wild datasets"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "koh2021wilds",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/fgsm-panda",
+   "type": "Claim",
+   "label": {
+    "ko": "픽셀당 0.007 변조로 판다 57.7% → 긴팔원숭이 99.3%",
+    "en": "Panda to gibbon with ε = 0.007"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "goodfellow2015explaining",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/fgsm-linearity",
+   "type": "Claim",
+   "label": {
+    "ko": "적대적 예제는 모델이 너무 직선적이라 생긴다",
+    "en": "Linearity explains adversarial examples"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "goodfellow2015explaining",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/audio-999",
+   "type": "Claim",
+   "label": {
+    "ko": "99.9% 비슷한 녹음으로 원하는 문장을 받아 적게 함",
+    "en": "99.9% similar audio, targeted transcription"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "carlini2018audio",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/textfooler",
+   "type": "Claim",
+   "label": {
+    "ko": "비슷한 낱말 바꿔치기로 BERT 등 분류를 속임",
+    "en": "Synonym substitution fools BERT"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "jin2020bert",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/injection-boundary",
+   "type": "Claim",
+   "label": {
+    "ko": "자료와 명령의 경계가 흐려지는 것이 핵심 문제",
+    "en": "Blurred line between data and instructions"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "greshake2023not",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/madry-minmax",
+   "type": "Claim",
+   "label": {
+    "ko": "방어를 가장 나쁜 경우 손실을 줄이는 min-max 문제로 정리",
+    "en": "Robust optimisation view"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "madry2018towards",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/ffpp-1.8m",
+   "type": "Claim",
+   "label": {
+    "ko": "영상 1,000개·조작 방법 4가지·조작 그림 180만 장 이상, 압축이 탐지를 어렵게 함",
+    "en": "FaceForensics++ scale and compression"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "rossler2019faceforensics",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:simulation/corrupt",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ① 손상 시험장",
+    "en": "corrupt"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/tone",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ② 시끄러운 공장",
+    "en": "tone"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/label",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ③ 틀린 정답 섞기",
+    "en": "label"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/hosp",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ④ 두 병원",
+    "en": "hosp"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/fgsm",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑤ 적대적 변조",
+    "en": "fgsm"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/text",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑥ 후기 바꿔치기",
+    "en": "text"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/agent",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑦ 장난감 비서",
+    "en": "agent"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/advtrain",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑧ 적대적 학습",
+    "en": "advtrain"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/fake",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑨ 가짜 영상 탐지기",
+    "en": "fake"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#p9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결: 깨끗한 그림 두 배 vs 적대적 학습",
+    "en": "duel"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s5-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s5-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s6-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s6-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s7-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s7-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s8-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s8-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s9-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s9 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n4-s9-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s9 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#s9",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/hendrycks2019benchmarking",
+   "type": "Work",
+   "label": {
+    "ko": "hendrycks2019benchmarking",
+    "en": "hendrycks2019benchmarking"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/koh2021wilds",
+   "type": "Work",
+   "label": {
+    "ko": "koh2021wilds",
+    "en": "koh2021wilds"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/goodfellow2015explaining",
+   "type": "Work",
+   "label": {
+    "ko": "goodfellow2015explaining",
+    "en": "goodfellow2015explaining"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/carlini2018audio",
+   "type": "Work",
+   "label": {
+    "ko": "carlini2018audio",
+    "en": "carlini2018audio"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/jin2020bert",
+   "type": "Work",
+   "label": {
+    "ko": "jin2020bert",
+    "en": "jin2020bert"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/greshake2023not",
+   "type": "Work",
+   "label": {
+    "ko": "greshake2023not",
+    "en": "greshake2023not"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/rossler2019faceforensics",
+   "type": "Work",
+   "label": {
+    "ko": "rossler2019faceforensics",
+    "en": "rossler2019faceforensics"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/madry2018towards",
+   "type": "Work",
+   "label": {
+    "ko": "madry2018towards",
+    "en": "madry2018towards"
+   },
+   "page": "data_to_numbers_04",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n4-s1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/common-corruption",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/common-corruption",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s2-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/snr-db",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s2-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/snr-db",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s3-1",
+   "p": "lab:assesses",
+   "o": "lab:method/knn-vote",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s3-2",
+   "p": "lab:assesses",
+   "o": "lab:method/knn-vote",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s4-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/distribution-shift",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s4-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/distribution-shift",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s5-1",
+   "p": "lab:assesses",
+   "o": "lab:method/fgsm",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s5-2",
+   "p": "lab:assesses",
+   "o": "lab:method/fgsm",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s6-1",
+   "p": "lab:assesses",
+   "o": "lab:method/word-substitution-attack",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s6-2",
+   "p": "lab:assesses",
+   "o": "lab:method/word-substitution-attack",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s7-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/prompt-injection",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s7-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/prompt-injection",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s8-1",
+   "p": "lab:assesses",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s8-2",
+   "p": "lab:assesses",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s9-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/deepfake-detection",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n4-s9-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/deepfake-detection",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/snr-db",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/longer-window",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/label-noise",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/knn-vote",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spurious-correlation",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/distribution-shift",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/multi-site-training",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/distribution-shift",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/common-corruption",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/adversarial-example",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fgsm",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/adversarial-example",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fgsm",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-substitution-attack",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/adversarial-example",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/data-instruction-separation",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/prompt-injection",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/common-corruption",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/deepfake-detection",
+   "anchor": "#s9",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/common-corruption",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/noise-destroys-info",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longer-window",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/latency-tradeoff",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knn-vote",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/majority-fails-high-noise",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spurious-correlation",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/shortcut-collapse",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/robust-accuracy-tradeoff",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deepfake-detection",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/compression-erases-traces",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/data-instruction-separation",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/no-complete-injection-defense",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/common-corruption",
+   "p": "lab:broader",
+   "o": "lab:topic/distribution-shift",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/snr-db",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longer-window",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/label-noise",
+   "p": "lab:broader",
+   "o": "lab:topic/data-splitting",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knn-vote",
+   "p": "lab:broader",
+   "o": "lab:topic/knn",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/distribution-shift",
+   "p": "lab:broader",
+   "o": "lab:topic/distribution-shift",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spurious-correlation",
+   "p": "lab:broader",
+   "o": "lab:topic/generalization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/multi-site-training",
+   "p": "lab:broader",
+   "o": "lab:topic/generalization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/adversarial-example",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fgsm",
+   "p": "lab:broader",
+   "o": "lab:topic/gradient-descent",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-substitution-attack",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/prompt-injection",
+   "p": "lab:broader",
+   "o": "lab:topic/prompting",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/data-instruction-separation",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:broader",
+   "o": "lab:topic/loss-function",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deepfake-detection",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/robust-accuracy-tradeoff",
+   "p": "lab:broader",
+   "o": "lab:topic/accuracy-metrics",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/imagenetc-75",
+   "p": "lab:supports",
+   "o": "lab:concept/common-corruption",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/imagenetc-75",
+   "p": "lab:assertedIn",
+   "o": "lab:work/hendrycks2019benchmarking",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wilds-10",
+   "p": "lab:supports",
+   "o": "lab:concept/distribution-shift",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wilds-10",
+   "p": "lab:assertedIn",
+   "o": "lab:work/koh2021wilds",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-panda",
+   "p": "lab:supports",
+   "o": "lab:concept/adversarial-example",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-panda",
+   "p": "lab:assertedIn",
+   "o": "lab:work/goodfellow2015explaining",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-linearity",
+   "p": "lab:supports",
+   "o": "lab:method/fgsm",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/fgsm-linearity",
+   "p": "lab:assertedIn",
+   "o": "lab:work/goodfellow2015explaining",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/audio-999",
+   "p": "lab:supports",
+   "o": "lab:method/word-substitution-attack",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/audio-999",
+   "p": "lab:assertedIn",
+   "o": "lab:work/carlini2018audio",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/textfooler",
+   "p": "lab:supports",
+   "o": "lab:method/word-substitution-attack",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/textfooler",
+   "p": "lab:assertedIn",
+   "o": "lab:work/jin2020bert",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/injection-boundary",
+   "p": "lab:supports",
+   "o": "lab:concept/prompt-injection",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/injection-boundary",
+   "p": "lab:assertedIn",
+   "o": "lab:work/greshake2023not",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/madry-minmax",
+   "p": "lab:supports",
+   "o": "lab:method/adversarial-training",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/madry-minmax",
+   "p": "lab:assertedIn",
+   "o": "lab:work/madry2018towards",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ffpp-1.8m",
+   "p": "lab:supports",
+   "o": "lab:concept/deepfake-detection",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ffpp-1.8m",
+   "p": "lab:assertedIn",
+   "o": "lab:work/rossler2019faceforensics",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/common-corruption",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/corrupt",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longer-window",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/tone",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knn-vote",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/label",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/distribution-shift",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/hosp",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fgsm",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/fgsm",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/word-substitution-attack",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/text",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/prompt-injection",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/agent",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/advtrain",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deepfake-detection",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/fake",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/adversarial-training",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/duel",
+   "anchor": "#top",
+   "confidence": "high"
+  }
+ ]
+}
