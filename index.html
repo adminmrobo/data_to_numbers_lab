@@ -378,6 +378,8 @@ var DEF={doc:'front',asst:'smile',fly:'clip',robo:'smile'};
 function src(w,m,l){var A=SPRITE_ALIAS,k=A[w+'_'+m]||A[w+'_'+DEF[w]];if(l){var kl=SPRITE_L_ALIAS[w+'_'+m]||k;if(SPRITE_L[kl])return SPRITE_L[kl];}return SPRITE[k]||'';}
 $$('img[data-who]').forEach(function(im){var s=src(im.getAttribute('data-who'),im.getAttribute('data-mood'),im.hasAttribute('data-large'));if(s)im.src=s;});
 $$('img.flipme').forEach(function(im){im.style.transform='scaleX(-1)';});
+/* 받은 픽셀아트 그림 (img/) */
+Object.assign(SPRITE,{cover_index:'img/cover_index.webp'});
 var c=document.getElementById('cover'),k=c.getAttribute('data-img');if(SPRITE[k]){var t=c.querySelector('.ttl');c.innerHTML='<img class="cv" src="'+SPRITE[k]+'" alt="">';if(t)c.appendChild(t);}
 var p=document.getElementById('prog');window.addEventListener('scroll',function(){var h=document.documentElement;p.style.width=(100*h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight))+'%';},{passive:true});})();</script>
 </body></html>

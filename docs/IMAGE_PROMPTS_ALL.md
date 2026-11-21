@@ -41,12 +41,6 @@
 
 ```
 16:9 wide cover, 16-bit RPG pixel art, bold dark outlines, 2–3 tone shading. A bright daytime laboratory with white walls and large sunlit windows. On the right half, a large transparent funnel machine. Four things are being drawn into its wide top opening: a framed photo of a red apple, a blue sound-wave ribbon, a strip of film frames, and a speech-bubble shaped text scrap. Inside the funnel they break apart into rows of tiny colored square pixel blocks flowing downward, and from the narrow bottom outlet only one single glowing green orb comes out. On the left half, four characters stand in a row: a chibi scientist with thin teal square glasses, black hair with one white streak and a short ponytail, white lab coat over black vest and tie, smiling and gesturing at the funnel with an open palm; a young researcher with long pink hair in two round buns with navy streaks, lavender hoodie under a white lab coat, jeans, holding a clipboard and counting the falling blocks; a beige boxy CRT robot with a dark green screen face and mint pixel eyes, an antenna tipped with abacus beads, crawler treads, holding a wooden abacus and looking up excitedly at the funnel opening; a small anthropomorphic fruit fly researcher with black body, red compound eyes, blue helmet with gold stripe, white coat over black vest, black gloves, transparent wings, peering skeptically at the green orb through a magnifying glass. Height ratio scientist 1.00, researcher 0.90, robot 0.72, fruit fly 0.41. Leave empty wall space at upper left for a title. No text, no numbers, no letters, no logos, no night scene, no neon.
-
-## 받은 뒤
-
-1. `build_character_pack.py --ingest ./받은그림 --plates cover_ch1=L --out received_ch1`
-2. 나온 base64 문자열을 `work/cover_ch1.b64`로 두고 다시 빌드하면 대체 표지가 그림으로 바뀝니다 (또는 `Object.assign(SPRITE,{cover_ch1:…})` 조각을 첫 스크립트 블록 끝에 붙입니다).
-3. 공유 미리보기 `img/og_ch1.jpg`는 같은 그림을 1200×630으로 잘라 둡니다.
 ```
 
 ### cover_ch2 · 1600×900 · 저장 이름 `cover_ch2.png`

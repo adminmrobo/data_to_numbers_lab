@@ -57,7 +57,7 @@ def comic(k):
 COV={}
 for c in ['00_index','01_why_numbers','02_rules_to_numbers','03_same_despite_looks','04_noise_and_attacks','05_lighter_models','06_hands_on']:
   t=open(f'{D}/COVER_{c}.md').read()
-  en=t.split('## English prompt')[1].strip()
+  en=t.split('## English prompt')[1].split('\n## ')[0].strip()
   key='cover_index' if c=='00_index' else 'cover_ch'+c[1]
   COV[key]=(en,c)
 REQ=[('R1_style_check',['cover_index'],'16:9','먼저 이 한 장으로 그림체를 확인합니다. 마음에 들면 이 그림을 이후 모든 요청에 참고 그림으로 함께 올립니다.'),
