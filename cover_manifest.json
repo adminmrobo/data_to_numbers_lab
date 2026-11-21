@@ -14,12 +14,20 @@
         "path": "index.html",
         "kg": false,
         "export": false
+      },
+      {
+        "path": "02_rules_to_numbers.html",
+        "kg": true,
+        "export": true
       }
     ],
     "files": [
       "kg/kg.json",
       "kg/refs.json",
-      "kg/meta.json"
+      "kg/meta.json",
+      "kg/ch2/kg.json",
+      "kg/ch2/refs.json",
+      "kg/ch2/meta.json"
     ]
   },
   "i18n": {
@@ -27,7 +35,7 @@
       "ko"
     ],
     "pages": {
-      "ko": 2
+      "ko": 3
     },
     "readme_langs": [
       "ko"
@@ -174,6 +182,106 @@
       "characters": [],
       "robot": "jupanbot-v2",
       "prompt_en": "see docs/IMG_01_why_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "cover_ch2",
+      "role": "cover",
+      "path": "img/cover_ch2.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, daytime lab, four translation counters turning photo/film/text/sound into number blocks (full prompt: docs/COVER_02_rules_to_numbers.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "02_rules_to_numbers.html",
+      "key": "#cover"
+    },
+    {
+      "id": "og_ch2",
+      "role": "og",
+      "path": "img/og_ch2.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_ch2",
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm2_1",
+      "role": "scene",
+      "embedded_in": "02_rules_to_numbers.html",
+      "key": ".frame[data-img=\"cm2_1\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_02_rules_to_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm2_2",
+      "role": "scene",
+      "embedded_in": "02_rules_to_numbers.html",
+      "key": ".frame[data-img=\"cm2_2\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_02_rules_to_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm2_3",
+      "role": "scene",
+      "embedded_in": "02_rules_to_numbers.html",
+      "key": ".frame[data-img=\"cm2_3\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_02_rules_to_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm2_4",
+      "role": "scene",
+      "embedded_in": "02_rules_to_numbers.html",
+      "key": ".frame[data-img=\"cm2_4\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_02_rules_to_numbers.md",
       "source_of": null,
       "status": "todo"
     }

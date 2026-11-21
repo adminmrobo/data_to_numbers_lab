@@ -1,0 +1,44 @@
+{
+ "title": "숫자로 바꾸는 네 개의 창구 — 모든 데이터는 숫자가 된다 2장",
+ "number": "D2N-2",
+ "series": "모든 데이터는 숫자가 된다 (연구실 해설)",
+ "about": [
+  "lab:concept/rgb-channel",
+  "lab:concept/one-hot",
+  "lab:concept/spectrogram",
+  "lab:method/standardize",
+  "lab:concept/patching"
+ ],
+ "basedOn": [
+  "dosovitskiy2021image",
+  "arnab2021vivit",
+  "sennrich2016neural",
+  "mikolov2013efficient",
+  "baevski2020wav2vec",
+  "gong2021ast"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/data_to_numbers_lab/02_rules_to_numbers.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 숫자로 바꾸는 네 개의 창구 — 모든 데이터는 숫자가 된다 2장. 연구실 해설, v1.0."
+}

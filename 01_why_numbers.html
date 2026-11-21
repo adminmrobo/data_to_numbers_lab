@@ -960,7 +960,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
     <div class="say" data-who="fly"><img class="who" data-who="fly" data-mood="coffee" alt="" aria-hidden="true"><div><b class="name">초파리 연구원</b><p>그래도 노란 사과는 틀렸지. 학습이 색의 버릇도 배웠다는 뜻이야. 3장에서 이걸 고치는 법을 보자.</p></div></div>
     <div class="say" data-who="robo"><img class="who" data-who="robo" data-mood="blush" alt="" aria-hidden="true"><div><b class="name">주판봇</b><p>숫자가 많다고 다가 아니었네… 2장에서 숫자 만드는 규칙부터 다시 배울게.</p></div></div>
   </div>
-  <p class="muted">다음: 2장 초급 — 숫자로 바꾸기 (준비 중) · <a href="index.html">시리즈 목차</a></p>
+  <p class="muted">다음: <a href="02_rules_to_numbers.html">2장 초급 — 숫자로 바꾸기</a> · <a href="index.html">시리즈 목차</a></p>
 </section>
 
 </main>
@@ -1025,7 +1025,7 @@ details.crowd summary{cursor:pointer;color:var(--info);font-weight:700;font-size
   </ul>
   <p>캐릭터 그림: 연구실 캐릭터 팩(adminmrobo/fruitfly-lab-expressions @ 86d04ac). 캐릭터 이름·설정·그림의 저작권은 안상선에게 있으며 허락 없이 쓸 수 없습니다.</p>
   <p class="byline">글 · 안상선 (<a href="https://adminmrobo.github.io/who_am_i/who_am_i.html">https://adminmrobo.github.io/who_am_i/who_am_i.html</a>) · (주)M-Robo 대표 · 2026-11-21</p>
-  <p>이 페이지는 교육용 해설입니다. 다음: 2장 초급 — 숫자로 바꾸기 (준비 중) · <a href="index.html">시리즈 목차</a></p>
+  <p>이 페이지는 교육용 해설입니다. 다음: <a href="02_rules_to_numbers.html">2장 초급 — 숫자로 바꾸기</a> · <a href="index.html">시리즈 목차</a></p>
  </div>
 </footer>
 <div id="tip" role="tooltip"></div>
@@ -1511,7 +1511,7 @@ function drawItem(c,x,y,it,r,test){
   var box=$('#chmap'),det=$('#chdetail');
   box.innerHTML=CH.map(function(e,i){return '<button class="chcard'+(e.now?' now':'')+'" aria-pressed="false" data-i="'+i+'"><span class="no">'+e.n+'</span><span class="t">'+e.t+'</span><span class="q">'+e.q+'</span></button>';}).join('');
   $$('.chcard',box).forEach(function(b){b.addEventListener('click',function(){setPressed($$('.chcard',box),b);var e=CH[+b.getAttribute('data-i')];
-    det.innerHTML='<b>'+e.n+' · '+e.t+'</b>'+(e.now?' (지금 읽는 장)':' (준비 중)')+'<ul>'+e.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><div class="pp">바탕 논문: '+e.pp+' — 번호는 아래 출처 표</div>';});});
+    det.innerHTML='<b>'+e.n+' · '+e.t+'</b>'+(e.now?' (지금 읽는 장)':e.n==='2장'?' · <a href="02_rules_to_numbers.html">읽으러 가기 →</a>':' (준비 중)')+'<ul>'+e.items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul><div class="pp">바탕 논문: '+e.pp+' — 번호는 아래 출처 표</div>';});});
 })();
 
 /* ---------- 대결 ---------- */

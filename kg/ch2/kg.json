@@ -1,0 +1,1596 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_02",
+ "nodes": [
+  {
+   "id": "lab:concept/rgb-channel",
+   "type": "Concept",
+   "label": {
+    "ko": "RGB 채널",
+    "en": "RGB channels"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "컬러 점 하나를 빨강·초록·파랑 숫자 셋으로 적는다. 색 하나의 숫자 판이 채널"
+   }
+  },
+  {
+   "id": "lab:method/grayscale",
+   "type": "Method",
+   "label": {
+    "ko": "흑백 변환 (가중 평균)",
+    "en": "Grayscale conversion"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "0.299R + 0.587G + 0.114B"
+   }
+  },
+  {
+   "id": "lab:concept/frame-difference",
+   "type": "Concept",
+   "label": {
+    "ko": "장면 사이 차이",
+    "en": "Frame difference"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "지금 장면에서 앞 장면을 빼면 움직인 곳만 남는다"
+   }
+  },
+  {
+   "id": "lab:concept/video-tensor",
+   "type": "Concept",
+   "label": {
+    "ko": "영상의 숫자 (장면×가로×세로×색)",
+    "en": "Video as array"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/longest-match-tokenize",
+   "type": "Method",
+   "label": {
+    "ko": "가장 긴 조각부터 맞추는 토큰화",
+    "en": "Longest-match tokenization"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "어휘에서 가장 긴 조각부터 찾고, 없는 글자는 한 글자씩 번호를 붙인다"
+   }
+  },
+  {
+   "id": "lab:concept/one-hot",
+   "type": "Concept",
+   "label": {
+    "ko": "원-핫",
+    "en": "One-hot encoding"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "어휘 수만큼 긴 줄에서 제 번호 자리에만 1"
+   }
+  },
+  {
+   "id": "lab:concept/spectrogram",
+   "type": "Concept",
+   "label": {
+    "ko": "스펙트로그램",
+    "en": "Spectrogram"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "짧은 창마다 높낮이별 세기를 재 시간×높낮이 그림으로 펼친 것"
+   }
+  },
+  {
+   "id": "lab:concept/window-tradeoff",
+   "type": "Concept",
+   "label": {
+    "ko": "창 길이의 맞바꿈 (시간 vs 높낮이)",
+    "en": "Time-frequency trade-off"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "높낮이 간격 = 1초에 재는 횟수 ÷ 창 길이"
+   }
+  },
+  {
+   "id": "lab:concept/label-encoding",
+   "type": "Concept",
+   "label": {
+    "ko": "정답의 숫자: 번호·상자·마스크",
+    "en": "Label encoding"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s5",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "분류는 번호 1개, 위치는 상자 4개, 영역은 마스크"
+   }
+  },
+  {
+   "id": "lab:concept/iou",
+   "type": "Concept",
+   "label": {
+    "ko": "IoU (겹침 비율)",
+    "en": "Intersection over Union"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "evaluation",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "겹친 넓이 ÷ 합친 넓이"
+   }
+  },
+  {
+   "id": "lab:method/standardize",
+   "type": "Method",
+   "label": {
+    "ko": "표준화 (z점수)",
+    "en": "Standardization"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s6",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "평균을 빼고 표준편차로 나눠 전체 밝기·대비를 지운다"
+   }
+  },
+  {
+   "id": "lab:method/scale01",
+   "type": "Method",
+   "label": {
+    "ko": "0~1로 나누기",
+    "en": "Min-max scaling to 0–1"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s6",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/patching",
+   "type": "Concept",
+   "label": {
+    "ko": "조각으로 잘라 숫자 줄로 펼치기",
+    "en": "Patch flattening"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "attention",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "p×p 조각을 한 줄로 펼친다. 조각 수 (한 변 ÷ p)², 조각 하나 p×p×색 수"
+   }
+  },
+  {
+   "id": "lab:method/color-rule",
+   "type": "Method",
+   "label": {
+    "ko": "색 규칙 판정 (빨강 − 초록 > 기준)",
+    "en": "Hand-written color rule"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s8",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/gray-loses-color",
+   "type": "Limitation",
+   "label": {
+    "ko": "흑백은 색 정보를 버린다",
+    "en": "Grayscale discards color"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/onehot-sparse",
+   "type": "Limitation",
+   "label": {
+    "ko": "원-핫은 길고 거의 다 0이다",
+    "en": "One-hot is long and sparse"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/small-object-iou",
+   "type": "Limitation",
+   "label": {
+    "ko": "작은 물체는 조금만 어긋나도 IoU가 크게 떨어진다",
+    "en": "Small objects are sensitive to box offset"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/z-erases-brightness",
+   "type": "Limitation",
+   "label": {
+    "ko": "표준화는 밝기 자체를 지운다",
+    "en": "Standardization erases absolute brightness"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/rule-ceiling",
+   "type": "Limitation",
+   "label": {
+    "ko": "색 규칙은 어떤 기준으로도 62.5%가 한계",
+    "en": "Color rule ceiling 62.5%"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s8",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/vit-patches",
+   "type": "Claim",
+   "label": {
+    "ko": "사진을 16×16 조각 줄로 읽는 순수 트랜스포머",
+    "en": "ViT reads 16×16 patch sequences"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "dosovitskiy2021image",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/vivit-tokens",
+   "type": "Claim",
+   "label": {
+    "ko": "영상에서 시간·공간 토큰을 뽑는다",
+    "en": "Spatio-temporal tokens"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "arnab2021vivit",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/bpe-compression",
+   "type": "Claim",
+   "label": {
+    "ko": "압축 알고리즘 BPE를 단어 쪼개기에 응용",
+    "en": "BPE adapted for word segmentation"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "sennrich2016neural",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/w2v-analogy",
+   "type": "Claim",
+   "label": {
+    "ko": "왕 − 남자 + 여자 ≈ 여왕",
+    "en": "King − man + woman ≈ queen"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "mikolov2013efficient",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/ast-patches",
+   "type": "Claim",
+   "label": {
+    "ko": "스펙트로그램을 16×16 조각으로 잘라 읽는다",
+    "en": "AST splits spectrogram into 16×16 patches"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "gong2021ast",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/wav2vec-raw",
+   "type": "Claim",
+   "label": {
+    "ko": "녹음 파형에서 바로 배운다",
+    "en": "Learns from raw waveform"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "baevski2020wav2vec",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:simulation/mix",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ① 색 섞기",
+    "en": "mix"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/flip",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ② 플립북",
+    "en": "flip"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/tok",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ③ 조각 내기",
+    "en": "tok"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/spec",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ④ 소리 그림",
+    "en": "spec"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/label",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑤ 정답 적기",
+    "en": "label"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/norm",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑥ 밝기 맞추기",
+    "en": "norm"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/patch",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑦ 조각 내기",
+    "en": "patch"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/rule",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑧ 색 규칙 심사",
+    "en": "rule"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#p8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결: 원본 vs 표준화",
+    "en": "duel"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s5-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s5-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s6-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s6-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s7-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s7-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s8-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n2-s8-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/dosovitskiy2021image",
+   "type": "Work",
+   "label": {
+    "ko": "An Image is Worth 16x16 Words",
+    "en": "An Image is Worth 16x16 Words"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/arnab2021vivit",
+   "type": "Work",
+   "label": {
+    "ko": "ViViT",
+    "en": "ViViT"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/sennrich2016neural",
+   "type": "Work",
+   "label": {
+    "ko": "Subword Units",
+    "en": "Subword Units"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/mikolov2013efficient",
+   "type": "Work",
+   "label": {
+    "ko": "Word2Vec",
+    "en": "Word2Vec"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/baevski2020wav2vec",
+   "type": "Work",
+   "label": {
+    "ko": "wav2vec 2.0",
+    "en": "wav2vec 2.0"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/gong2021ast",
+   "type": "Work",
+   "label": {
+    "ko": "AST",
+    "en": "AST"
+   },
+   "page": "data_to_numbers_02",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n2-s1-1",
+   "p": "lab:assesses",
+   "o": "lab:method/grayscale",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s1-2",
+   "p": "lab:assesses",
+   "o": "lab:method/grayscale",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s2-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/frame-difference",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s2-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/frame-difference",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s3-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/one-hot",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s3-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/one-hot",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s4-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/window-tradeoff",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s4-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/window-tradeoff",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s5-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/iou",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s5-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/iou",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s6-1",
+   "p": "lab:assesses",
+   "o": "lab:method/standardize",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s6-2",
+   "p": "lab:assesses",
+   "o": "lab:method/standardize",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s7-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/patching",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s7-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/patching",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s8-1",
+   "p": "lab:assesses",
+   "o": "lab:method/color-rule",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n2-s8-2",
+   "p": "lab:assesses",
+   "o": "lab:method/color-rule",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rgb-channel",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/grayscale",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rgb-channel",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/video-tensor",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/video-tensor",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/frame-difference",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longest-match-tokenize",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/one-hot",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spectrogram",
+   "p": "lab:hasLimitation",
+   "o": "lab:concept/window-tradeoff",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/label-encoding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/iou",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/scale01",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/standardize",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/patching",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/spectrogram",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/grayscale",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/gray-loses-color",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/one-hot",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/onehot-sparse",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/iou",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/small-object-iou",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardize",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/z-erases-brightness",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/color-rule",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/rule-ceiling",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardize",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/color-rule",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rgb-channel",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frame-difference",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/video-tensor",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/one-hot",
+   "p": "lab:broader",
+   "o": "lab:topic/word-embedding",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spectrogram",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/window-tradeoff",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/label-encoding",
+   "p": "lab:broader",
+   "o": "lab:topic/supervised-learning",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/iou",
+   "p": "lab:broader",
+   "o": "lab:topic/object-detection",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/patching",
+   "p": "lab:broader",
+   "o": "lab:topic/transformer",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/grayscale",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longest-match-tokenize",
+   "p": "lab:broader",
+   "o": "lab:topic/tokenization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardize",
+   "p": "lab:broader",
+   "o": "lab:topic/normalization-layers",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/scale01",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/color-rule",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vit-patches",
+   "p": "lab:supports",
+   "o": "lab:concept/patching",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vit-patches",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dosovitskiy2021image",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vivit-tokens",
+   "p": "lab:supports",
+   "o": "lab:concept/video-tensor",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vivit-tokens",
+   "p": "lab:assertedIn",
+   "o": "lab:work/arnab2021vivit",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/bpe-compression",
+   "p": "lab:supports",
+   "o": "lab:method/longest-match-tokenize",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/bpe-compression",
+   "p": "lab:assertedIn",
+   "o": "lab:work/sennrich2016neural",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:supports",
+   "o": "lab:concept/one-hot",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013efficient",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ast-patches",
+   "p": "lab:supports",
+   "o": "lab:concept/spectrogram",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ast-patches",
+   "p": "lab:assertedIn",
+   "o": "lab:work/gong2021ast",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-raw",
+   "p": "lab:supports",
+   "o": "lab:concept/spectrogram",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-raw",
+   "p": "lab:assertedIn",
+   "o": "lab:work/baevski2020wav2vec",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/grayscale",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/mix",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frame-difference",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/flip",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/longest-match-tokenize",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/tok",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spectrogram",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/spec",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/iou",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/label",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardize",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/norm",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/patching",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/patch",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/color-rule",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/rule",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/standardize",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/duel",
+   "anchor": "#duel",
+   "confidence": "high"
+  }
+ ]
+}
