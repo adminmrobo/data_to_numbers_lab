@@ -1,0 +1,1442 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_05",
+ "nodes": [
+  {
+   "id": "lab:concept/model-size",
+   "type": "Concept",
+   "label": {
+    "ko": "모델 크기 = 가중치 수 × 비트",
+    "en": "Model size"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "크기(바이트) = 가중치 수 × 비트 ÷ 8"
+   }
+  },
+  {
+   "id": "lab:method/quantization",
+   "type": "Method",
+   "label": {
+    "ko": "양자화",
+    "en": "Quantization"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "가중치를 2ᵇ개 눈금 중 가장 가까운 값으로"
+   }
+  },
+  {
+   "id": "lab:method/pruning",
+   "type": "Method",
+   "label": {
+    "ko": "가지치기",
+    "en": "Pruning"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "절댓값이 작은 가중치부터 0으로"
+   }
+  },
+  {
+   "id": "lab:method/retrain-after-pruning",
+   "type": "Method",
+   "label": {
+    "ko": "가지치기 뒤 다시 학습",
+    "en": "Fine-tuning after pruning"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/huffman-coding",
+   "type": "Method",
+   "label": {
+    "ko": "허프만 부호",
+    "en": "Huffman coding"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/deep-compression",
+   "type": "Method",
+   "label": {
+    "ko": "압축 3단계 (가지치기·양자화·허프만)",
+    "en": "Deep Compression pipeline"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/knowledge-distillation",
+   "type": "Method",
+   "label": {
+    "ko": "지식 증류",
+    "en": "Knowledge distillation"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "선생님 모델의 확률(온도 T)로 학생 모델 학습"
+   }
+  },
+  {
+   "id": "lab:concept/temperature",
+   "type": "Concept",
+   "label": {
+    "ko": "온도 T (확률 펴기)",
+    "en": "Softmax temperature"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:method/depthwise-separable",
+   "type": "Method",
+   "label": {
+    "ko": "깊이별 분리 합성곱",
+    "en": "Depthwise separable convolution"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "계산 비율 = 1/N + 1/k²"
+   }
+  },
+  {
+   "id": "lab:concept/deployment-budget",
+   "type": "Concept",
+   "label": {
+    "ko": "기기별 크기·시간 한도",
+    "en": "Deployment budget"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s7",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "efficiency",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:concept/compression-robustness",
+   "type": "Concept",
+   "label": {
+    "ko": "줄인 모델의 강건성 변화",
+    "en": "Robustness after compression"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "robustness",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/low-bit-collapse",
+   "type": "Limitation",
+   "label": {
+    "ko": "눈금이 너무 적으면(2비트) 가중치가 뭉개진다",
+    "en": "Too few levels collapse weights"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/prune-without-retrain",
+   "type": "Limitation",
+   "label": {
+    "ko": "다시 학습 없이 크게 지우면 정확도가 무너진다",
+    "en": "Pruning without retraining fails"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/index-overhead",
+   "type": "Limitation",
+   "label": {
+    "ko": "남은 가중치의 위치 표시가 따로 든다",
+    "en": "Sparse index overhead"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/student-ceiling",
+   "type": "Limitation",
+   "label": {
+    "ko": "학생은 구조의 한계 때문에 선생님을 넘기 어렵다",
+    "en": "Student capacity ceiling"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/separable-limit",
+   "type": "Limitation",
+   "label": {
+    "ko": "분리 합성곱의 절약은 k²배를 넘지 못한다",
+    "en": "Saving bounded by k²"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s6",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/hardware-dependence",
+   "type": "Limitation",
+   "label": {
+    "ko": "실제 속도는 칩이 0 건너뛰기·정수 계산을 지원하는지에 달렸다",
+    "en": "Speed depends on hardware support"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/dc-35x",
+   "type": "Claim",
+   "label": {
+    "ko": "AlexNet 240MB → 6.9MB, VGG-16 552MB → 11.3MB, 정확도 손실 없음",
+    "en": "35× and 49× compression"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "han2016deep",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/dc-5bit",
+   "type": "Claim",
+   "label": {
+    "ko": "연결 하나를 32비트에서 5비트로",
+    "en": "32 to 5 bits per connection"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "han2016deep",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/int8-4x",
+   "type": "Claim",
+   "label": {
+    "ko": "8비트 정수 계산으로 메모리 약 4분의 1, 휴대폰 CPU에서 빠르게",
+    "en": "INT8 inference"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "jacob2018quantization",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/distill-soft",
+   "type": "Claim",
+   "label": {
+    "ko": "선생님의 부드러운 확률에 닮은 정도 정보가 담긴다",
+    "en": "Soft targets carry dark knowledge"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "hinton2015distilling",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/mobilenet-8-9x",
+   "type": "Claim",
+   "label": {
+    "ko": "3×3 분리 합성곱은 계산량을 8~9배 줄인다",
+    "en": "8–9× less computation"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "howard2017mobilenets",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:simulation/size",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ① 모델 크기 계산기",
+    "en": "size"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/quant",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ② 양자화",
+    "en": "quant"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/prune",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ③ 가지치기",
+    "en": "prune"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/pipe",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ④ 압축 3단계",
+    "en": "pipe"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/distill",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑤ 지식 증류",
+    "en": "distill"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/conv",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑥ 합성곱 계산량",
+    "en": "conv"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/budget",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑦ 기기별 고르기",
+    "en": "budget"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/robust",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑧ 줄인 모델 점검",
+    "en": "robust"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#p8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결: 한 번에 자르기 vs 여러 방법",
+    "en": "duel"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s5-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s5-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s6-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s6-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s7-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s7-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s7 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s7",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s8-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 1",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n5-s8-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s8 확인 퀴즈 2",
+    "en": "Quiz"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#s8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/han2016deep",
+   "type": "Work",
+   "label": {
+    "ko": "han2016deep",
+    "en": "han2016deep"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/jacob2018quantization",
+   "type": "Work",
+   "label": {
+    "ko": "jacob2018quantization",
+    "en": "jacob2018quantization"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/hinton2015distilling",
+   "type": "Work",
+   "label": {
+    "ko": "hinton2015distilling",
+    "en": "hinton2015distilling"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/howard2017mobilenets",
+   "type": "Work",
+   "label": {
+    "ko": "howard2017mobilenets",
+    "en": "howard2017mobilenets"
+   },
+   "page": "data_to_numbers_05",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n5-s1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/model-size",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/model-size",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s2-1",
+   "p": "lab:assesses",
+   "o": "lab:method/quantization",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s2-2",
+   "p": "lab:assesses",
+   "o": "lab:method/quantization",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s3-1",
+   "p": "lab:assesses",
+   "o": "lab:method/pruning",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s3-2",
+   "p": "lab:assesses",
+   "o": "lab:method/pruning",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s4-1",
+   "p": "lab:assesses",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s4-2",
+   "p": "lab:assesses",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s5-1",
+   "p": "lab:assesses",
+   "o": "lab:method/knowledge-distillation",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s5-2",
+   "p": "lab:assesses",
+   "o": "lab:method/knowledge-distillation",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s6-1",
+   "p": "lab:assesses",
+   "o": "lab:method/depthwise-separable",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s6-2",
+   "p": "lab:assesses",
+   "o": "lab:method/depthwise-separable",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s7-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/deployment-budget",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s7-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/deployment-budget",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s8-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/compression-robustness",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n5-s8-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/compression-robustness",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/model-size",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/quantization",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/retrain-after-pruning",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:partOf",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/quantization",
+   "p": "lab:partOf",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/huffman-coding",
+   "p": "lab:partOf",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/temperature",
+   "p": "lab:partOf",
+   "o": "lab:method/knowledge-distillation",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deployment-budget",
+   "p": "lab:relatedTo",
+   "o": "lab:method/deep-compression",
+   "anchor": "#s7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/compression-robustness",
+   "p": "lab:relatedTo",
+   "o": "lab:method/pruning",
+   "anchor": "#s8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/quantization",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/low-bit-collapse",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/prune-without-retrain",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/index-overhead",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knowledge-distillation",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/student-ceiling",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/depthwise-separable",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/separable-limit",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deployment-budget",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/hardware-dependence",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/model-size",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/quantization",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:broader",
+   "o": "lab:topic/sparse-representation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/retrain-after-pruning",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/huffman-coding",
+   "p": "lab:broader",
+   "o": "lab:topic/information-theory",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/deep-compression",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knowledge-distillation",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/temperature",
+   "p": "lab:broader",
+   "o": "lab:topic/activation-function",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/depthwise-separable",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deployment-budget",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/compression-robustness",
+   "p": "lab:broader",
+   "o": "lab:topic/ai-safety",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/dc-35x",
+   "p": "lab:supports",
+   "o": "lab:method/deep-compression",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/dc-35x",
+   "p": "lab:assertedIn",
+   "o": "lab:work/han2016deep",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/dc-5bit",
+   "p": "lab:supports",
+   "o": "lab:method/quantization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/dc-5bit",
+   "p": "lab:assertedIn",
+   "o": "lab:work/han2016deep",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/int8-4x",
+   "p": "lab:supports",
+   "o": "lab:method/quantization",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/int8-4x",
+   "p": "lab:assertedIn",
+   "o": "lab:work/jacob2018quantization",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/distill-soft",
+   "p": "lab:supports",
+   "o": "lab:method/knowledge-distillation",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/distill-soft",
+   "p": "lab:assertedIn",
+   "o": "lab:work/hinton2015distilling",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/mobilenet-8-9x",
+   "p": "lab:supports",
+   "o": "lab:method/depthwise-separable",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/mobilenet-8-9x",
+   "p": "lab:assertedIn",
+   "o": "lab:work/howard2017mobilenets",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/model-size",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/size",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/quantization",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/quant",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/pruning",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/prune",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/deep-compression",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/pipe",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/knowledge-distillation",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/distill",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/depthwise-separable",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/conv",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/deployment-budget",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/budget",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/compression-robustness",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/robust",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/retrain-after-pruning",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/duel",
+   "anchor": "#top",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+[
+ {
+  "id": "han2016deep",
+  "type": "paper-conference",
+  "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+  "author": [
+   {
+    "family": "Han",
+    "given": "Song"
+   },
+   {
+    "family": "Mao",
+    "given": "Huizi"
+   },
+   {
+    "family": "Dally",
+    "given": "William J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1510.00149",
+  "container-title": "ICLR 2016",
+  "lab": {
+   "work": "lab:work/han2016deep",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "jacob2018quantization",
+  "type": "paper-conference",
+  "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+  "author": [
+   {
+    "family": "Jacob",
+    "given": "Benoit"
+   },
+   {
+    "family": "Kligys",
+    "given": "Skirmantas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1712.05877",
+  "container-title": "CVPR 2018",
+  "lab": {
+   "work": "lab:work/jacob2018quantization",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "hinton2015distilling",
+  "type": "paper-conference",
+  "title": "Distilling the Knowledge in a Neural Network",
+  "author": [
+   {
+    "family": "Hinton",
+    "given": "Geoffrey"
+   },
+   {
+    "family": "Vinyals",
+    "given": "Oriol"
+   },
+   {
+    "family": "Dean",
+    "given": "Jeff"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1503.02531",
+  "container-title": "NIPS 2014 Deep Learning Workshop",
+  "lab": {
+   "work": "lab:work/hinton2015distilling",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "howard2017mobilenets",
+  "type": "paper-conference",
+  "title": "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications",
+  "author": [
+   {
+    "family": "Howard",
+    "given": "Andrew G."
+   },
+   {
+    "family": "Zhu",
+    "given": "Menglong"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1704.04861",
+  "container-title": "arXiv",
+  "lab": {
+   "work": "lab:work/howard2017mobilenets",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ }
+]

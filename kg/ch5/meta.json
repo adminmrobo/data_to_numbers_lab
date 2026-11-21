@@ -1,0 +1,42 @@
+{
+ "title": "가볍게 만들기 — 모든 데이터는 숫자가 된다 5장",
+ "number": "D2N-5",
+ "series": "모든 데이터는 숫자가 된다 (연구실 해설)",
+ "about": [
+  "lab:method/quantization",
+  "lab:method/pruning",
+  "lab:method/knowledge-distillation",
+  "lab:method/depthwise-separable",
+  "lab:concept/deployment-budget"
+ ],
+ "basedOn": [
+  "han2016deep",
+  "jacob2018quantization",
+  "hinton2015distilling",
+  "howard2017mobilenets"
+ ],
+ "educationalLevel": "입문",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-21",
+ "version": "1.0",
+ "language": [
+  "ko"
+ ],
+ "license": "",
+ "url": "https://adminmrobo.github.io/data_to_numbers_lab/05_lighter_models.html",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 가볍게 만들기 — 모든 데이터는 숫자가 된다 5장. 연구실 해설, v1.0."
+}

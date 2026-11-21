@@ -29,6 +29,11 @@
         "path": "04_noise_and_attacks.html",
         "kg": true,
         "export": true
+      },
+      {
+        "path": "05_lighter_models.html",
+        "kg": true,
+        "export": true
       }
     ],
     "files": [
@@ -43,7 +48,10 @@
       "kg/ch3/meta.json",
       "kg/ch4/kg.json",
       "kg/ch4/refs.json",
-      "kg/ch4/meta.json"
+      "kg/ch4/meta.json",
+      "kg/ch5/kg.json",
+      "kg/ch5/refs.json",
+      "kg/ch5/meta.json"
     ]
   },
   "i18n": {
@@ -51,7 +59,7 @@
       "ko"
     ],
     "pages": {
-      "ko": 5
+      "ko": 6
     },
     "readme_langs": [
       "ko"
@@ -498,6 +506,106 @@
       "characters": [],
       "robot": "jupanbot-v2",
       "prompt_en": "see docs/IMG_04_noise_and_attacks.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "cover_ch5",
+      "role": "cover",
+      "path": "img/cover_ch5.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, daytime lab, a 3×3 block stack compressed into one small green block sliding into a phone (full prompt: docs/COVER_05_lighter_models.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "05_lighter_models.html",
+      "key": "#cover"
+    },
+    {
+      "id": "og_ch5",
+      "role": "og",
+      "path": "img/og_ch5.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_ch5",
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm5_1",
+      "role": "scene",
+      "embedded_in": "05_lighter_models.html",
+      "key": ".frame[data-img=\"cm5_1\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_05_lighter_models.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm5_2",
+      "role": "scene",
+      "embedded_in": "05_lighter_models.html",
+      "key": ".frame[data-img=\"cm5_2\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_05_lighter_models.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm5_3",
+      "role": "scene",
+      "embedded_in": "05_lighter_models.html",
+      "key": ".frame[data-img=\"cm5_3\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_05_lighter_models.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm5_4",
+      "role": "scene",
+      "embedded_in": "05_lighter_models.html",
+      "key": ".frame[data-img=\"cm5_4\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_05_lighter_models.md",
       "source_of": null,
       "status": "todo"
     }
