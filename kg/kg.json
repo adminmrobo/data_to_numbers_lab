@@ -1,0 +1,1729 @@
+{
+ "version": "1.0",
+ "page": "data_to_numbers_01",
+ "nodes": [
+  {
+   "id": "lab:concept/data-as-numbers",
+   "type": "Concept",
+   "label": {
+    "ko": "데이터의 숫자화",
+    "en": "Data as numbers"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "사진·영상·글·소리를 정해진 규칙으로 숫자 배열로 바꾸는 일"
+   }
+  },
+  {
+   "id": "lab:concept/pixel",
+   "type": "Term",
+   "label": {
+    "ko": "픽셀과 밝기 값",
+    "en": "Pixel intensity"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "사진을 이루는 점. 흑백은 숫자 1개(0~255), 컬러는 RGB 숫자 3개"
+   }
+  },
+  {
+   "id": "lab:concept/bit-depth",
+   "type": "Term",
+   "label": {
+    "ko": "비트 수와 표현 가짓수",
+    "en": "Bit depth"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "k비트로 2^k가지 값을 적는다. 8비트 = 256단계"
+   }
+  },
+  {
+   "id": "lab:concept/image-tensor",
+   "type": "Concept",
+   "label": {
+    "ko": "사진의 숫자 판 (가로×세로×색)",
+    "en": "Image as array"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "224×224 컬러 사진 = 150,528개 숫자"
+   }
+  },
+  {
+   "id": "lab:concept/video-tensor",
+   "type": "Concept",
+   "label": {
+    "ko": "영상의 숫자 (장면×가로×세로×색)",
+    "en": "Video as array"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "vision",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "장면 수만큼 사진을 쌓은 숫자 배열"
+   }
+  },
+  {
+   "id": "lab:concept/subword-token",
+   "type": "Concept",
+   "label": {
+    "ko": "하위 단어 토큰",
+    "en": "Subword token"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "글을 자주 쓰는 조각으로 쪼개 번호를 붙인 단위"
+   }
+  },
+  {
+   "id": "lab:concept/audio-sampling",
+   "type": "Concept",
+   "label": {
+    "ko": "소리 샘플링",
+    "en": "Audio sampling"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "소리를 1초에 정해진 횟수만큼 재서 숫자로 적는 일"
+   }
+  },
+  {
+   "id": "lab:concept/spectrogram",
+   "type": "Term",
+   "label": {
+    "ko": "스펙트로그램",
+    "en": "Spectrogram"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "sequence",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "소리를 시간×높낮이로 펼친 그림"
+   }
+  },
+  {
+   "id": "lab:concept/patch",
+   "type": "Concept",
+   "label": {
+    "ko": "조각(패치)으로 자르기",
+    "en": "Patching"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "attention",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "사진·소리 그림을 16×16 조각으로 잘라 숫자 줄로 만드는 일"
+   }
+  },
+  {
+   "id": "lab:concept/embedding",
+   "type": "Concept",
+   "label": {
+    "ko": "임베딩 (뜻을 담은 숫자 줄)",
+    "en": "Embedding"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "language",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "학습으로 다듬어 뜻이 비슷하면 가깝게 놓이는 숫자 줄"
+   }
+  },
+  {
+   "id": "lab:concept/softmax",
+   "type": "Concept",
+   "label": {
+    "ko": "소프트맥스 (점수 → 확률)",
+    "en": "Softmax"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "점수를 지수함수로 양수로 만든 뒤 합으로 나눠 확률로 바꾸는 계산"
+   }
+  },
+  {
+   "id": "lab:concept/encoding-vs-learning",
+   "type": "Concept",
+   "label": {
+    "ko": "번역(규칙)과 학습(최적화)의 차이",
+    "en": "Encoding vs learning"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "ml-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "숫자로 바꾸는 일은 정해진 규칙, 숫자가 뜻을 담게 하는 일은 손실을 줄이는 학습"
+   }
+  },
+  {
+   "id": "lab:concept/euclid-distance",
+   "type": "Term",
+   "label": {
+    "ko": "두 점 사이 거리",
+    "en": "Euclidean distance"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "math",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "피타고라스 정리로 재는 두 숫자 줄 사이 거리"
+   }
+  },
+  {
+   "id": "lab:method/contrastive-margin",
+   "type": "Method",
+   "label": {
+    "ko": "같은 종류는 가깝게, 다른 종류는 멀게 (대조 손실)",
+    "en": "Contrastive margin loss"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "optimization",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "같은 종류 거리², 다른 종류 (m−거리)²를 줄이는 손실"
+   }
+  },
+  {
+   "id": "lab:concept/gd",
+   "type": "Method",
+   "label": {
+    "ko": "경사 하강",
+    "en": "Gradient descent"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "optimization",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "손실이 줄어드는 방향으로 가중치를 조금씩 고치는 방법"
+   }
+  },
+  {
+   "id": "lab:concept/info-loss",
+   "type": "Concept",
+   "label": {
+    "ko": "숫자로 바꿀 때 잃는 정보",
+    "en": "Information loss in encoding"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "해상도·밝기 단계·샘플링 횟수만큼만 담기고, 잃은 정보는 되찾을 수 없다"
+   }
+  },
+  {
+   "id": "lab:concept/quantization",
+   "type": "Term",
+   "label": {
+    "ko": "양자화",
+    "en": "Quantization"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "optimization",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "definition": {
+    "ko": "숫자를 더 적은 비트로 적는 것"
+   }
+  },
+  {
+   "id": "lab:limitation/raw-numbers-no-meaning",
+   "type": "Limitation",
+   "label": {
+    "ko": "원시 숫자는 뜻을 담지 않는다",
+    "en": "Raw numbers carry no meaning"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/too-many-numbers",
+   "type": "Limitation",
+   "label": {
+    "ko": "원시 숫자가 너무 많다",
+    "en": "Too many raw numbers"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/prob-among-candidates",
+   "type": "Limitation",
+   "label": {
+    "ko": "확률은 후보 중의 비율일 뿐",
+    "en": "Probability only among candidates"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/learns-bias",
+   "type": "Limitation",
+   "label": {
+    "ko": "학습은 훈련 데이터의 치우침도 배운다",
+    "en": "Learning picks up dataset bias"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:limitation/lost-info-unrecoverable",
+   "type": "Limitation",
+   "label": {
+    "ko": "잃은 정보는 되찾을 수 없다",
+    "en": "Lost information is unrecoverable"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:question/what-to-keep",
+   "type": "Question",
+   "label": {
+    "ko": "과제에 필요한 정보는 어디까지 남기나",
+    "en": "How much to keep for the task"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:claim/vit-patches",
+   "type": "Claim",
+   "label": {
+    "ko": "순수 트랜스포머가 이미지 조각의 줄만으로 분류를 잘한다",
+    "en": "Pure transformer on image patch sequences classifies well"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "dosovitskiy2021image",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/vivit-tokens",
+   "type": "Claim",
+   "label": {
+    "ko": "영상에서 시간·공간 토큰을 뽑아 트랜스포머로 읽는다",
+    "en": "Spatio-temporal tokens from video"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "arnab2021vivit",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/bpe-subword",
+   "type": "Claim",
+   "label": {
+    "ko": "드문 낱말을 하위 단어 조각의 줄로 적는다 (압축 알고리즘 BPE를 응용)",
+    "en": "Rare words as subword units via BPE"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "sennrich2016neural",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/w2v-analogy",
+   "type": "Claim",
+   "label": {
+    "ko": "왕 − 남자 + 여자 ≈ 여왕",
+    "en": "King − man + woman ≈ queen"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "mikolov2013efficient",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/wav2vec-raw",
+   "type": "Claim",
+   "label": {
+    "ko": "녹음 파형에서 바로 음성 표현을 학습한다",
+    "en": "Speech representations from raw audio"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "baevski2020wav2vec",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/ast-patches",
+   "type": "Claim",
+   "label": {
+    "ko": "스펙트로그램을 16×16 조각으로 잘라 768차원 숫자 줄로 바꾼다",
+    "en": "Spectrogram split into 16×16 patches, 768-d embedding"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "gong2021ast",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/facenet-128",
+   "type": "Claim",
+   "label": {
+    "ko": "얼굴 하나를 128바이트로 표현하고 거리 = 얼굴 유사도",
+    "en": "128 bytes per face, distance = similarity"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "schroff2015facenet",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:claim/deepcomp",
+   "type": "Claim",
+   "label": {
+    "ko": "연결 비트를 32에서 5로, AlexNet 240MB → 6.9MB",
+    "en": "32→5 bits, AlexNet 240MB→6.9MB"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ],
+   "source": [
+    {
+     "ref": "han2016deep",
+     "loc": ""
+    }
+   ]
+  },
+  {
+   "id": "lab:simulation/draw",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ① 그리기판",
+    "en": "draw"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/four",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ② 네 손님 숫자 세기",
+    "en": "four"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#p2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/funnel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ③ 깔때기와 확률",
+    "en": "funnel"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/map",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ④ 학습 지도",
+    "en": "map"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/shrink",
+   "type": "Simulation",
+   "label": {
+    "ko": "대시보드 ⑤ 줄이기 실험실",
+    "en": "shrink"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#p5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:simulation/duel",
+   "type": "Simulation",
+   "label": {
+    "ko": "대결: 원시 숫자 vs 다듬은 숫자",
+    "en": "duel"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#duel",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 1",
+    "en": "Quiz s1-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s1 확인 퀴즈 2",
+    "en": "Quiz s1-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 1",
+    "en": "Quiz s2-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s2 확인 퀴즈 2",
+    "en": "Quiz s2-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 1",
+    "en": "Quiz s3-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s3 확인 퀴즈 2",
+    "en": "Quiz s3-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s4-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 1",
+    "en": "Quiz s4-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s4-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s4 확인 퀴즈 2",
+    "en": "Quiz s4-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s5-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 1",
+    "en": "Quiz s5-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s5-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s5 확인 퀴즈 2",
+    "en": "Quiz s5-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s5",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s6-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 1",
+    "en": "Quiz s6-1"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:quiz/d2n1-s6-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "s6 확인 퀴즈 2",
+    "en": "Quiz s6-2"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#s6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/dosovitskiy2021image",
+   "type": "Work",
+   "label": {
+    "ko": "An Image is Worth 16x16 Words",
+    "en": "An Image is Worth 16x16 Words"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/arnab2021vivit",
+   "type": "Work",
+   "label": {
+    "ko": "ViViT: A Video Vision Transformer",
+    "en": "ViViT: A Video Vision Transformer"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/sennrich2016neural",
+   "type": "Work",
+   "label": {
+    "ko": "Neural Machine Translation of Rare Words with Subword Units",
+    "en": "Neural Machine Translation of Rare Words with Subword Units"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/mikolov2013efficient",
+   "type": "Work",
+   "label": {
+    "ko": "Efficient Estimation of Word Representations in Vector Space",
+    "en": "Efficient Estimation of Word Representations in Vector Space"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/baevski2020wav2vec",
+   "type": "Work",
+   "label": {
+    "ko": "wav2vec 2.0",
+    "en": "wav2vec 2.0"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/gong2021ast",
+   "type": "Work",
+   "label": {
+    "ko": "AST: Audio Spectrogram Transformer",
+    "en": "AST: Audio Spectrogram Transformer"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/schroff2015facenet",
+   "type": "Work",
+   "label": {
+    "ko": "FaceNet",
+    "en": "FaceNet"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  },
+  {
+   "id": "lab:work/han2016deep",
+   "type": "Work",
+   "label": {
+    "ko": "Deep Compression",
+    "en": "Deep Compression"
+   },
+   "page": "data_to_numbers_01",
+   "anchor": "#export",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": [],
+   "domain": [
+    "ai"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:quiz/d2n1-s1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/pixel",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/pixel",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s2-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/subword-token",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s2-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/subword-token",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s3-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/softmax",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s3-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/softmax",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s4-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/euclid-distance",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s4-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/euclid-distance",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s5-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/info-loss",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s5-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/info-loss",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s6-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/encoding-vs-learning",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/d2n1-s6-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/encoding-vs-learning",
+   "anchor": "#s6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/data-as-numbers",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel",
+   "p": "lab:partOf",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bit-depth",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/pixel",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/image-tensor",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/image-tensor",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/video-tensor",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/image-tensor",
+   "p": "lab:partOf",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/video-tensor",
+   "p": "lab:partOf",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/subword-token",
+   "p": "lab:partOf",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/audio-sampling",
+   "p": "lab:partOf",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/subword-token",
+   "p": "lab:broader",
+   "o": "lab:topic/tokenization",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/audio-sampling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/spectrogram",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/data-as-numbers",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/raw-numbers-no-meaning",
+   "anchor": "#s1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/raw-numbers-no-meaning",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/encoding-vs-learning",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/data-as-numbers",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/too-many-numbers",
+   "anchor": "#s2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/too-many-numbers",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/patch",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/patch",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/embedding",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/softmax",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/patch",
+   "p": "lab:broader",
+   "o": "lab:topic/transformer",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/softmax",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/prob-among-candidates",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding",
+   "p": "lab:broader",
+   "o": "lab:topic/word-embedding",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/euclid-distance",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/contrastive-margin",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/contrastive-margin",
+   "p": "lab:partOf",
+   "o": "lab:concept/encoding-vs-learning",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/gd",
+   "p": "lab:partOf",
+   "o": "lab:concept/encoding-vs-learning",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/gd",
+   "p": "lab:broader",
+   "o": "lab:topic/gradient-descent",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/contrastive-margin",
+   "p": "lab:broader",
+   "o": "lab:topic/loss-function",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/encoding-vs-learning",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/contrastive-margin",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/learns-bias",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/encoding-vs-learning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/embedding",
+   "anchor": "#s4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/info-loss",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/lost-info-unrecoverable",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/info-loss",
+   "p": "lab:raises",
+   "o": "lab:question/what-to-keep",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/quantization",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/info-loss",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bit-depth",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/quantization",
+   "anchor": "#s5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vit-patches",
+   "p": "lab:supports",
+   "o": "lab:concept/patch",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vit-patches",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dosovitskiy2021image",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vivit-tokens",
+   "p": "lab:supports",
+   "o": "lab:concept/video-tensor",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/vivit-tokens",
+   "p": "lab:assertedIn",
+   "o": "lab:work/arnab2021vivit",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/bpe-subword",
+   "p": "lab:supports",
+   "o": "lab:concept/subword-token",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/bpe-subword",
+   "p": "lab:assertedIn",
+   "o": "lab:work/sennrich2016neural",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:supports",
+   "o": "lab:concept/embedding",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/w2v-analogy",
+   "p": "lab:assertedIn",
+   "o": "lab:work/mikolov2013efficient",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-raw",
+   "p": "lab:supports",
+   "o": "lab:concept/audio-sampling",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/wav2vec-raw",
+   "p": "lab:assertedIn",
+   "o": "lab:work/baevski2020wav2vec",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ast-patches",
+   "p": "lab:supports",
+   "o": "lab:concept/spectrogram",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/ast-patches",
+   "p": "lab:assertedIn",
+   "o": "lab:work/gong2021ast",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/facenet-128",
+   "p": "lab:supports",
+   "o": "lab:concept/embedding",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/facenet-128",
+   "p": "lab:assertedIn",
+   "o": "lab:work/schroff2015facenet",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/deepcomp",
+   "p": "lab:supports",
+   "o": "lab:concept/quantization",
+   "anchor": "#s3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/deepcomp",
+   "p": "lab:assertedIn",
+   "o": "lab:work/han2016deep",
+   "anchor": "#export",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/draw",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/data-as-numbers",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/four",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/softmax",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/funnel",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/encoding-vs-learning",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/map",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/info-loss",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/shrink",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/embedding",
+   "p": "lab:demonstratedBy",
+   "o": "lab:simulation/duel",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/contrastive-margin",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/data-as-numbers",
+   "anchor": "#duel",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/pixel",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/image-tensor",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/video-tensor",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bit-depth",
+   "p": "lab:broader",
+   "o": "lab:topic/information-theory",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/audio-sampling",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spectrogram",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/softmax",
+   "p": "lab:broader",
+   "o": "lab:topic/logistic-regression",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/euclid-distance",
+   "p": "lab:broader",
+   "o": "lab:topic/knn",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/info-loss",
+   "p": "lab:broader",
+   "o": "lab:topic/information-theory",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/quantization",
+   "p": "lab:broader",
+   "o": "lab:topic/information-theory",
+   "anchor": "#top",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,344 @@
+[
+ {
+  "id": "dosovitskiy2021image",
+  "type": "paper-conference",
+  "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+  "author": [
+   {
+    "family": "Dosovitskiy",
+    "given": "Alexey"
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2010.11929",
+  "container-title": "ICLR 2021",
+  "lab": {
+   "work": "lab:work/dosovitskiy2021image",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "arnab2021vivit",
+  "type": "paper-conference",
+  "title": "ViViT: A Video Vision Transformer",
+  "author": [
+   {
+    "family": "Arnab",
+    "given": "Anurag"
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2103.15691",
+  "container-title": "ICCV 2021",
+  "lab": {
+   "work": "lab:work/arnab2021vivit",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "sennrich2016neural",
+  "type": "paper-conference",
+  "title": "Neural Machine Translation of Rare Words with Subword Units",
+  "author": [
+   {
+    "family": "Sennrich",
+    "given": "Rico"
+   },
+   {
+    "family": "Haddow",
+    "given": "Barry"
+   },
+   {
+    "family": "Birch",
+    "given": "Alexandra"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1508.07909",
+  "container-title": "ACL 2016",
+  "lab": {
+   "work": "lab:work/sennrich2016neural",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "mikolov2013efficient",
+  "type": "article-journal",
+  "title": "Efficient Estimation of Word Representations in Vector Space",
+  "author": [
+   {
+    "family": "Mikolov",
+    "given": "Tomas"
+   },
+   {
+    "family": "Chen",
+    "given": "Kai"
+   },
+   {
+    "family": "Corrado",
+    "given": "Greg"
+   },
+   {
+    "family": "Dean",
+    "given": "Jeffrey"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1301.3781",
+  "container-title": "arXiv",
+  "lab": {
+   "work": "lab:work/mikolov2013efficient",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "baevski2020wav2vec",
+  "type": "paper-conference",
+  "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+  "author": [
+   {
+    "family": "Baevski",
+    "given": "Alexei"
+   },
+   {
+    "family": "Zhou",
+    "given": "Henry"
+   },
+   {
+    "family": "Mohamed",
+    "given": "Abdelrahman"
+   },
+   {
+    "family": "Auli",
+    "given": "Michael"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2006.11477",
+  "container-title": "NeurIPS 2020",
+  "lab": {
+   "work": "lab:work/baevski2020wav2vec",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "gong2021ast",
+  "type": "paper-conference",
+  "title": "AST: Audio Spectrogram Transformer",
+  "author": [
+   {
+    "family": "Gong",
+    "given": "Yuan"
+   },
+   {
+    "family": "Chung",
+    "given": "Yu-An"
+   },
+   {
+    "family": "Glass",
+    "given": "James"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/2104.01778",
+  "container-title": "Interspeech 2021",
+  "lab": {
+   "work": "lab:work/gong2021ast",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "schroff2015facenet",
+  "type": "paper-conference",
+  "title": "FaceNet: A Unified Embedding for Face Recognition and Clustering",
+  "author": [
+   {
+    "family": "Schroff",
+    "given": "Florian"
+   },
+   {
+    "family": "Kalenichenko",
+    "given": "Dmitry"
+   },
+   {
+    "family": "Philbin",
+    "given": "James"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1503.03832",
+  "container-title": "CVPR 2015",
+  "lab": {
+   "work": "lab:work/schroff2015facenet",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "han2016deep",
+  "type": "paper-conference",
+  "title": "Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",
+  "author": [
+   {
+    "family": "Han",
+    "given": "Song"
+   },
+   {
+    "family": "Mao",
+    "given": "Huizi"
+   },
+   {
+    "family": "Dally",
+    "given": "William J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "URL": "https://arxiv.org/abs/1510.00149",
+  "container-title": "ICLR 2016",
+  "lab": {
+   "work": "lab:work/han2016deep",
+   "role": "primary",
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "arXiv 초록 페이지·학회 페이지와 대조 (2026-11-21)",
+   "checkedSource": "external"
+  }
+ }
+]

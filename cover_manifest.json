@@ -1,0 +1,181 @@
+{
+  "series_ko": "연구실 해설 · 모든 데이터는 숫자가 된다",
+  "title_ko": "모든 데이터는 숫자가 된다",
+  "site_title": "모든 데이터는 숫자가 된다 — 시리즈 목차 · 연구실 해설",
+  "site_url": "https://adminmrobo.github.io/data_to_numbers_lab/",
+  "ontology": {
+    "pages": [
+      {
+        "path": "01_why_numbers.html",
+        "kg": true,
+        "export": true
+      },
+      {
+        "path": "index.html",
+        "kg": false,
+        "export": false
+      }
+    ],
+    "files": [
+      "kg/kg.json",
+      "kg/refs.json",
+      "kg/meta.json"
+    ]
+  },
+  "i18n": {
+    "langs": [
+      "ko"
+    ],
+    "pages": {
+      "ko": 2
+    },
+    "readme_langs": [
+      "ko"
+    ]
+  },
+  "languages": [
+    "ko"
+  ],
+  "items": [
+    {
+      "id": "cover_index",
+      "role": "cover",
+      "path": "img/cover_index.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, bright daytime lab corridor with six picture-sign doors (full prompt: docs/COVER_00_index.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "index.html",
+      "key": "#cover"
+    },
+    {
+      "id": "cover_ch1",
+      "role": "cover",
+      "path": "img/cover_ch1.webp",
+      "size": [
+        1600,
+        900
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": "16-bit RPG pixel art, daytime lab, transparent funnel turning photo/sound/film/text into pixel blocks and one green orb (full prompt: docs/COVER_01_why_numbers.md)",
+      "source_of": null,
+      "status": "todo",
+      "embedded_in": "01_why_numbers.html",
+      "key": "#cover"
+    },
+    {
+      "id": "og_ch1",
+      "role": "og",
+      "path": "img/og_ch1.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_ch1",
+      "status": "todo"
+    },
+    {
+      "id": "og_index",
+      "role": "og",
+      "path": "img/og_index.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "characters": [
+        "doc",
+        "asst",
+        "fly",
+        "jupanbot"
+      ],
+      "robot": "jupanbot-v2",
+      "prompt_en": null,
+      "source_of": "cover_index",
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm1_1",
+      "role": "scene",
+      "embedded_in": "01_why_numbers.html",
+      "key": ".frame[data-img=\"cm1_1\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_01_why_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm1_2",
+      "role": "scene",
+      "embedded_in": "01_why_numbers.html",
+      "key": ".frame[data-img=\"cm1_2\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_01_why_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm1_3",
+      "role": "scene",
+      "embedded_in": "01_why_numbers.html",
+      "key": ".frame[data-img=\"cm1_3\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_01_why_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    },
+    {
+      "id": "sc_cm1_4",
+      "role": "scene",
+      "embedded_in": "01_why_numbers.html",
+      "key": ".frame[data-img=\"cm1_4\"]",
+      "size": [
+        1200,
+        800
+      ],
+      "characters": [],
+      "robot": "jupanbot-v2",
+      "prompt_en": "see docs/IMG_01_why_numbers.md",
+      "source_of": null,
+      "status": "todo"
+    }
+  ]
+}
