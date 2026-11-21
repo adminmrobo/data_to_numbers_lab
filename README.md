@@ -42,7 +42,7 @@
 | `04_noise_and_attacks.html` | 4장 |
 | `05_lighter_models.html` | 5장 |
 | `kg/` | 1장 지식 색인·온톨로지 원본 (`kg.json`, `refs.json`, `meta.json`, 점검 보고서). 2장은 `kg/ch2/` |
-| `docs/` | 서베이 26편 목록, 표지 지시문, 이미지 명세서 (16비트 픽셀아트) |
+| `docs/` | 서베이 26편 목록, 표지 지시문, 이미지 명세서 (16비트 픽셀아트), **이미지 프롬프트 모음 `IMAGE_PROMPTS_ALL.md`**와 요청 꾸러미 `d2n_image_request_pack.zip` |
 | `cover_manifest.json` | 표지·장면 그림 목록 ([ahnboat lab 이미지 표지 현황](https://adminmrobo.github.io/ahnboat_lab_cover_status/)이 읽음) |
 
 ## 바탕 논문
