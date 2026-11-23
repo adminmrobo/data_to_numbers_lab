@@ -1,0 +1,284 @@
+{
+ "version": "1.0",
+ "made": "2026-11-24",
+ "via": "rehang-2026-11-24",
+ "domains": [
+  "data",
+  "dl"
+ ],
+ "note": "분야 뼈대 주제에 다시 걸기(ai-lab-retrofit 15장). links는 자동 후보이며 틀린 줄은 지우면 된다. 빌드 스크립트가 있는 저장소는 빌드 끝에 rehang.apply_overlay()가 이 파일을 적용한다.",
+ "topics": {
+  "lab:topic/activation-function": {
+   "ko": "활성화 함수",
+   "en": "Activation function",
+   "domain": [
+    "ai",
+    "dl"
+   ],
+   "level": 2
+  },
+  "lab:topic/audio-signal": {
+   "ko": "소리 신호의 수치화",
+   "en": "Digitizing audio",
+   "domain": [
+    "data"
+   ],
+   "level": 1
+  },
+  "lab:topic/contrastive": {
+   "ko": "대조 학습",
+   "en": "Contrastive learning",
+   "domain": [
+    "ai",
+    "dl"
+   ],
+   "level": 3
+  },
+  "lab:topic/dispersion": {
+   "ko": "퍼짐",
+   "en": "Measures of dispersion",
+   "domain": [
+    "stats"
+   ],
+   "level": 1
+  },
+  "lab:topic/distance-angle": {
+   "ko": "거리와 각",
+   "en": "Distance and angle",
+   "domain": [
+    "geom"
+   ],
+   "level": 1
+  },
+  "lab:topic/embedding-space": {
+   "ko": "임베딩 공간",
+   "en": "Embedding space",
+   "domain": [
+    "ai",
+    "dl"
+   ],
+   "level": 3
+  },
+  "lab:topic/encoding-categorical": {
+   "ko": "범주형 인코딩",
+   "en": "Encoding categorical data",
+   "domain": [
+    "data"
+   ],
+   "level": 1
+  },
+  "lab:topic/gradient-descent": {
+   "ko": "경사하강법",
+   "en": "Gradient descent",
+   "domain": [
+    "ai",
+    "dl"
+   ],
+   "level": 2
+  },
+  "lab:topic/image-as-array": {
+   "ko": "이미지를 배열로",
+   "en": "Images as arrays",
+   "domain": [
+    "data"
+   ],
+   "level": 1
+  },
+  "lab:topic/inner-product-orthogonality": {
+   "ko": "내적과 직교",
+   "en": "Inner products and orthogonality",
+   "domain": [
+    "math"
+   ],
+   "level": 1
+  },
+  "lab:topic/tokenization": {
+   "ko": "토큰화",
+   "en": "Tokenization",
+   "domain": [
+    "ai",
+    "llm"
+   ],
+   "level": 4
+  }
+ },
+ "links": {
+  "lab:concept/audio-sampling": {
+   "topic": "lab:topic/audio-signal",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "소리 샘플링"
+  },
+  "lab:concept/bit-depth": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "비트 수와 표현 가짓수"
+  },
+  "lab:concept/cosine-similarity": {
+   "topic": "lab:topic/inner-product-orthogonality",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "코사인 유사도"
+  },
+  "lab:concept/data-as-numbers": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "데이터의 숫자화"
+  },
+  "lab:concept/embedding": {
+   "topic": "lab:topic/embedding-space",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "임베딩 (뜻을 담은 숫자 줄)"
+  },
+  "lab:concept/embedding-distance": {
+   "topic": "lab:topic/embedding-space",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "임베딩 사이 거리"
+  },
+  "lab:concept/euclid-distance": {
+   "topic": "lab:topic/distance-angle",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "두 점 사이 거리"
+  },
+  "lab:concept/gd": {
+   "topic": "lab:topic/gradient-descent",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "경사 하강"
+  },
+  "lab:concept/image-tensor": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "사진의 숫자 판 (가로×세로×색)"
+  },
+  "lab:concept/label-encoding": {
+   "topic": "lab:topic/encoding-categorical",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "정답의 숫자: 번호·상자·마스크"
+  },
+  "lab:concept/one-hot": {
+   "topic": "lab:topic/encoding-categorical",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "원-핫"
+  },
+  "lab:concept/patch": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "조각(패치)으로 자르기"
+  },
+  "lab:concept/pixel": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "픽셀과 밝기 값"
+  },
+  "lab:concept/quantization": {
+   "topic": "lab:topic/audio-signal",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "양자화"
+  },
+  "lab:concept/rgb-channel": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "RGB 채널"
+  },
+  "lab:concept/softmax": {
+   "topic": "lab:topic/activation-function",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "소프트맥스 (점수 → 확률)"
+  },
+  "lab:concept/spectrogram": {
+   "topic": "lab:topic/audio-signal",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "스펙트로그램"
+  },
+  "lab:concept/subword-token": {
+   "topic": "lab:topic/tokenization",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "하위 단어 토큰"
+  },
+  "lab:concept/video-tensor": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "영상의 숫자 (장면×가로×세로×색)"
+  },
+  "lab:method/augmentation-contrastive": {
+   "topic": "lab:topic/contrastive",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "증강 + 대조 학습"
+  },
+  "lab:method/contrastive-margin": {
+   "topic": "lab:topic/contrastive",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "같은 종류는 가깝게, 다른 종류는 멀게 (대조 손실)"
+  },
+  "lab:method/grayscale": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "흑백 변환 (가중 평균)"
+  },
+  "lab:method/longest-match-tokenize": {
+   "topic": "lab:topic/tokenization",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "가장 긴 조각부터 맞추는 토큰화"
+  },
+  "lab:method/quantization": {
+   "topic": "lab:topic/audio-signal",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "양자화"
+  },
+  "lab:method/scale01": {
+   "topic": "lab:topic/encoding-categorical",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "0~1로 나누기"
+  },
+  "lab:method/standardize": {
+   "topic": "lab:topic/dispersion",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "표준화 (z점수)"
+  },
+  "lab:method/triplet-loss": {
+   "topic": "lab:topic/contrastive",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "세 쌍 손실"
+  },
+  "lab:simulation/patch": {
+   "topic": "lab:topic/image-as-array",
+   "score": 3,
+   "why": "사람이 고름",
+   "ko": "대시보드 ⑦ 조각 내기"
+  }
+ },
+ "retag": {
+  "from": [
+   "ai"
+  ],
+  "to": [
+   "data",
+   "ai"
+  ]
+ }
+}
